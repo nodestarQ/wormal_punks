@@ -2,6 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "./SigilLib.sol";
+import "./HexLib.sol";
 
 library BackgroundLib {
     uint256 internal constant N = 25;
@@ -36,53 +37,42 @@ library BackgroundLib {
         uint256 shift;
 
         if (i < 20) {
-            // packs 0..1, 10 items each, 2 bytes padding => +16 bits
-            uint256 p = i / 10;     // 0 or 1
-            j = i - p * 10;         // 0..9
+            uint256 p = i / 10; // 0 or 1
+            j = i - p * 10; // 0..9
             shift = (9 - j) * 24 + 16;
 
             if (!dark) w = (p == 0) ? PACK_BASE_0 : PACK_BASE_1;
-            else       w = (p == 0) ? PACK_DARK_0 : PACK_DARK_1;
+            else w = (p == 0) ? PACK_DARK_0 : PACK_DARK_1;
         } else {
-            // pack 2, 5 items, 17 bytes padding => +136 bits
-            j = i - 20;             // 0..4
+            j = i - 20; // 0..4
             shift = (4 - j) * 24 + 136;
-
             w = dark ? PACK_DARK_2 : PACK_BASE_2;
         }
 
         return bytes3(uint24(uint256(w >> shift)));
     }
 
-    function backgroundSvg(bytes32 h, uint256 i) internal pure returns (string memory) {
+    function backgroundSvg(
+        bytes32 h,
+        uint256 i
+    ) internal pure returns (string memory) {
         bytes3 wall = colorBase(i);
         bytes3 floor = colorDark(i);
 
+        bytes memory wallHex = HexLib.hex6(wall);
+        bytes memory floorHex = HexLib.hex6(floor);
 
-        return string(
-            abi.encodePacked(
-                '<rect style="fill:#', _hex(wall),
-                ';" id="wall" width="32" height="24" x="0" y="0" />',
-                '<rect style="fill:#', _hex(floor),
-                ';" id="floor" width="32" height="8" x="0" y="24" />',
-                SigilLib.sigilPath(h, _hex(floor))
-            )
-        );
-    }
-
-    function _hex(bytes3 c) private pure returns (bytes memory out) {
-        out = new bytes(6);
-        uint24 v = uint24(c);
-        out[0] = _n(uint8(v >> 20));
-        out[1] = _n(uint8(v >> 16));
-        out[2] = _n(uint8(v >> 12));
-        out[3] = _n(uint8(v >> 8));
-        out[4] = _n(uint8(v >> 4));
-        out[5] = _n(uint8(v));
-    }
-
-    function _n(uint8 x) private pure returns (bytes1) {
-        uint8 n = x & 0x0f;
-        return n < 10 ? bytes1(uint8(48 + n)) : bytes1(uint8(87 + n));
+        return
+            string(
+                abi.encodePacked(
+                    '<rect style="fill:#',
+                    wallHex,
+                    ';" id="wall" width="32" height="24" x="0" y="0" />',
+                    '<rect style="fill:#',
+                    floorHex,
+                    ';" id="floor" width="32" height="8" x="0" y="24" />',
+                    SigilLib.sigilPath(h, floorHex)
+                )
+            );
     }
 }
