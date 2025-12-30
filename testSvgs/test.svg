@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+    <rect style="fill:#ebab99;" id="wall" width="32" height="24" x="0" y="0" />
+    <rect style="fill:#d6532e;" id="floor" width="32" height="8" x="0" y="24" />
+    <path fill="#d6532e"
+        d="M23 1h1v1h-1ZM30 1h1v1h-1ZM24 1h1v1h-1ZM29 1h1v1h-1ZM25 1h1v1h-1ZM28 1h1v1h-1ZM26 1h1v1h-1ZM27 1h1v1h-1ZM24 2h1v1h-1ZM29 2h1v1h-1ZM24 3h1v1h-1ZM29 3h1v1h-1ZM25 3h1v1h-1ZM28 3h1v1h-1ZM24 4h1v1h-1ZM29 4h1v1h-1ZM25 4h1v1h-1ZM28 4h1v1h-1ZM26 4h1v1h-1ZM27 4h1v1h-1ZM23 5h1v1h-1ZM30 5h1v1h-1ZM25 5h1v1h-1ZM28 5h1v1h-1ZM26 5h1v1h-1ZM27 5h1v1h-1ZM23 6h1v1h-1ZM30 6h1v1h-1ZM24 6h1v1h-1ZM29 6h1v1h-1ZM23 7h1v1h-1ZM30 7h1v1h-1ZM25 7h1v1h-1ZM28 7h1v1h-1ZM26 7h1v1h-1ZM27 7h1v1h-1ZM24 8h1v1h-1ZM29 8h1v1h-1ZM25 8h1v1h-1ZM28 8h1v1h-1ZM26 8h1v1h-1ZM27 8h1v1h-1Z" />
+</svg>

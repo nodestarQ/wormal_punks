@@ -2,9 +2,9 @@
 pragma solidity ^0.8.20;
 
 library SigilLib {
-    function svg(
+    function sigilPath(
         bytes32 h,
-        string memory c
+        bytes memory c
     ) internal pure returns (string memory) {
         uint256 xOff = 23;
         uint256 yOff = 1;
