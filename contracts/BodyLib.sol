@@ -174,7 +174,7 @@ library BodyLib {
             );
     }
 
-    function bodySvg(uint256 i) internal pure returns (string memory) {
+    function body(uint256 i) external pure returns (string memory) {
         return
             string(
                 abi.encodePacked(

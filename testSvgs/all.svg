@@ -1,0 +1,1382 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+
+    <g id="layer2eyes" style="display:inline;fill:#1a1a1a">
+        <g id="g79eyes1" style="display:inline" transform="translate(-2,1)">
+            <path id="rect78"
+                style="fill:#5fbcd3;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 13,11 v 3 h 1 v -3 z m 5,0 v 2 h 1 v -2 z" />
+            <path id="rect77"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 13,10 v 1 h 2 v -1 z m 5,0 v 1 h 2 v -1 z" />
+        </g>
+        <g id="g84eyes2" style="display:inline" transform="translate(-2,1)">
+            <path id="rect83"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 14,10 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+            <path id="rect79"
+                style="display:inline;fill:#1a1a1a;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 15,9 v 1 h 1 V 9 Z m 2,0 v 1 h 1 V 9 Z m 1,1 v 1 h 1 v -1 z m -5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer3eyes3" style="display:inline;fill:#1a1a1a">
+            <path id="rect84"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,10 v 2 h 2 v 1 h 2 v -1 h 2 v 1 h 2 v -1 h 2 v -2 z" />
+            <path id="rect87"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="rect89"
+                style="fill:#2ac9de;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer4eyes4" style="display:inline">
+            <path id="rect98"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1.41421;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,11 v 2 h 1 v -2 z m 4,0 v 2 h 1 v -2 z" />
+        </g>
+        <g id="g103eyes5" style="display:inline">
+            <path id="rect105"
+                style="fill:#f9f9f9;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 2 h 2 v -2 z m 4,0 v 2 h 2 v -2 z" />
+            <path id="rect109"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,10 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer5eyes6" style="display:inline;fill:#1a1a1a">
+            <path id="rect112"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g115eyes7" style="display:inline;fill:#1a1a1a">
+            <path id="rect114"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,10 v 2 h 2 v -2 z m 4,0 v 2 h 2 v -2 z" />
+            <path id="rect114-9"
+                style="display:inline;fill:#f9f9f9;stroke:none;stroke-width:1.41421;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 2 h 1 v -2 z m 4,0 v 2 h 1 v -2 z" />
+        </g>
+        <g id="layer6eyes8" style="display:inline">
+            <path id="rect121"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,10 v 1 h 2 v 1 h 2 v -1 h 2 v 1 h 2 v -1 h 2 v -1 z" />
+            <path id="rect124"
+                style="display:inline;fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,10 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer7eyes9" style="display:inline">
+            <path id="rect125"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 4,-2 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 0,1 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer8eyes10" style="display:inline">
+            <rect
+                style="display:inline;fill:#d95763;fill-opacity:1;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect131" width="2" height="1" x="11" y="11" />
+            <rect
+                style="fill:#b7c4c8;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect130" width="2" height="2" x="9" y="10" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:0.707105;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect132" width="1" height="1" x="16" y="11" />
+            <rect
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect135" width="1" height="1" x="15" y="11" />
+        </g>
+        <g id="g866eyes10" style="display:inline;fill:#1a1a1a">
+            <rect
+                style="display:inline;fill:#eb7d43;fill-opacity:1;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect863" width="2" height="1" x="11" y="11" />
+            <rect
+                style="fill:#b7c4c8;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect864" width="2" height="2" x="9" y="10" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:0.707105;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect865" width="1" height="1" x="16" y="11" />
+            <rect
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect866" width="1" height="1" x="15" y="11" />
+        </g>
+        <g id="g874eyes10" style="display:inline;fill:#1a1a1a">
+            <rect
+                style="display:inline;fill:#639bff;fill-opacity:1;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect871" width="2" height="1" x="11" y="11" />
+            <rect
+                style="fill:#b7c4c8;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect872" width="2" height="2" x="9" y="10" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:0.707105;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect873" width="1" height="1" x="16" y="11" />
+            <rect
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect874" width="1" height="1" x="15" y="11" />
+        </g>
+        <g id="g870eyes10" style="display:inline;fill:#1a1a1a">
+            <rect
+                style="display:inline;fill:#75db60;fill-opacity:1;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect867" width="2" height="1" x="11" y="11" />
+            <rect
+                style="fill:#b7c4c8;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect868" width="2" height="2" x="9" y="10" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:0.707105;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect869" width="1" height="1" x="16" y="11" />
+            <rect
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect870" width="1" height="1" x="15" y="11" />
+        </g>
+        <g id="layer9eyes11" style="display:inline">
+            <path id="rect137"
+                style="display:inline;fill:#1a1a1a;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,10 v 1 h 3 v 1 h 1 v -1 h 2 v 1 h 2 v -1 h 2 v -1 z" />
+            <path id="rect136"
+                style="display:inline;fill:#f9f9f9;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer10eyes12" style="display:inline">
+            <path id="rect145"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10.997619,10 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m -1,0 H 9.9976191 v 1 H 10.997619 Z M 16,10 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m -1,0 h -1 v 1 h 1 z" />
+        </g>
+        <g id="g156eyes13" style="display:inline">
+            <path id="rect157"
+                style="display:inline;fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="rect188"
+                style="display:inline;fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,10 v 1 h 1 1 v 1 h 1 v -1 h 1 1 1 v 1 h 1 v -1 h 1 v -1 h -3 -1 -3 z" />
+        </g>
+        <g id="layer11eyes14" style="display:inline;fill:#1a1a1a">
+            <path id="rect158"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 15,10 v 2 h 2 v -2 z m -4,1 v 1 h 2 v -1 z" />
+        </g>
+        <g id="layer12eyes15" style="display:inline;fill:#1a1a1a">
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect161" width="1" height="2" x="10" y="11" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect162" width="1" height="2" x="17" y="11" />
+        </g>
+        <g id="layer13eyes16" style="display:inline">
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect163" width="3" height="1" x="10" y="11" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect164" width="3" height="1" x="15" y="11" />
+            <rect
+                style="fill:#f9f9f9;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect165" width="3" height="1" x="10" y="12" />
+            <rect
+                style="fill:#f9f9f9;stroke:none;stroke-width:0.999997;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect166" width="3" height="1" x="15" y="12" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect167" width="1" height="1" x="12" y="12" />
+            <rect
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect168" width="1" height="1" x="15" y="12" />
+        </g>
+        <g id="layer14eyes17" style="display:inline;fill:#1a1a1a">
+            <path id="rect169"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,10.5 v 2 h 1 v -2 z m 3,0 v 2 h 1 v -2 z" />
+            <path id="rect171"
+                style="fill:#ff5555;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11.5 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer15eyes18" style="display:inline;fill:#ff0000">
+            <rect
+                style="fill:#ff0000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect173" width="2" height="1" x="12" y="11" />
+            <rect
+                style="fill:#00ccff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                id="rect174" width="2" height="1" x="16" y="11" />
+            <path id="rect176"
+                style="fill:#f9f9f9;stroke:none;stroke-width:0.999996;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,10 v 1 h 1 v 1 h 1 v 1 h 8 v -1 -1 -1 z m 3,1 h 2 v 1 h -2 z m 4,0 h 2 v 1 h -2 z" />
+        </g>
+        <g id="g882eyes19" style="display:inline;fill:#1a1a1a">
+            <path id="path880"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,11 v 1 h 3 v -1 z m 5,0 v 1 h 3 v -1 z" />
+            <path id="path881"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 3 h 1 v -3 z m 5,0 v 3 h 1 v -3 z" />
+            <path id="path882"
+                style="fill:#00ccff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g879eyes19" style="display:inline;fill:#1a1a1a">
+            <path id="path877"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,11 v 1 h 3 v -1 z m 5,0 v 1 h 3 v -1 z" />
+            <path id="path878"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 3 h 1 v -3 z m 5,0 v 3 h 1 v -3 z" />
+            <path id="path879"
+                style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g876eyes19" style="display:inline;fill:#1a1a1a">
+            <path id="path874"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,11 v 1 h 3 v -1 z m 5,0 v 1 h 3 v -1 z" />
+            <path id="path875"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 3 h 1 v -3 z m 5,0 v 3 h 1 v -3 z" />
+            <path id="path876"
+                style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer18eyes20" style="display:inline">
+            <path id="rect196"
+                style="display:inline;fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 1 H 9 v 1 h 2 v 1 h 2 v -1 h 2 v 1 h 2 v -1 h 2 v -1 h -2 v -1 h -2 v 1 h -2 v -1 z" />
+            <path id="rect194"
+                style="fill:#2ad4ff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,11 v 1 h 2 v -1 z m 4,0 v 1 h 2 v -1 z" />
+        </g>
+        <g id="layer19eyes21" style="display:inline">
+            <path id="rect200"
+                style="fill:#000000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,10 v 1 h 2 v -1 z m 4,0 v 1 h 2 v -1 z m -4,2 v 1 h 2 v -1 z m 4,0 v 1 h 2 v -1 z" />
+            <path id="rect204"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,12 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g885eyes22" style="display:inline;fill:#1a1a1a">
+            <path id="path883" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 h -1 v 1 h 3 v -1 -1 z m 4,0 v 1 1 h 3 v -1 h -1 v -1 z" />
+            <path id="path884" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="path885" style="fill:#d95763;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g888eyes22" style="display:inline;fill:#1a1a1a">
+            <path id="path886" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 h -1 v 1 h 3 v -1 -1 z m 4,0 v 1 1 h 3 v -1 h -1 v -1 z" />
+            <path id="path887" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="path888" style="fill:#75db60;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g891eyes22" style="display:inline;fill:#1a1a1a">
+            <path id="path889" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 h -1 v 1 h 3 v -1 -1 z m 4,0 v 1 1 h 3 v -1 h -1 v -1 z" />
+            <path id="path890" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="path891" style="fill:#2ac9de;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g894eyes22" style="display:inline;fill:#1a1a1a">
+            <path id="path892" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 h -1 v 1 h 3 v -1 -1 z m 4,0 v 1 1 h 3 v -1 h -1 v -1 z" />
+            <path id="path893" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="path894" style="fill:#aa6edb;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g897eyes22" style="display:inline;fill:#1a1a1a">
+            <path id="path895" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 h -1 v 1 h 3 v -1 -1 z m 4,0 v 1 1 h 3 v -1 h -1 v -1 z" />
+            <path id="path896" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+            <path id="path897" style="fill:#ed77b4;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer85eyes23" style="display:inline">
+            <rect style="fill:#333333;fill-opacity:1;stroke-linecap:round" id="rect612" width="1" height="1" x="12"
+                y="11" />
+            <rect style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round" id="rect613" width="1" height="1" x="11"
+                y="11" />
+            <rect style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round" id="rect614" width="2" height="1" x="11"
+                y="10" />
+            <rect style="fill:#00ccff;fill-opacity:1;stroke-linecap:round" id="rect615" width="2" height="2" x="15"
+                y="10" />
+            <rect style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round" id="rect616" width="1" height="3" x="17"
+                y="11" />
+            <rect style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round" id="rect617" width="1" height="1" x="15"
+                y="10" />
+        </g>
+        <g id="layer87eyes25" style="display:inline">
+            <path id="rect627" style="display:inline;fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,10 v 2 h 1 v 1 h 2 v -1 h 1 v -2 z m 5,0 v 2 h 1 v 1 h 2 v -1 h 1 v -2 z" />
+            <path id="rect626" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 1 h 2 v -1 -1 z m 5,0 v 1 1 h 2 v -1 -1 z" />
+        </g>
+        <g id="g900eyes24" style="display:inline;fill:#1a1a1a">
+            <path id="path898" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 10,10 v 1 H 9 v 1 1 1 h 2 v -1 h 1 v -1 h 1 v -1 h -1 v -1 z m 6,0 v 1 h -1 v 1 h 1 v 1 h 1 v 1 h 2 v -1 -1 -1 h -1 v -1 z" />
+            <path id="path899" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,11 v 1 h 2 v -1 z m 6,0 v 1 h 2 v -1 z" />
+            <path id="path900" style="fill:#ff0000;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 6,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g903eyes24" style="display:inline;fill:#1a1a1a">
+            <path id="path901" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 10,10 v 1 H 9 v 1 1 1 h 2 v -1 h 1 v -1 h 1 v -1 h -1 v -1 z m 6,0 v 1 h -1 v 1 h 1 v 1 h 1 v 1 h 2 v -1 -1 -1 h -1 v -1 z" />
+            <path id="path902" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,11 v 1 h 2 v -1 z m 6,0 v 1 h 2 v -1 z" />
+            <path id="path903" style="fill:#00ff00;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 6,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g906eyes24" style="display:inline;fill:#1a1a1a">
+            <path id="path904" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 10,10 v 1 H 9 v 1 1 1 h 2 v -1 h 1 v -1 h 1 v -1 h -1 v -1 z m 6,0 v 1 h -1 v 1 h 1 v 1 h 1 v 1 h 2 v -1 -1 -1 h -1 v -1 z" />
+            <path id="path905" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,11 v 1 h 2 v -1 z m 6,0 v 1 h 2 v -1 z" />
+            <path id="path906" style="fill:#00ccff;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 1 h 1 v -1 z m 6,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer88eyes26" style="display:inline">
+            <path id="rect629" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 12,10 v 1 h -1 v 1 h 6 v -1 h -1 v -1 z" />
+            <path id="rect630" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 z m 2,0 h 1 v -1 h -1 z" />
+        </g>
+        <g id="layer89eyes27" style="display:inline">
+            <rect style="fill:#784421;fill-opacity:1;stroke-linecap:round" id="rect632" width="10" height="2" x="9"
+                y="10" />
+            <path id="rect633" style="fill:#00ccff;fill-opacity:1;stroke-linecap:round"
+                d="m 12,10 v 2 h 2 v -2 z m 5,0 v 2 h 2 v -2 z" />
+            <path id="rect635" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 12,10 v 1 h 1 v -1 z m 5,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer90eyes28" style="display:inline">
+            <path id="rect636" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 9,10 v 1 h 1 v 1 h 3 v -1 h 2 v 1 h 3 v -1 h 1 v -1 z" />
+            <path id="rect638" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 11,10 v 1 h 2 v -1 z m 5,0 v 1 h 2 v -1 z" />
+        </g>
+        <g id="layer91eyes29" style="display:inline">
+            <path id="rect639" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 9,10 v 1 h 4 v -1 z m 6,0 v 1 h 4 v -1 z" />
+            <path id="rect640" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,11 v 2 h 1 v -2 z m 7,0 v 2 h 1 v -2 z" />
+            <path id="rect641" style="fill:#784421;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 2 h 1 1 v -1 h -1 v -1 z m 4,0 v 2 h 1 1 v -1 h -1 v -1 z" />
+            <path id="rect644" style="fill:#c87137;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g910eyes29" style="display:inline">
+            <path id="path907" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 9,10 v 1 h 4 v -1 z m 6,0 v 1 h 4 v -1 z" />
+            <path id="path908" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,11 v 2 h 1 v -2 z m 7,0 v 2 h 1 v -2 z" />
+            <path id="path909" style="fill:#217821;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 2 h 1 1 v -1 h -1 v -1 z m 4,0 v 2 h 1 1 v -1 h -1 v -1 z" />
+            <path id="path910" style="fill:#37c837;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g914eyes29" style="display:inline">
+            <path id="path911" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 9,10 v 1 h 4 v -1 z m 6,0 v 1 h 4 v -1 z" />
+            <path id="path912" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round"
+                d="m 10,11 v 2 h 1 v -2 z m 7,0 v 2 h 1 v -2 z" />
+            <path id="path913" style="fill:#0088aa;fill-opacity:1;stroke-linecap:round"
+                d="m 11,11 v 2 h 1 1 v -1 h -1 v -1 z m 4,0 v 2 h 1 1 v -1 h -1 v -1 z" />
+            <path id="path914" style="fill:#00ccff;fill-opacity:1;stroke-linecap:round"
+                d="m 12,11 v 1 h 1 v -1 z m 4,0 v 1 h 1 v -1 z" />
+        </g>
+    </g>
+    <g id="layer20head" style="display:inline">
+        <g id="layer23head 1" style="display:inline;fill:#333333" transform="translate(1,5)">
+            <path id="rect222"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,1 V 2 H 8 V 3 H 7 V 5 H 18 V 3 H 17 V 2 H 16 V 1 Z" />
+            <path id="rect215"
+                style="fill:#ff6600;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,2 V 3 H 8 v 2 h 9 V 3 H 16 V 2 Z" />
+            <path id="rect217"
+                style="fill:#1a1a1a;fill-opacity:0.5;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 8,3 v 1 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 V 3 Z" />
+        </g>
+        <g id="g3head 1" style="display:inline;fill:#333333" transform="translate(1,5)">
+            <path id="path1"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,1 V 2 H 8 V 3 H 7 V 5 H 18 V 3 H 17 V 2 H 16 V 1 Z" />
+            <path id="path2"
+                style="fill:#4d4d4d;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,2 V 3 H 8 v 2 h 9 V 3 H 16 V 2 Z" />
+            <path id="path3"
+                style="fill:#1a1a1a;fill-opacity:0.5;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 8,3 v 1 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 V 3 Z" />
+        </g>
+        <g id="g6head 1" style="display:inline;fill:#333333" transform="translate(1,5)">
+            <path id="path4"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,1 V 2 H 8 V 3 H 7 V 5 H 18 V 3 H 17 V 2 H 16 V 1 Z" />
+            <path id="path5"
+                style="fill:#ff2a2a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,2 V 3 H 8 v 2 h 9 V 3 H 16 V 2 Z" />
+            <path id="path6"
+                style="fill:#1a1a1a;fill-opacity:0.5;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 8,3 v 1 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 V 3 Z" />
+        </g>
+        <g id="g9head 1" style="display:inline;fill:#333333" transform="translate(1,5)">
+            <path id="path7"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,1 V 2 H 8 V 3 H 7 V 5 H 18 V 3 H 17 V 2 H 16 V 1 Z" />
+            <path id="path8"
+                style="fill:#8d5fd3;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,2 V 3 H 8 v 2 h 9 V 3 H 16 V 2 Z" />
+            <path id="path9"
+                style="fill:#1a1a1a;fill-opacity:0.5;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 8,3 v 1 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 v 1 h 1 V 4 h 1 V 3 Z" />
+        </g>
+        <g id="layer24head 3" style="display:inline">
+            <path id="rect233"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,4 V 5 H 9 V 7 H 7 V 8 H 6 v 1 h 1 v 1 H 6 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h 1 V 9 h 1 V 8 h 5 V 7 h 1 V 6 H 16 V 5 H 15 V 4 H 14 V 5 H 13 V 4 H 12 V 5 H 11 V 4 Z" />
+            <path id="rect226"
+                style="fill:#00ccff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,5 V 6 7 H 9 V 8 H 7 v 1 h 1 v 1 H 7 v 1 h 2 v -1 h 1 V 9 h 1 V 8 h 5 V 7 6 H 15 V 5 H 14 V 6 H 13 V 5 H 12 V 6 H 11 V 5 Z" />
+        </g>
+        <g id="g11head 3" style="display:inline">
+            <path id="path10"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,4 V 5 H 9 V 7 H 7 V 8 H 6 v 1 h 1 v 1 H 6 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h 1 V 9 h 1 V 8 h 5 V 7 h 1 V 6 H 16 V 5 H 15 V 4 H 14 V 5 H 13 V 4 H 12 V 5 H 11 V 4 Z" />
+            <path id="path11"
+                style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,5 V 6 7 H 9 V 8 H 7 v 1 h 1 v 1 H 7 v 1 h 2 v -1 h 1 V 9 h 1 V 8 h 5 V 7 6 H 15 V 5 H 14 V 6 H 13 V 5 H 12 V 6 H 11 V 5 Z" />
+        </g>
+        <g id="g13head 3" style="display:inline">
+            <path id="path12"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,4 V 5 H 9 V 7 H 7 V 8 H 6 v 1 h 1 v 1 H 6 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h 1 V 9 h 1 V 8 h 5 V 7 h 1 V 6 H 16 V 5 H 15 V 4 H 14 V 5 H 13 V 4 H 12 V 5 H 11 V 4 Z" />
+            <path id="path13"
+                style="fill:#5fd35f;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,5 V 6 7 H 9 V 8 H 7 v 1 h 1 v 1 H 7 v 1 h 2 v -1 h 1 V 9 h 1 V 8 h 5 V 7 6 H 15 V 5 H 14 V 6 H 13 V 5 H 12 V 6 H 11 V 5 Z" />
+        </g>
+        <g id="layer25head 4" style="display:inline">
+            <path id="rect531" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 7 V 8 H 6 v 1 h 1 v 1 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="rect245"
+                style="display:inline;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 8 v 1 H 9 19 V 7 H 18 V 6 Z M 8,10 H 7 v 1 H 8 Z M 8,9 V 8 H 7 v 1 z" />
+        </g>
+        <g id="g249head 5" style="display:inline">
+            <path id="path538" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 7 V 8 H 6 v 1 h 1 v 1 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path249"
+                style="fill:#0044aa;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 8 v 1 H 9 19 V 7 H 18 V 6 Z M 8,10 H 7 v 1 H 8 Z M 8,9 V 8 H 7 v 1 z" />
+        </g>
+        <g id="g18head 5" style="display:inline">
+            <path id="path17" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 7 V 8 H 6 v 1 h 1 v 1 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path18"
+                style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 8 v 1 H 9 19 V 7 H 18 V 6 Z M 8,10 H 7 v 1 H 8 Z M 8,9 V 8 H 7 v 1 z" />
+        </g>
+        <g id="layer26head 6" style="display:inline">
+            <path id="rect538" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 V 9 H 6 v 1 h 1 v 1 h 1 v -1 h 12 v 1 h 1 v -1 h 1 V 9 H 21 V 8 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="rect249"
+                style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 7 v 1 H 21 V 9 H 19 V 7 H 18 V 6 Z" />
+            <path id="rect252"
+                style="fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:0.912871;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,8 V 9 H 19 V 8 Z" />
+        </g>
+        <g id="layer27head 7" style="display:inline">
+            <path id="rect253"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.896201;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9.96875,1 V 8 H 8.3613281 8 V 9 H 8.3613281 19.605469 20 V 8 H 19.605469 18 V 1 Z" />
+            <path id="rect254"
+                style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:0.894425;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,7 v 1 h 8 V 7 Z" />
+        </g>
+        <g id="layer28head 8" style="display:inline;fill:#ffcc00">
+            <path id="rect543" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 13,5 V 6 H 12 V 7 H 11 V 6 H 10 V 7 H 9 V 8 H 8 V 9 H 20 V 8 H 19 V 7 H 18 V 6 H 17 V 7 H 16 V 6 H 15 V 5 Z" />
+            <path id="rect255"
+                style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 13,6 V 7 H 12 V 8 H 11 V 7 H 10 V 8 H 9 V 9 H 19 V 8 H 18 V 7 H 17 V 8 H 16 V 7 H 15 V 6 Z" />
+        </g>
+        <g id="layer29head 9" style="display:inline">
+            <path id="rect547" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 V 9 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="rect282"
+                style="fill:#75db60;fill-opacity:1;stroke:none;stroke-width:0.953463;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 7 v 1 H 9 19 V 7 H 18 V 6 Z" />
+            <path id="rect285"
+                style="fill:#000000;fill-opacity:0.6;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 14,7 v 1 h -1 v 1 h 4 V 8 H 16 V 7 Z" />
+        </g>
+        <g id="g21head 9" style="display:inline">
+            <path id="path19" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 V 9 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path20"
+                style="fill:#eb7d43;fill-opacity:1;stroke:none;stroke-width:0.953463;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 7 v 1 H 9 19 V 7 H 18 V 6 Z" />
+            <path id="path21"
+                style="fill:#000000;fill-opacity:0.6;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 14,7 v 1 h -1 v 1 h 4 V 8 H 16 V 7 Z" />
+        </g>
+        <g id="g24head 9" style="display:inline">
+            <path id="path22" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 V 9 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path23"
+                style="fill:#ed77b4;fill-opacity:1;stroke:none;stroke-width:0.953463;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 7 v 1 H 9 19 V 7 H 18 V 6 Z" />
+            <path id="path24"
+                style="fill:#000000;fill-opacity:0.6;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 14,7 v 1 h -1 v 1 h 4 V 8 H 16 V 7 Z" />
+        </g>
+        <g id="g27head 9" style="display:inline">
+            <path id="path25" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 V 9 H 6 v 1 h 1 v 1 H 8 V 10 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path26"
+                style="fill:#639bff;fill-opacity:1;stroke:none;stroke-width:0.953463;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,6 V 7 H 9 V 9 H 7 v 1 H 9 19 V 7 H 18 V 6 Z" />
+            <path id="path27"
+                style="fill:#000000;fill-opacity:0.6;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 14,7 v 1 h -1 v 1 h 4 V 8 H 16 V 7 Z" />
+        </g>
+        <g id="layer30head 10" style="display:inline">
+            <path id="rect552" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 11,3 V 4 H 10 V 5 H 9 V 6 H 8 V 8 H 7 v 1 h 1 v 1 H 9 V 9 h 10 v 1 h 1 V 9 h 1 V 8 H 20 V 6 H 19 V 5 H 18 V 4 H 17 V 3 Z" />
+            <path id="rect286"
+                style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 11,4 V 5 H 10 V 6 H 9 V 9 H 19 V 6 H 18 V 5 H 17 V 4 Z" />
+            <path id="rect288"
+                style="fill:#999999;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 8,8 V 9 H 9 V 8 Z m 11,0 v 1 h 1 V 8 Z" />
+        </g>
+        <g id="layer31head 11" style="display:inline">
+            <path id="rect557" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 12,1 V 2 H 11 V 3 4 H 10 V 5 6 H 9 V 7 8 H 8 v 2 H 20 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 16 V 4 H 15 V 3 H 14 V 2 H 13 V 1 Z" />
+            <path id="rect322"
+                style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 12,2 V 3 4 H 11 V 5 6 H 10 V 7 8 H 9 v 2 H 19 V 8 H 18 V 7 H 17 V 6 H 16 V 5 H 15 V 4 H 14 V 3 H 13 V 2 Z" />
+            <path id="rect328"
+                style="fill:#999999;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,4 v 1 1 h -1 v 2 h -1 v 2 h 8 V 8 H 17 V 7 H 16 V 6 H 15 V 5 H 14 V 4 Z" />
+        </g>
+        <g id="layer32head 12" style="display:inline">
+            <path id="rect564" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 13,1 V 2 H 12 V 3 H 11 V 5 H 10 V 7 H 9 v 2 h 9 V 7 H 17 V 5 H 16 V 3 H 15 V 2 H 14 V 1 Z" />
+            <path id="rect332"
+                style="fill:#ffe680;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 13,2 v 1 h -1 v 2 h -1 v 2 h -1 v 1 1 h 7 V 8 7 H 16 V 5 H 15 V 3 H 14 V 2 Z" />
+            <path id="rect340"
+                style="fill:#5681d5;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,3 v 1 h 1 V 3 Z m 1,1 v 1 h 1 V 4 Z m 1,1 v 1 h 1 V 5 Z m 1,1 v 1 h 1 V 6 Z m 1,1 v 1 h 1 V 7 Z" />
+            <path id="rect345"
+                style="fill:#64b457;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,5 v 1 h 1 V 5 Z m 1,1 v 1 h 1 V 6 Z m 1,1 v 1 h 1 V 7 Z m 1,1 v 1 h 1 V 8 Z" />
+            <path id="rect349"
+                style="fill:#eb7d43;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,7 v 1 h 1 V 7 Z m 1,1 v 1 h 1 V 8 Z" />
+        </g>
+        <g id="layer34head 13" style="display:inline">
+            <path id="rect568" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 11,3 V 4 H 10 V 5 6 H 9 V 7 H 8 v 2 1 h 1 10 1 1 V 9 H 20 V 8 H 19 V 7 H 18 V 6 H 17 V 5 4 H 16 V 3 Z" />
+            <path id="rect354"
+                style="display:inline;fill:#2a2aff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 11,4 v 1 h 5 V 4 Z M 10,6 V 7 H 9 v 2 h 1 2 V 6 Z" />
+            <path id="rect353"
+                style="display:inline;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 15,6 v 3 h 3 V 8 7 H 17 V 6 Z" />
+            <path id="rect350"
+                style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1.22475;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,6 v 1 h -1 v 1 h -1 v 1 h 7 V 8 H 16 V 7 H 15 V 6 Z" />
+            <path id="rect356"
+                style="fill:#2aff2a;fill-opacity:1;stroke:none;stroke-width:1.10555;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,9 v 1 H 20 V 9 Z" />
+            <path id="rect357"
+                style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 13,5 v 1 h 1 V 5 Z" />
+        </g>
+        <g id="layer35head 14" style="display:inline;fill:#aa4400">
+            <path id="rect574" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 10,3 V 4 H 9 V 5 H 8 V 6 H 7 V 5 H 6 V 6 H 5 v 2 h 1 v 1 h 1 v 1 H 8 V 8 h 12 v 2 h 1 V 9 h 1 V 8 h 1 V 6 H 22 V 5 H 21 V 6 H 20 V 5 H 19 V 4 H 18 V 3 H 16 15 V 4 H 13 V 3 h -1 z" />
+            <path id="rect363"
+                style="fill:#a05a2c;fill-opacity:1;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 10,4 V 5 H 9 V 8 H 8 V 7 H 7 V 6 H 6 v 1 1 h 1 v 1 h 1 v 1 H 20 V 9 h 1 V 8 h 1 V 7 6 H 21 V 7 H 20 V 8 H 19 V 5 H 18 V 4 H 15 V 5 H 13 V 4 Z" />
+            <path id="rect373"
+                style="fill:#502d16;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,7 V 8 H 19 V 7 Z" />
+        </g>
+        <g id="g374head 15" style="display:inline">
+            <path id="rect585" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 9,4 V 5 H 8 V 6 9 H 7 v 1 H 21 V 9 H 20 V 8 H 19 V 6 H 18 V 5 H 11 10 V 4 Z" />
+            <path id="path373"
+                style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.896201;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9.96875,6 V 9 H 8 v 1 H 20 V 9 H 18 V 6 Z" />
+            <path id="path374"
+                style="fill:#782121;fill-opacity:1;stroke:none;stroke-width:0.894425;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,8 v 1 h 8 V 8 Z" />
+            <path id="rect376"
+                style="display:inline;fill:#c8c4b7;fill-opacity:1;stroke:none;stroke-width:1.73205;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,5 v 3 1 h 2 V 8 H 10 V 5 Z" />
+        </g>
+        <g id="g41head 15" style="display:inline">
+            <path id="path38" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 9,4 V 5 H 8 V 6 9 H 7 v 1 H 21 V 9 H 20 V 8 H 19 V 6 H 18 V 5 H 11 10 V 4 Z" />
+            <path id="path39"
+                style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.896201;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9.96875,6 V 9 H 8 v 1 H 20 V 9 H 18 V 6 Z" />
+            <path id="path40"
+                style="fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.894425;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,8 v 1 h 8 V 8 Z" />
+            <path id="path41"
+                style="display:inline;fill:#c8c4b7;fill-opacity:1;stroke:none;stroke-width:1.73205;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,5 v 3 1 h 2 V 8 H 10 V 5 Z" />
+        </g>
+        <g id="g45head 15" style="display:inline">
+            <path id="path42" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 9,4 V 5 H 8 V 6 9 H 7 v 1 H 21 V 9 H 20 V 8 H 19 V 6 H 18 V 5 H 11 10 V 4 Z" />
+            <path id="path43"
+                style="fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:0.896201;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9.96875,6 V 9 H 8 v 1 H 20 V 9 H 18 V 6 Z" />
+            <path id="path44"
+                style="fill:#999999;fill-opacity:1;stroke:none;stroke-width:0.894425;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 10,8 v 1 h 8 V 8 Z" />
+            <path id="path45"
+                style="display:inline;fill:#e9ddaf;fill-opacity:1;stroke:none;stroke-width:1.73205;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,5 v 3 1 h 2 V 8 H 10 V 5 Z" />
+        </g>
+        <g id="layer36head 16" style="display:inline">
+            <path id="rect588" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 9,1 V 2 H 8 v 1 h 1 v 1 h 2 V 6 H 10 V 7 H 9 V 8 H 8 7 V 9 H 6 v 1 h 1 v 1 h 1 v -1 h 12 v 1 h 1 v -1 h 1 V 9 H 21 V 8 H 20 19 V 7 H 18 17 V 6 H 16 V 4 H 15 V 3 H 14 V 2 H 12 V 1 h -1 z" />
+            <path id="rect377"
+                style="fill:#800080;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 9,2 v 1 h 2 v 1 h 1 V 5 6 H 11 V 7 H 10 V 8 H 9 V 9 H 7 v 1 H 21 V 9 H 19 V 8 H 17 V 7 H 16 V 6 H 15 V 5 4 H 14 V 3 H 12 V 2 Z" />
+            <path id="rect389"
+                style="display:inline;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 12,3 v 1 h 1 V 3 Z m 1,2 v 1 h 1 V 5 Z m 2,1 v 1 h 1 V 6 Z m -3,1 v 1 h 1 V 7 Z m -2,1 v 1 h 1 V 8 Z m 4,0 v 1 h 1 V 8 Z m 4,0 v 1 h 1 V 8 Z" />
+        </g>
+        <g id="layer37head 17" style="display:inline">
+            <path id="rect603" style="display:inline;fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="M 11,3 V 4 H 9 V 5 H 8 V 7 H 7 V 8 H 6 v 1 h 1 v 1 H 21 V 9 h 1 V 8 H 21 V 7 H 20 V 5 H 19 V 4 H 17 V 3 Z" />
+            <path id="rect396"
+                style="display:inline;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 11,4 V 5 H 9 V 7 H 8 v 3 H 20 V 7 H 19 V 5 H 17 V 4 Z" />
+            <path id="rect398"
+                style="display:inline;fill:#d4aa00;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 13,4 v 3 h 2 V 4 Z m -3,1 v 2 h 1 V 5 Z m 7,0 v 2 h 1 V 5 Z M 7,8 V 9 H 9 V 8 Z m 1,1 v 1 H 20 V 9 Z m 11,0 h 2 V 8 h -2 z" />
+        </g>
+        <g id="layer38head 18" style="display:inline;fill:#1a1a1a">
+            <path id="rect403"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.707107;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 16,4 v 1 h 2 V 4 Z m 2,1 v 1 h 1 V 5 Z m -2,0 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z" />
+        </g>
+        <g id="g47head 19" style="display:inline">
+            <path id="path46"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63299;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,5 V 6 H 8 v 4 h 3 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 3 V 6 H 19 V 5 Z" />
+            <path id="path47" style="fill:#a05a2c;stroke-linecap:round"
+                d="M 10,6 V 7 H 9 v 3 h 2 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 2 V 7 H 18 V 6 h -1 -6 z" />
+        </g>
+        <g id="g49head 19" style="display:inline">
+            <path id="path48"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63299;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,5 V 6 H 8 v 4 h 3 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 3 V 6 H 19 V 5 Z" />
+            <path id="path49" style="fill:#ff6600;stroke-linecap:round"
+                d="M 10,6 V 7 H 9 v 3 h 2 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 2 V 7 H 18 V 6 h -1 -6 z" />
+        </g>
+        <g id="g51head 19" style="display:inline">
+            <path id="path50"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63299;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,5 V 6 H 8 v 4 h 3 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 3 V 6 H 19 V 5 Z" />
+            <path id="path51" style="fill:#ffd42a;stroke-linecap:round"
+                d="M 10,6 V 7 H 9 v 3 h 2 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 2 V 7 H 18 V 6 h -1 -6 z" />
+        </g>
+        <g id="g53head 19" style="display:inline">
+            <path id="path52"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63299;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,5 V 6 H 8 v 4 h 3 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 3 V 6 H 19 V 5 Z" />
+            <path id="path53" style="fill:#999999;stroke-linecap:round"
+                d="M 10,6 V 7 H 9 v 3 h 2 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 2 V 7 H 18 V 6 h -1 -6 z" />
+        </g>
+        <g id="g55head 19" style="display:inline">
+            <path id="path54"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.63299;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,5 V 6 H 8 v 4 h 3 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 3 V 6 H 19 V 5 Z" />
+            <path id="path55" style="fill:#333333;stroke-linecap:round"
+                d="M 10,6 V 7 H 9 v 3 h 2 V 8 h 2 v 1 h 2 V 8 h 2 v 2 h 2 V 7 H 18 V 6 h -1 -6 z" />
+        </g>
+        <g id="g57head 20" style="display:inline">
+            <path id="path56"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.27475;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,4 V 5 H 8 V 6 H 7 V 7 H 6 v 8 h 1 v 1 h 1 v -1 h 1 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 1 V 6 H 19 V 5 H 18 V 4 Z" />
+            <path id="path57" style="display:inline;fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="M 9,5 V 6 H 8 V 7 H 7 v 8 h 2 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 V 6 H 18 V 5 Z" />
+        </g>
+        <g id="g59head 20" style="display:inline">
+            <path id="path58"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.27475;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,4 V 5 H 8 V 6 H 7 V 7 H 6 v 8 h 1 v 1 h 1 v -1 h 1 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 1 V 6 H 19 V 5 H 18 V 4 Z" />
+            <path id="path59" style="display:inline;fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="M 9,5 V 6 H 8 V 7 H 7 v 8 h 2 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 V 6 H 18 V 5 Z" />
+        </g>
+        <g id="g61head 20" style="display:inline">
+            <path id="path60"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.27475;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,4 V 5 H 8 V 6 H 7 V 7 H 6 v 8 h 1 v 1 h 1 v -1 h 1 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 1 V 6 H 19 V 5 H 18 V 4 Z" />
+            <path id="path61" style="display:inline;fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="M 9,5 V 6 H 8 V 7 H 7 v 8 h 2 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 V 6 H 18 V 5 Z" />
+        </g>
+        <g id="g63head 20" style="display:inline">
+            <path id="path62"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.27475;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,4 V 5 H 8 V 6 H 7 V 7 H 6 v 8 h 1 v 1 h 1 v -1 h 1 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 1 V 6 H 19 V 5 H 18 V 4 Z" />
+            <path id="path63" style="display:inline;fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="M 9,5 V 6 H 8 V 7 H 7 v 8 h 2 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 V 6 H 18 V 5 Z" />
+        </g>
+        <g id="g65head 20" style="display:inline">
+            <path id="path64"
+                style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.27475;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="M 9,4 V 5 H 8 V 6 H 7 V 7 H 6 v 8 h 1 v 1 h 1 v -1 h 1 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 1 V 6 H 19 V 5 H 18 V 4 Z" />
+            <path id="path65" style="display:inline;fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="M 9,5 V 6 H 8 V 7 H 7 v 8 h 2 v -5 h 1 V 9 h 1 v 1 h 6 V 9 h 1 v 1 h 1 V 6 H 18 V 5 Z" />
+        </g>
+        <g id="g2head 22" style="display:inline">
+            <path id="rect3" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,2 V 3 H 7 V 4 H 6 V 5 H 5 V 6 H 6 V 7 H 8 V 6 H 9 V 7 H 8 V 8 H 7 v 2 H 21 V 8 H 20 V 7 H 19 V 6 H 18 V 5 H 16 V 4 H 15 V 3 H 14 V 2 Z" />
+            <path id="rect11" style="fill:#ff0000;stroke-linecap:round"
+                d="M 9,3 V 4 H 8 v 1 h 1 v 1 h 1 v 1 1 h 8 V 7 6 H 16 V 5 H 15 V 4 H 14 V 3 Z" />
+            <path id="rect16" style="display:inline;fill:#f9f9f9;stroke-linecap:round"
+                d="M 7,4 V 5 H 6 V 6 H 7 8 V 4 Z m 1,4 v 2 H 20 V 8 Z" />
+        </g>
+        <g id="g15head 25" style="display:inline" transform="matrix(-1.000063,0,0,1,27.000567,0)">
+            <path id="rect4" style="fill:#1a1a1a;stroke-width:0.999969;stroke-linecap:round"
+                d="m -18.99937,0 v 1 h -0.999937 v 1 h -0.999937 v 1 h -0.999937 v 1 h 0.999937 v 1 h 1.999874 V 4 h 1.999874 v 1 h -0.999937 v 1 h -0.999937 v 3 h 0.999937 v 1 h 9.99937 V 9 h 0.999937 V 8 H -8.000063 V 6 H -9 V 5 h -3.999748 V 3 h -0.999937 V 2 h -0.999937 V 1 h -0.999937 V 0 Z"
+                transform="scale(-1,1)" />
+            <path id="rect18" style="fill:#ff0000;stroke-width:0.999969;stroke-linecap:round"
+                d="m -18.99937,1 v 1 h -0.999937 v 1 h -0.999937 v 1 h 1.999874 V 3 h 1.999874 v 1 h 0.999937 v 1 h 1.999874 V 4 3 h -0.999937 V 2 h -0.999937 V 1 Z"
+                transform="scale(-1,1)" />
+            <path id="rect22" style="fill:#999999;stroke-width:0.999969;stroke-linecap:round"
+                d="M -17.999433,6 V 9 H -9 -8.000063 V 8 H -9 V 6 Z" transform="scale(-1,1)" />
+            <path id="rect24" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="m 11,7 v 1 1 h 1 V 8 h 1 v 1 h 1 V 8 h 1 v 1 h 1 V 8 h 1 v 1 h 1 V 8 7 Z"
+                transform="matrix(-0.999937,0,0,1,26.998866,0)" />
+            <path id="rect23" style="display:inline;fill:#f9f9f9;stroke-linecap:round" d="m 9,6 v 1 h 1 V 6 Z"
+                transform="matrix(-0.999937,0,0,1,26.998866,0)" />
+        </g>
+        <g id="g32head 26" style="display:inline" transform="matrix(-1.000063,0,0,1,27.000567,0)">
+            <path id="path28" style="fill:#1a1a1a;stroke-width:0.999969;stroke-linecap:round"
+                d="m -18.99937,0 v 1 h -0.999937 v 1 h -0.999937 v 1 h -0.999937 v 1 h 0.999937 v 1 h 1.999874 V 4 h 1.999874 v 1 h -0.999937 v 1 h -0.999937 v 3 h 0.999937 v 1 h 9.99937 V 9 h 0.999937 V 8 H -8.000063 V 6 H -9 V 5 h -3.999748 V 3 h -0.999937 V 2 h -0.999937 V 1 h -0.999937 V 0 Z"
+                transform="scale(-1,1)" />
+            <path id="path29" style="fill:#0066ff;stroke-width:0.999969;stroke-linecap:round"
+                d="m -18.99937,1 v 1 h -0.999937 v 1 h -0.999937 v 1 h 1.999874 V 3 h 1.999874 v 1 h 0.999937 v 1 h 1.999874 V 4 3 h -0.999937 V 2 h -0.999937 V 1 Z"
+                transform="scale(-1,1)" />
+            <path id="path30" style="fill:#ffcc00;stroke-width:0.999969;stroke-linecap:round"
+                d="M -17.999433,6 V 9 H -9 -8.000063 V 8 H -9 V 6 Z" transform="scale(-1,1)" />
+            <path id="path31" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="m 11,7 v 1 1 h 1 V 8 h 1 v 1 h 1 V 8 h 1 v 1 h 1 V 8 h 1 v 1 h 1 V 8 7 Z"
+                transform="matrix(-0.999937,0,0,1,26.998866,0)" />
+            <path id="path32" style="display:inline;fill:#f9f9f9;stroke-linecap:round" d="m 9,6 v 1 h 1 V 6 Z"
+                transform="matrix(-0.999937,0,0,1,26.998866,0)" />
+        </g>
+        <g id="g37head 27" style="display:inline" transform="matrix(-1.000063,0,0,1,27.000567,0)">
+            <path id="path33" style="fill:#1a1a1a;stroke-width:0.999969;stroke-linecap:round"
+                d="m -18.99937,0 v 1 h -0.999937 v 1 h -0.999937 v 1 h -0.999937 v 1 h 0.999937 v 1 h 1.999874 V 4 h 1.999874 v 1 h -0.999937 v 1 h -0.999937 v 3 h 0.999937 v 1 h 9.99937 V 9 h 0.999937 V 8 H -8.000063 V 6 H -9 V 5 h -3.999748 V 3 h -0.999937 V 2 h -0.999937 V 1 h -0.999937 V 0 Z"
+                transform="scale(-1,1)" />
+            <path id="path34" style="fill:#b3b3b3;stroke-width:0.999969;stroke-linecap:round"
+                d="m -18.99937,1 v 1 h -0.999937 v 1 h -0.999937 v 1 h 1.999874 V 3 h 1.999874 v 1 h 0.999937 v 1 h 1.999874 V 4 3 h -0.999937 V 2 h -0.999937 V 1 Z"
+                transform="scale(-1,1)" />
+            <path id="path35" style="fill:#4d4d4d;stroke-width:0.999969;stroke-linecap:round"
+                d="M -17.999433,6 V 9 H -9 -8.000063 V 8 H -9 V 6 Z" transform="scale(-1,1)" />
+            <path id="path36" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="m 11,7 v 1 1 h 1 V 8 h 1 v 1 h 1 V 8 h 1 v 1 h 1 V 8 h 1 v 1 h 1 V 8 7 Z"
+                transform="matrix(-0.999937,0,0,1,26.998866,0)" />
+            <path id="path37" style="display:inline;fill:#f9f9f9;stroke-linecap:round" d="m 9,6 v 1 h 1 V 6 Z"
+                transform="matrix(-0.999937,0,0,1,26.998866,0)" />
+        </g>
+        <g id="layer43head 28" style="display:inline">
+            <path id="rect37" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,7 V 8 H 8 V 9 H 7 v 1 H 6 v 4 h 1 v 1 H 8 V 10 H 19 V 8 H 18 V 7 Z" />
+            <path id="rect40" style="fill:#0044aa;stroke-linecap:round"
+                d="M 9,8 V 9 H 8 v 1 H 18 V 9 8 Z M 8,10 H 7 v 4 h 1 z" />
+            <path id="rect42" style="fill:#cccccc;stroke-linecap:round" d="m 13,8 v 2 h 3 V 8 Z" />
+        </g>
+        <g id="layer44head 29" style="display:inline">
+            <path id="rect43" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,4 V 5 H 9 V 6 H 8 v 3 1 H 21 V 9 h 1 V 8 H 21 V 7 H 19 V 6 H 18 V 5 H 17 V 4 Z" />
+            <path id="rect48" style="fill:#ff0000;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 v 3 h 9 3 V 8 H 18 V 6 H 17 V 5 Z" />
+            <path id="rect50" style="fill:#1a1a1a;stroke-linecap:round" d="m 15,7 v 1 h 3 V 7 Z m 0,1 h -1 v 1 h 1 z" />
+            <path id="rect51" style="fill:#ffd42a;stroke-linecap:round"
+                d="m 13,5 v 1 h 1 V 5 Z m 1,1 v 1 h 1 V 6 Z m 1,0 h 1 V 5 h -1 z m 1,0 v 1 h 1 V 6 Z m -3,0 h -1 v 1 h 1 z" />
+        </g>
+        <g id="g69head 29" style="display:inline">
+            <path id="path66" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,4 V 5 H 9 V 6 H 8 v 3 1 H 21 V 9 h 1 V 8 H 21 V 7 H 19 V 6 H 18 V 5 H 17 V 4 Z" />
+            <path id="path67" style="fill:#639bff;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 v 3 h 9 3 V 8 H 18 V 6 H 17 V 5 Z" />
+            <path id="path68" style="fill:#1a1a1a;stroke-linecap:round" d="m 15,7 v 1 h 3 V 7 Z m 0,1 h -1 v 1 h 1 z" />
+        </g>
+        <g id="g71head 29" style="display:inline">
+            <path id="path69" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,4 V 5 H 9 V 6 H 8 v 3 1 H 21 V 9 h 1 V 8 H 21 V 7 H 19 V 6 H 18 V 5 H 17 V 4 Z" />
+            <path id="path70" style="fill:#ed77b4;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 v 3 h 9 3 V 8 H 18 V 6 H 17 V 5 Z" />
+            <path id="path71" style="fill:#1a1a1a;stroke-linecap:round" d="m 15,7 v 1 h 3 V 7 Z m 0,1 h -1 v 1 h 1 z" />
+        </g>
+        <g id="g74head 29" style="display:inline">
+            <path id="path72" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,4 V 5 H 9 V 6 H 8 v 3 1 H 21 V 9 h 1 V 8 H 21 V 7 H 19 V 6 H 18 V 5 H 17 V 4 Z" />
+            <path id="path73" style="fill:#eb7d43;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 v 3 h 9 3 V 8 H 18 V 6 H 17 V 5 Z" />
+            <path id="path74" style="fill:#1a1a1a;stroke-linecap:round" d="m 15,7 v 1 h 3 V 7 Z m 0,1 h -1 v 1 h 1 z" />
+        </g>
+        <g id="g77head 29" style="display:inline">
+            <path id="path75" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,4 V 5 H 9 V 6 H 8 v 3 1 H 21 V 9 h 1 V 8 H 21 V 7 H 19 V 6 H 18 V 5 H 17 V 4 Z" />
+            <path id="path76" style="fill:#75db60;fill-opacity:1;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 v 3 h 9 3 V 8 H 18 V 6 H 17 V 5 Z" />
+            <path id="path77" style="fill:#1a1a1a;stroke-linecap:round" d="m 15,7 v 1 h 3 V 7 Z m 0,1 h -1 v 1 h 1 z" />
+        </g>
+        <g id="layer45head 30" style="display:inline">
+            <path id="rect55" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,2 V 3 H 7 v 2 1 4 H 20 V 9 h 1 V 7 H 20 V 6 H 19 V 5 H 10 V 3 H 9 V 2 Z" />
+            <path id="rect59" style="fill:#ff0000;stroke-linecap:round" d="m 8,4 v 6 H 9 V 4 Z" />
+            <path id="rect60" style="display:inline;fill:#ff6600;stroke-linecap:round"
+                d="M 8,3 V 4 H 9 V 3 Z m 1,3 v 4 H 19 V 9 h 1 V 7 H 19 V 6 Z" />
+            <path id="rect62" style="fill:#55ddff;stroke-linecap:round" d="m 10,7 v 2 h 9 V 7 Z" />
+            <path id="rect63" style="fill:#d7eef4;stroke-linecap:round" d="m 10,7 v 1 1 h 1 V 8 h 2 V 7 Z" />
+        </g>
+        <g id="layer46head 31" style="display:inline">
+            <path id="rect64" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,2 V 3 H 7 v 3 h 1 v 4 H 21 V 6 h 1 V 3 H 21 V 2 Z" />
+            <path id="rect65" style="fill:#f9f9f9;stroke-linecap:round" d="m 8,3 v 3 h 1 v 4 H 20 V 6 h 1 V 3 Z" />
+            <path id="rect66" style="fill:#cccccc;stroke-linecap:round"
+                d="m 9,3 v 6 h 1 10 V 8 3 H 19 V 8 H 18 V 3 H 17 V 8 H 16 V 3 H 15 V 8 H 14 V 3 H 13 V 8 H 12 V 3 H 11 V 8 H 10 V 3 Z" />
+        </g>
+        <g id="layer47head 32" style="display:inline">
+            <path id="rect72" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 15,2 V 3 H 14 V 4 H 13 V 3 h -2 v 1 h -1 v 1 h 1 v 1 h 1 v 2 h 3 V 6 h 1 V 5 h 1 V 4 3 H 16 V 2 Z" />
+            <path id="rect80" style="fill:#00aa00;stroke-linecap:round"
+                d="M 15,3 V 4 H 14 V 5 H 13 V 4 h -1 -1 v 1 h 1 v 1 h 1 v 2 h 1 V 6 h 1 V 5 h 1 V 3 Z" />
+        </g>
+        <g id="layer48head 33" style="display:inline">
+            <path id="rect6" style="fill:#ff6600;stroke-linecap:round"
+                d="M 9,7 V 8 H 8 v 1 h 1 v 1 h 1 V 9 h 3 v 1 h 1 V 9 h 3 v 1 h 1 V 9 h 1 V 8 H 18 V 7 H 17 V 8 H 14 V 7 H 13 V 8 H 10 V 7 Z" />
+            <path id="rect10" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="m 10,7 v 1 h 1 V 7 Z M 8,9 v 1 H 9 V 9 Z" />
+            <path id="rect12" style="fill:#ffdd55;stroke-linecap:round"
+                d="m 9,8 v 1 h 1 V 8 Z m 4,0 v 1 h 1 V 8 Z m 4,0 v 1 h 1 V 8 Z" />
+            <path id="rect14" style="fill:#00d455;stroke-linecap:round" d="m 11,8 v 1 h 1 V 8 Z m 4,0 v 1 h 1 V 8 Z" />
+        </g>
+        <g id="layer49head 34" style="display:inline">
+            <path id="rect17" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,3 V 4 H 9 v 2 h 1 v 3 h 3 V 4 H 12 V 3 Z m 6,0 v 1 h -1 v 5 h 3 V 6 h 1 V 4 H 18 V 3 Z" />
+            <path id="rect25" style="fill:#5aa02c;stroke-linecap:round"
+                d="m 10,4 v 2 h 1 v 2 1 h 2 V 8 H 12 V 6 4 Z m 6,0 v 2 2 h -1 v 1 h 2 V 8 6 h 1 V 4 Z" />
+        </g>
+        <g id="layer50head 35" style="display:inline">
+            <path id="rect29" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 11,2 V 3 H 9 V 4 H 8 V 5 H 7 V 6 H 6 v 5 h 1 v 1 H 9 V 9 h 1 V 8 h 8 v 1 h 1 v 3 h 2 v -1 h 1 V 6 H 21 V 5 H 20 V 4 H 19 V 3 H 17 V 2 Z" />
+            <path id="rect39" style="fill:#2ad4ff;fill-opacity:1;stroke-linecap:round"
+                d="M 9,4 V 5 H 8 V 6 H 7 v 5 h 1 v 1 h 1 v -2 h 1 V 4 Z" />
+            <path id="rect44" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 18,4 v 6 h 1 v 2 h 1 v -1 h 1 V 6 H 20 V 5 H 19 V 4 Z" />
+            <path id="rect46" style="fill:#ff0000;stroke-linecap:round"
+                d="m 11,3 v 1 h -1 v 5 h 1 V 8 h 1 1 1 V 3 h -1 -1 z" />
+            <path id="rect52" style="fill:#75db60;fill-opacity:1;stroke-linecap:round"
+                d="m 14,3 v 5 h 3 v 1 h 1 V 4 H 17 V 3 Z" />
+        </g>
+        <g id="layer51head 36" style="display:inline">
+            <path id="rect53" style="fill:#1a1a1a;stroke-linecap:round"
+                d="m 14,3 v 1 h -1 v 4 h 3 V 6 h 1 V 4 H 16 V 3 Z" />
+            <path id="rect56" style="fill:#ff0000;stroke-linecap:round" d="m 14,4 v 2 h 2 V 4 Z" />
+            <path id="rect57" style="fill:#999999;stroke-linecap:round" d="m 14,6 v 2 h 1 V 6 Z" />
+        </g>
+        <g id="layer52head 37" style="display:inline">
+            <path id="rect58" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="M 13,2 V 3 H 12 V 4 H 11 V 5 H 10 V 6 H 9 V 7 H 8 V 8 H 7 V 9 H 6 v 1 h 1 v 1 h 2 v -1 h 10 v 1 h 2 v -1 h 1 V 9 H 21 V 8 H 20 V 7 H 19 V 6 H 18 V 5 H 17 V 4 H 16 V 3 H 15 V 2 Z" />
+            <path id="rect75" style="fill:#d38d5f;stroke-linecap:round"
+                d="M 13,3 V 4 H 12 V 5 H 11 V 6 H 10 V 7 H 9 V 8 H 8 V 9 H 7 v 1 H 21 V 9 H 20 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 16 V 4 H 15 V 3 Z" />
+        </g>
+        <g id="layer53head 38" style="display:inline">
+            <path id="rect88" style="fill:#1a1a1a;stroke-linecap:round"
+                d="m 11,1 v 1 h -1 v 3 h 1 v 1 h 6 V 5 h 1 V 2 H 17 V 1 Z" />
+            <path id="rect90" style="fill:#d4af37;fill-opacity:1;stroke-linecap:round"
+                d="m 11,2 v 1 2 h 1 3 V 4 H 12 V 3 h 1 V 2 Z" />
+            <path id="rect92" style="fill:#ffd700;fill-opacity:1;stroke-linecap:round"
+                d="m 13,2 v 1 h 3 v 1 h -1 v 1 h 2 V 4 3 2 Z" />
+        </g>
+        <g id="layer54head 39" style="display:inline">
+            <path id="rect94" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,5 V 6 H 8 V 7 H 7 V 8 H 6 v 1 1 H 5 v 3 h 1 v 1 h 1 v 2 H 8 V 14 13 10 H 20 V 9 H 19 V 7 H 18 V 6 H 17 V 5 Z" />
+            <path id="rect102" style="fill:#a05a2c;stroke-linecap:round"
+                d="M 9,6 V 7 H 8 V 8 H 18 V 7 H 17 V 6 Z M 7,9 v 1 H 6 v 3 h 1 v 1 h 1 v 2 H 9 V 14 13 10 H 19 V 9 Z" />
+            <path id="rect108" style="fill:#afdde9;stroke-linecap:round" d="m 11,8 v 1 h 2 V 8 Z m 5,0 v 1 h 2 V 8 Z" />
+        </g>
+        <g id="layer55head 40" style="display:inline">
+            <path id="rect110" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 v 2 H 6 v 3 h 1 v 1 h 2 v -4 h 1 V 8 h 1 6 v 1 h 1 v 1 h 1 v 4 h 2 v -1 h 1 V 10 H 21 V 9 8 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="rect123" style="fill:#ff0000;stroke-linecap:round"
+                d="m 10,6 v 1 h 8 V 6 Z m 8,1 v 1 h 1 V 7 Z m 1,1 v 2 3 h 2 V 10 H 20 V 8 Z M 10,7 H 9 v 1 h 1 z M 9,8 H 8 v 2 H 7 v 3 h 2 v -3 z" />
+        </g>
+        <g id="g80head 40" style="display:inline">
+            <path id="path78" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 v 2 H 6 v 3 h 1 v 1 h 2 v -4 h 1 V 8 h 1 6 v 1 h 1 v 1 h 1 v 4 h 2 v -1 h 1 V 10 H 21 V 9 8 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path79" style="fill:#00ff00;stroke-linecap:round"
+                d="m 10,6 v 1 h 8 V 6 Z m 8,1 v 1 h 1 V 7 Z m 1,1 v 2 3 h 2 V 10 H 20 V 8 Z M 10,7 H 9 v 1 h 1 z M 9,8 H 8 v 2 H 7 v 3 h 2 v -3 z" />
+        </g>
+        <g id="g81head 40" style="display:inline">
+            <path id="path80" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 10,5 V 6 H 9 V 7 H 8 V 8 H 7 v 2 H 6 v 3 h 1 v 1 h 2 v -4 h 1 V 8 h 1 6 v 1 h 1 v 1 h 1 v 4 h 2 v -1 h 1 V 10 H 21 V 9 8 H 20 V 7 H 19 V 6 H 18 V 5 Z" />
+            <path id="path81" style="fill:#0000ff;stroke-linecap:round"
+                d="m 10,6 v 1 h 8 V 6 Z m 8,1 v 1 h 1 V 7 Z m 1,1 v 2 3 h 2 V 10 H 20 V 8 Z M 10,7 H 9 v 1 h 1 z M 9,8 H 8 v 2 H 7 v 3 h 2 v -3 z" />
+        </g>
+        <g id="g102head 41" style="display:inline">
+            <path id="path101" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 18,3 V 4 H 9 V 5 H 8 V 6 H 7 V 7 H 6 v 4 h 1 v 2 H 9 V 9 h 9 v 1 h 3 V 9 h 1 V 4 H 21 V 3 Z" />
+            <path id="path102" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="M 18,4 V 5 H 9 V 6 7 H 8 7 v 2 2 h 1 v 2 h 1 v -3 h 1 V 9 h 8 2 1 V 4 Z" />
+        </g>
+        <g id="layer56head 41" style="display:inline">
+            <path id="rect134" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 18,3 V 4 H 9 V 5 H 8 V 6 H 7 V 7 H 6 v 4 h 1 v 2 H 9 V 9 h 9 v 1 h 3 V 9 h 1 V 4 H 21 V 3 Z" />
+            <path id="rect142" style="fill:#a05a2c;stroke-linecap:round"
+                d="M 18,4 V 5 H 9 V 6 7 H 8 7 v 2 2 h 1 v 2 h 1 v -3 h 1 V 9 h 8 2 1 V 4 Z" />
+        </g>
+        <g id="g116head 41" style="display:inline">
+            <path id="path114" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 18,3 V 4 H 9 V 5 H 8 V 6 H 7 V 7 H 6 v 4 h 1 v 2 H 9 V 9 h 9 v 1 h 3 V 9 h 1 V 4 H 21 V 3 Z" />
+            <path id="path115" style="fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="M 18,4 V 5 H 9 V 6 7 H 8 7 v 2 2 h 1 v 2 h 1 v -3 h 1 V 9 h 8 2 1 V 4 Z" />
+        </g>
+        <g id="g128head 41" style="display:inline">
+            <path id="path127" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 18,3 V 4 H 9 V 5 H 8 V 6 H 7 V 7 H 6 v 4 h 1 v 2 H 9 V 9 h 9 v 1 h 3 V 9 h 1 V 4 H 21 V 3 Z" />
+            <path id="path128" style="fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="M 18,4 V 5 H 9 V 6 7 H 8 7 v 2 2 h 1 v 2 h 1 v -3 h 1 V 9 h 8 2 1 V 4 Z" />
+        </g>
+        <g id="g141head 41" style="display:inline">
+            <path id="path140" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 18,3 V 4 H 9 V 5 H 8 V 6 H 7 V 7 H 6 v 4 h 1 v 2 H 9 V 9 h 9 v 1 h 3 V 9 h 1 V 4 H 21 V 3 Z" />
+            <path id="path141" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="M 18,4 V 5 H 9 V 6 7 H 8 7 v 2 2 h 1 v 2 h 1 v -3 h 1 V 9 h 8 2 1 V 4 Z" />
+        </g>
+        <g id="g91head 42" style="display:inline">
+            <path id="path90" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 16,3 V 4 H 15 V 5 H 8 V 6 H 7 V 8 H 6 v 6 H 5 v 2 h 1 v 1 H 9 V 16 14 9 H 20 V 6 5 4 H 19 V 3 Z" />
+            <path id="path91" style="fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="M 16,4 V 6 H 15 8 V 9 H 7 v 5 H 6 v 2 h 3 v -2 -4 h 1 V 9 h 5 1 3 V 4 Z" />
+        </g>
+        <g id="g104head 42" style="display:inline">
+            <path id="path103" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 16,3 V 4 H 15 V 5 H 8 V 6 H 7 V 8 H 6 v 6 H 5 v 2 h 1 v 1 H 9 V 16 14 9 H 20 V 6 5 4 H 19 V 3 Z" />
+            <path id="path104" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="M 16,4 V 6 H 15 8 V 9 H 7 v 5 H 6 v 2 h 3 v -2 -4 h 1 V 9 h 5 1 3 V 4 Z" />
+        </g>
+        <g id="g117head 42" style="display:inline">
+            <path id="path116" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 16,3 V 4 H 15 V 5 H 8 V 6 H 7 V 8 H 6 v 6 H 5 v 2 h 1 v 1 H 9 V 16 14 9 H 20 V 6 5 4 H 19 V 3 Z" />
+            <path id="path117" style="fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="M 16,4 V 6 H 15 8 V 9 H 7 v 5 H 6 v 2 h 3 v -2 -4 h 1 V 9 h 5 1 3 V 4 Z" />
+        </g>
+        <g id="g130head 42" style="display:inline">
+            <path id="path129" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 16,3 V 4 H 15 V 5 H 8 V 6 H 7 V 8 H 6 v 6 H 5 v 2 h 1 v 1 H 9 V 16 14 9 H 20 V 6 5 4 H 19 V 3 Z" />
+            <path id="path130" style="fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="M 16,4 V 6 H 15 8 V 9 H 7 v 5 H 6 v 2 h 3 v -2 -4 h 1 V 9 h 5 1 3 V 4 Z" />
+        </g>
+        <g id="g143head 42" style="display:inline">
+            <path id="path142" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 16,3 V 4 H 15 V 5 H 8 V 6 H 7 V 8 H 6 v 6 H 5 v 2 h 1 v 1 H 9 V 16 14 9 H 20 V 6 5 4 H 19 V 3 Z" />
+            <path id="path143" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="M 16,4 V 6 H 15 8 V 9 H 7 v 5 H 6 v 2 h 3 v -2 -4 h 1 V 9 h 5 1 3 V 4 Z" />
+        </g>
+        <g id="g93head 43" style="display:inline">
+            <path id="path92" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,7 V 8 H 7 V 9 H 6 v 2 h 1 v 1 h 1 v -2 h 2 V 8 h 8 v 2 h 2 v 2 h 1 v -1 h 1 V 9 H 21 V 8 H 20 V 7 Z" />
+            <path id="path93" style="fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="M 8,8 V 9 H 7 v 2 h 2 v -1 h 1 V 9 h 1 V 8 Z m 9,0 v 1 h 1 v 1 h 1 v 1 h 2 V 10 9 H 20 V 8 Z" />
+        </g>
+        <g id="g106head 43" style="display:inline">
+            <path id="path105" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,7 V 8 H 7 V 9 H 6 v 2 h 1 v 1 h 1 v -2 h 2 V 8 h 8 v 2 h 2 v 2 h 1 v -1 h 1 V 9 H 21 V 8 H 20 V 7 Z" />
+            <path id="path106" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="M 8,8 V 9 H 7 v 2 h 2 v -1 h 1 V 9 h 1 V 8 Z m 9,0 v 1 h 1 v 1 h 1 v 1 h 2 V 10 9 H 20 V 8 Z" />
+        </g>
+        <g id="g119head 43" style="display:inline">
+            <path id="path118" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,7 V 8 H 7 V 9 H 6 v 2 h 1 v 1 h 1 v -2 h 2 V 8 h 8 v 2 h 2 v 2 h 1 v -1 h 1 V 9 H 21 V 8 H 20 V 7 Z" />
+            <path id="path119" style="fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="M 8,8 V 9 H 7 v 2 h 2 v -1 h 1 V 9 h 1 V 8 Z m 9,0 v 1 h 1 v 1 h 1 v 1 h 2 V 10 9 H 20 V 8 Z" />
+        </g>
+        <g id="g132head 43" style="display:inline">
+            <path id="path131" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,7 V 8 H 7 V 9 H 6 v 2 h 1 v 1 h 1 v -2 h 2 V 8 h 8 v 2 h 2 v 2 h 1 v -1 h 1 V 9 H 21 V 8 H 20 V 7 Z" />
+            <path id="path132" style="fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="M 8,8 V 9 H 7 v 2 h 2 v -1 h 1 V 9 h 1 V 8 Z m 9,0 v 1 h 1 v 1 h 1 v 1 h 2 V 10 9 H 20 V 8 Z" />
+        </g>
+        <g id="g145head 43" style="display:inline">
+            <path id="path144" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 8,7 V 8 H 7 V 9 H 6 v 2 h 1 v 1 h 1 v -2 h 2 V 8 h 8 v 2 h 2 v 2 h 1 v -1 h 1 V 9 H 21 V 8 H 20 V 7 Z" />
+            <path id="path145" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="M 8,8 V 9 H 7 v 2 h 2 v -1 h 1 V 9 h 1 V 8 Z m 9,0 v 1 h 1 v 1 h 1 v 1 h 2 V 10 9 H 20 V 8 Z" />
+        </g>
+        <g id="layer59head 44" style="display:inline">
+            <path id="rect198" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 5,6 V 7 H 4 V 8 H 3 v 5 h 1 v 1 H 6 V 13 H 7 V 12 H 8 V 10 H 20 V 8 H 19 V 7 H 18 V 6 H 9 V 7 H 8 7 V 6 Z" />
+            <path id="rect206" style="fill:#ffaacc;stroke-linecap:round"
+                d="M 5,7 V 8 H 4 v 5 H 6 V 12 H 7 V 7 Z M 9,7 V 8 H 8 v 2 h 2 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 2 V 8 H 18 V 7 Z" />
+            <path id="rect221" style="fill:#ff6600;stroke-linecap:round" d="M 7,8 V 9 H 8 V 8 Z" />
+        </g>
+        <g id="g96head 44" style="display:inline">
+            <path id="path94" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 5,6 V 7 H 4 V 8 H 3 v 5 h 1 v 1 H 6 V 13 H 7 V 12 H 8 V 10 H 20 V 8 H 19 V 7 H 18 V 6 H 9 V 7 H 8 7 V 6 Z" />
+            <path id="path95" style="fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="M 5,7 V 8 H 4 v 5 H 6 V 12 H 7 V 7 Z M 9,7 V 8 H 8 v 2 h 2 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 2 V 8 H 18 V 7 Z" />
+            <path id="path96" style="fill:#ff6600;stroke-linecap:round" d="M 7,8 V 9 H 8 V 8 Z" />
+        </g>
+        <g id="g109head 44" style="display:inline">
+            <path id="path107" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 5,6 V 7 H 4 V 8 H 3 v 5 h 1 v 1 H 6 V 13 H 7 V 12 H 8 V 10 H 20 V 8 H 19 V 7 H 18 V 6 H 9 V 7 H 8 7 V 6 Z" />
+            <path id="path108" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="M 5,7 V 8 H 4 v 5 H 6 V 12 H 7 V 7 Z M 9,7 V 8 H 8 v 2 h 2 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 2 V 8 H 18 V 7 Z" />
+            <path id="path109" style="fill:#00ccff;fill-opacity:1;stroke-linecap:round" d="M 7,8 V 9 H 8 V 8 Z" />
+        </g>
+        <g id="g122head 44" style="display:inline">
+            <path id="path120" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 5,6 V 7 H 4 V 8 H 3 v 5 h 1 v 1 H 6 V 13 H 7 V 12 H 8 V 10 H 20 V 8 H 19 V 7 H 18 V 6 H 9 V 7 H 8 7 V 6 Z" />
+            <path id="path121" style="fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="M 5,7 V 8 H 4 v 5 H 6 V 12 H 7 V 7 Z M 9,7 V 8 H 8 v 2 h 2 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 2 V 8 H 18 V 7 Z" />
+            <path id="path122" style="fill:#ff6600;stroke-linecap:round" d="M 7,8 V 9 H 8 V 8 Z" />
+        </g>
+        <g id="g135head 44" style="display:inline">
+            <path id="path133" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 5,6 V 7 H 4 V 8 H 3 v 5 h 1 v 1 H 6 V 13 H 7 V 12 H 8 V 10 H 20 V 8 H 19 V 7 H 18 V 6 H 9 V 7 H 8 7 V 6 Z" />
+            <path id="path134" style="fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="M 5,7 V 8 H 4 v 5 H 6 V 12 H 7 V 7 Z M 9,7 V 8 H 8 v 2 h 2 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 2 V 8 H 18 V 7 Z" />
+            <path id="path135" style="fill:#ff6600;stroke-linecap:round" d="M 7,8 V 9 H 8 V 8 Z" />
+        </g>
+        <g id="g148head 44" style="display:inline">
+            <path id="path146" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 5,6 V 7 H 4 V 8 H 3 v 5 h 1 v 1 H 6 V 13 H 7 V 12 H 8 V 10 H 20 V 8 H 19 V 7 H 18 V 6 H 9 V 7 H 8 7 V 6 Z" />
+            <path id="path147" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="M 5,7 V 8 H 4 v 5 H 6 V 12 H 7 V 7 Z M 9,7 V 8 H 8 v 2 h 2 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 2 V 8 H 18 V 7 Z" />
+            <path id="path148" style="fill:#ff6600;stroke-linecap:round" d="M 7,8 V 9 H 8 V 8 Z" />
+        </g>
+        <g id="layer60head 45" style="display:inline">
+            <path id="rect223" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 v 3 H 9 V 9 h 10 v 1 h 1 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 13 V 4 Z" />
+            <path id="rect230" style="fill:#2aff80;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 v 3 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 2 v 1 h 1 V 9 h 1 v 1 h 1 V 8 H 18 V 7 H 17 V 6 H 13 V 5 Z" />
+        </g>
+        <g id="g98head 45" style="display:inline">
+            <path id="path97" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 v 3 H 9 V 9 h 10 v 1 h 1 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 13 V 4 Z" />
+            <path id="path98" style="fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 v 3 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 2 v 1 h 1 V 9 h 1 v 1 h 1 V 8 H 18 V 7 H 17 V 6 H 13 V 5 Z" />
+        </g>
+        <g id="g111head 45" style="display:inline">
+            <path id="path110" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 v 3 H 9 V 9 h 10 v 1 h 1 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 13 V 4 Z" />
+            <path id="path111" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 v 3 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 2 v 1 h 1 V 9 h 1 v 1 h 1 V 8 H 18 V 7 H 17 V 6 H 13 V 5 Z" />
+        </g>
+        <g id="g124head 45" style="display:inline">
+            <path id="path123" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 v 3 H 9 V 9 h 10 v 1 h 1 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 13 V 4 Z" />
+            <path id="path124" style="fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 v 3 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 2 v 1 h 1 V 9 h 1 v 1 h 1 V 8 H 18 V 7 H 17 V 6 H 13 V 5 Z" />
+        </g>
+        <g id="g137head 45" style="display:inline">
+            <path id="path136" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 v 3 H 9 V 9 h 10 v 1 h 1 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 13 V 4 Z" />
+            <path id="path137" style="fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 v 3 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 2 v 1 h 1 V 9 h 1 v 1 h 1 V 8 H 18 V 7 H 17 V 6 H 13 V 5 Z" />
+        </g>
+        <g id="g150head 45" style="display:inline">
+            <path id="path149" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 v 3 H 9 V 9 h 10 v 1 h 1 V 8 H 19 V 7 H 18 V 6 H 17 V 5 H 13 V 4 Z" />
+            <path id="path150" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 v 3 h 1 V 9 h 1 v 1 h 1 V 9 h 1 v 1 h 1 V 9 h 2 v 1 h 1 V 9 h 1 v 1 h 1 V 8 H 18 V 7 H 17 V 6 H 13 V 5 Z" />
+        </g>
+        <g id="layer61head 46" style="display:inline">
+            <path id="rect239" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 13,2 V 3 H 12 V 4 H 11 V 5 H 10 V 6 H 7 V 7 H 6 v 2 h 1 v 1 H 21 V 9 h 1 V 7 H 21 V 6 H 18 V 5 H 17 V 4 H 16 V 3 H 15 V 2 Z" />
+            <path id="rect246" style="fill:#d38d5f;stroke-linecap:round"
+                d="M 13,3 V 4 H 12 V 5 H 11 V 6 7 H 7 v 2 h 1 v 1 H 20 V 9 h 1 V 7 H 17 V 6 5 H 16 V 4 H 15 V 3 Z" />
+            <path id="rect256" style="fill:#ff0000;stroke-linecap:round" d="M 7,8 V 9 H 21 V 8 Z" />
+            <path id="rect257" style="fill:#00aa44;stroke-linecap:round"
+                d="m 9,8 v 1 h 1 V 8 Z m 3,0 v 1 h 1 V 8 Z m 3,0 v 1 h 1 V 8 Z m 3,0 v 1 h 1 V 8 Z" />
+            <path id="rect260" style="fill:#784421;stroke-linecap:round" d="m 11,6 v 1 h 6 V 6 Z" />
+        </g>
+        <g id="layer62head 47" style="display:inline">
+            <path id="rect262" style="fill:#1a1a1a;stroke-width:1.06904;stroke-linecap:round"
+                d="m 9,2 v 1 h 2 V 4 H 10 V 6 H 9 v 3 h 8 V 6 H 16 V 4 H 15 V 3 H 13 V 2 Z M 9,3 H 8 V 4 H 7 V 5 H 9 V 4 Z" />
+            <path id="rect267" style="fill:#ff2a2a;stroke-linecap:round" d="m 11,4 v 2 h -1 v 3 h 6 V 6 H 15 V 4 Z" />
+        </g>
+        <g id="layer63head 48" style="display:inline">
+            <path id="rect268" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,2 V 3 H 11 V 4 H 10 V 5 H 9 V 7 H 7 V 8 H 6 v 2 h 1 v 1 h 1 v -1 h 12 v 1 h 1 v -1 h 1 V 8 H 21 V 7 H 19 V 5 H 18 V 4 H 17 V 3 H 16 V 2 Z" />
+            <path id="rect275" style="fill:#003380;stroke-linecap:round"
+                d="M 12,3 V 4 5 H 11 10 V 7 H 9 V 8 H 7 v 2 H 21 V 8 H 19 V 7 H 18 V 5 H 17 16 V 4 3 Z m 1,4 h 1 v 1 h -1 z m 2,0 h 1 v 1 h -1 z" />
+            <path id="rect279" style="fill:#f9f9f9;stroke-linecap:round"
+                d="m 11,5 v 1 h 1 V 5 Z m 1,1 v 1 1 h 1 V 7 h 1 v 1 h -1 v 1 h 3 V 8 H 15 V 7 h 1 V 6 Z m 4,0 h 1 V 5 h -1 z m 0,3 v 1 h 1 V 9 Z m -5,0 v 1 h 1 V 9 Z" />
+        </g>
+        <g id="g100head 49" style="display:inline">
+            <path id="path99" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,6 V 7 H 8 v 3 h 2 V 9 h 8 v 1 h 1 V 7 H 18 V 6 Z" />
+            <path id="path100" style="fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="m 9,7 v 3 h 1 V 9 h 8 V 7 h -8 z" />
+        </g>
+        <g id="g113head 49" style="display:inline">
+            <path id="path112" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,6 V 7 H 8 v 3 h 2 V 9 h 8 v 1 h 1 V 7 H 18 V 6 Z" />
+            <path id="path113" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 9,7 v 3 h 1 V 9 h 8 V 7 h -8 z" />
+        </g>
+        <g id="g126head 49" style="display:inline">
+            <path id="path125" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,6 V 7 H 8 v 3 h 2 V 9 h 8 v 1 h 1 V 7 H 18 V 6 Z" />
+            <path id="path126" style="fill:#ffd42a;fill-opacity:1;stroke-linecap:round"
+                d="m 9,7 v 3 h 1 V 9 h 8 V 7 h -8 z" />
+        </g>
+        <g id="g139head 49" style="display:inline">
+            <path id="path138" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,6 V 7 H 8 v 3 h 2 V 9 h 8 v 1 h 1 V 7 H 18 V 6 Z" />
+            <path id="path139" style="fill:#999999;fill-opacity:1;stroke-linecap:round"
+                d="m 9,7 v 3 h 1 V 9 h 8 V 7 h -8 z" />
+        </g>
+        <g id="g152head 49" style="display:inline">
+            <path id="path151" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 9,6 V 7 H 8 v 3 h 2 V 9 h 8 v 1 h 1 V 7 H 18 V 6 Z" />
+            <path id="path152" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="m 9,7 v 3 h 1 V 9 h 8 V 7 h -8 z" />
+        </g>
+        <g id="layer65head 50" style="display:inline">
+            <path id="rect296" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 V 8 H 7 v 1 5 1 h 1 v 1 1 h 9 v -1 h 2 v -1 h 1 v -1 h 1 V 9 H 20 V 8 7 H 19 V 6 H 18 V 5 H 16 V 4 Z m -1,5 h 6 v 1 h 2 v 3 h -1 v 1 H 10 V 13 H 9 v -2 h 1 v -1 h 1 z" />
+            <path id="rect314" style="fill:#333333;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 V 8 H 8 v 1 1 1 2 1 1 h 11 v -1 h 1 V 13 9 H 19 V 7 H 18 V 6 H 16 V 5 Z m -1,4 h 6 v 1 h 2 v 3 h -1 v 1 H 10 V 13 H 9 v -2 h 1 v -1 h 1 z m -2,7 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g83head 50" style="display:inline">
+            <path id="path82" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 V 8 H 7 v 1 5 1 h 1 v 1 1 h 9 v -1 h 2 v -1 h 1 v -1 h 1 V 9 H 20 V 8 7 H 19 V 6 H 18 V 5 H 16 V 4 Z m -1,5 h 6 v 1 h 2 v 3 h -1 v 1 H 10 V 13 H 9 v -2 h 1 v -1 h 1 z" />
+            <path id="path83" style="fill:#ff6600;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 V 8 H 8 v 1 1 1 2 1 1 h 11 v -1 h 1 V 13 9 H 19 V 7 H 18 V 6 H 16 V 5 Z m -1,4 h 6 v 1 h 2 v 3 h -1 v 1 H 10 V 13 H 9 v -2 h 1 v -1 h 1 z m -2,7 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g87head 50" style="display:inline">
+            <path id="path86" style="fill:#1a1a1a;stroke-linecap:round"
+                d="M 12,4 V 5 H 10 V 6 H 9 V 7 H 8 V 8 H 7 v 1 5 1 h 1 v 1 1 h 9 v -1 h 2 v -1 h 1 v -1 h 1 V 9 H 20 V 8 7 H 19 V 6 H 18 V 5 H 16 V 4 Z m -1,5 h 6 v 1 h 2 v 3 h -1 v 1 H 10 V 13 H 9 v -2 h 1 v -1 h 1 z" />
+            <path id="path87" style="fill:#ff80b2;stroke-linecap:round"
+                d="M 12,5 V 6 H 10 V 7 H 9 V 8 H 8 v 1 1 1 2 1 1 h 11 v -1 h 1 V 13 9 H 19 V 7 H 18 V 6 H 16 V 5 Z m -1,4 h 6 v 1 h 2 v 3 h -1 v 1 H 10 V 13 H 9 v -2 h 1 v -1 h 1 z m -2,7 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z" />
+        </g>
+    </g>
+    <g id="layer21accessoires" style="display:inline">
+        <g id="layer22accessoires 1" style="display:inline">
+            <path id="rect208"
+                style="fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,12 v 1 h -1 v 1 h 1 v 1 h 5 v -1 h 1 v -1 h -1 v -1 z" />
+            <path id="rect209"
+                style="fill:#ff6600;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,13 v 1 h 2 v -1 z" />
+            <path id="rect210"
+                style="fill:#f9f9f9;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 21,13 v 1 h 2 v -1 z" />
+            <path id="rect211"
+                style="fill:#ff0000;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 23,13 v 1 h 1 v -1 z" />
+            <path id="rect212"
+                style="fill:#e6e6e6;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 23,8 v 1 h 1 V 8 Z m 1,1 v 1 h 1 V 9 Z m 1,1 v 2 h 1 v -2 z m 0,2 h -1 v 1 h 1 z" />
+        </g>
+        <g id="layer67accessoires 2" style="display:inline">
+            <path id="rect383" style="display:inline;fill:#1a1a1a;stroke-linecap:round"
+                d="m 22,12 v 1 h -1 v 1 h -1 v -1 h -1 v 3 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -3 h -1 v -1 z" />
+            <path id="rect374" style="fill:#a05a2c;stroke-linecap:round"
+                d="m 18,13 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 h 1 v -1 -1 -1 h -2 v 1 1 1 z" />
+            <path id="rect382" style="fill:#deaa87;stroke-linecap:round" d="m 22,14 v 1 h 2 v -1 z" />
+            <path id="rect388" style="fill:#cccccc;stroke-linecap:round"
+                d="m 24,9 v 2 h 1 V 9 Z m 0,2 h -1 v 1 h 1 z" />
+        </g>
+        <g id="layer69accessoires 3" style="display:inline">
+            <path id="rect443" style="fill:#000000;fill-opacity:1;stroke-linecap:round"
+                d="m 7,16 v 2 h 5 v 1 h 1 v -1 h 4 v -2 z" />
+            <path id="rect444" style="fill:#ff0000;fill-opacity:1;stroke-linecap:round" d="m 8,16 v 1 h 8 v -1 z" />
+            <path id="rect445" style="fill:#ffcc00;fill-opacity:1;stroke-linecap:round" d="m 12,17 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g920accessoires 3" style="display:inline">
+            <path id="path918" style="fill:#000000;fill-opacity:1;stroke-linecap:round"
+                d="m 7,16 v 2 h 5 v 1 h 1 v -1 h 4 v -2 z" />
+            <path id="path919" style="fill:#2a2aff;fill-opacity:1;stroke-linecap:round" d="m 8,16 v 1 h 8 v -1 z" />
+            <path id="path920" style="fill:#ffcc00;fill-opacity:1;stroke-linecap:round" d="m 12,17 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g923accessoires 3" style="display:inline">
+            <path id="path921" style="fill:#000000;fill-opacity:1;stroke-linecap:round"
+                d="m 7,16 v 2 h 5 v 1 h 1 v -1 h 4 v -2 z" />
+            <path id="path922" style="fill:#ff2a7f;fill-opacity:1;stroke-linecap:round" d="m 8,16 v 1 h 8 v -1 z" />
+            <path id="path923" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round" d="m 12,17 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer70accessoires 4" style="display:inline">
+            <path id="rect446" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 2,20 v 1 H 1 v 2 h 1 v 1 H 3 V 23 H 4 V 21 H 3 v -1 z" />
+            <path id="rect447" style="fill:#e6e6e6;fill-opacity:1;stroke-linecap:round"
+                d="m 1,16 v 1 h 1 v -1 z m 0,1 H 0 v 1 h 1 z m 0,1 v 1 h 1 v -1 z m 0,1 H 0 v 1 h 1 z m 0,1 v 1 h 1 v -1 z" />
+            <path id="rect452" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 2,14 v 1 H 1 v 1 H 4 V 15 H 3 v -1 z" />
+            <path id="rect453" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 2,16 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 2 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v -1 h 1 V 22 H 10 V 21 H 9 V 20 H 8 V 19 H 7 V 18 H 6 V 17 H 5 v -1 z" />
+            <path id="rect461" style="fill:#aa4400;fill-opacity:1;stroke-linecap:round"
+                d="m 2,15 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 2,2 v 3 h 1 v -3 z" />
+            <path id="rect467" style="fill:#b3b3b3;fill-opacity:1;stroke-linecap:round" d="m 7,21 v 2 h 2 v -2 z" />
+            <path id="rect468" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round" d="m 2,21 v 1 h 1 v -1 z" />
+            <path id="rect469" style="fill:#ff2a2a;fill-opacity:1;stroke-linecap:round" d="m 2,22 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer71accessoires 5" style="display:inline">
+            <path id="rect470" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 4,24 v 1 H 3 v 1 H 2 v 3 h 1 v 1 h 1 v 1 h 5 v -1 h 1 v -1 h 1 V 26 H 10 V 25 H 9 v -1 z" />
+            <path id="rect472" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 4,25 v 1 H 3 v 3 h 1 v 1 h 5 v -1 h 1 V 26 H 9 v -1 z" />
+            <path id="rect473" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 6,25 v 2 H 5 V 26 H 4 v 1 H 3 v 1 h 1 v 1 h 1 v -1 h 1 v 2 h 1 v -2 h 1 v 1 h 1 v -1 h 1 V 27 H 9 V 26 H 8 v 1 H 7 v -2 z" />
+        </g>
+        <g id="layer72accessoires 6" style="display:inline">
+            <path id="rect476" style="fill:#ff0000;fill-opacity:1;stroke-linecap:round" d="m 2,27 v 3 h 3 v -3 z" />
+            <path id="rect477" style="fill:#ffb380;fill-opacity:1;stroke-linecap:round" d="m 4,28 v 1 h 1 v -1 z" />
+            <path id="rect478" style="fill:#784421;fill-opacity:1;stroke-linecap:round" d="m 3,26 v 1 h 1 v -1 z" />
+            <path id="rect479" style="fill:#00aa44;fill-opacity:1;stroke-linecap:round" d="m 2,25 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer73accessoires 7" style="display:inline">
+            <path id="rect480" style="fill:#a05a2c;fill-opacity:1;stroke-linecap:round"
+                d="m 2,29 v 2 h 1 v 1 h 2 v -1 h 1 v -2 z" />
+            <path id="rect482" style="fill:#00aa44;fill-opacity:1;stroke-linecap:round"
+                d="m 3,25 v 4 H 5 V 27 H 6 V 26 H 5 v -1 z" />
+            <path id="rect484" style="fill:#008033;fill-opacity:1;stroke-linecap:round"
+                d="m 1,26 v 1 1 H 3 V 27 H 2 v -1 z" />
+        </g>
+        <g id="layer74accessoires 8" style="display:inline">
+            <path id="rect485" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 2,27 v 2 1 h 2 v -1 h 1 v -2 z" />
+            <path id="rect486" style="fill:#b3b3b3;fill-opacity:1;stroke-linecap:round" d="m 3,27 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer75accessoires 9" style="display:inline">
+            <path id="rect487" style="fill:#e6e6e6;fill-opacity:1;stroke-linecap:round" d="m 23,10 v 2 h 1 v -2 z" />
+            <path id="rect208-5"
+                style="display:inline;fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,12 v 1 h -1 v 1 h 1 v 1 h 5 v -1 h 1 v -1 h -1 v -1 z" />
+            <path id="rect209-3"
+                style="display:inline;fill:#4d4d4d;stroke:none;stroke-width:1.41421;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,13 v 1 h 4 v -1 z" />
+            <path id="rect211-6"
+                style="display:inline;fill:#5599ff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 23,13 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g927accessoires 9" style="display:inline">
+            <path id="path924" style="fill:#e6e6e6;fill-opacity:1;stroke-linecap:round" d="m 23,10 v 2 h 1 v -2 z" />
+            <path id="path925"
+                style="display:inline;fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,12 v 1 h -1 v 1 h 1 v 1 h 5 v -1 h 1 v -1 h -1 v -1 z" />
+            <path id="path926"
+                style="display:inline;fill:#4d4d4d;stroke:none;stroke-width:1.41421;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,13 v 1 h 4 v -1 z" />
+            <path id="path927"
+                style="display:inline;fill:#ff5599;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 23,13 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g931accessoires 9" style="display:inline">
+            <path id="path928" style="fill:#e6e6e6;fill-opacity:1;stroke-linecap:round" d="m 23,10 v 2 h 1 v -2 z" />
+            <path id="path929"
+                style="display:inline;fill:#1a1a1a;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,12 v 1 h -1 v 1 h 1 v 1 h 5 v -1 h 1 v -1 h -1 v -1 z" />
+            <path id="path930"
+                style="display:inline;fill:#4d4d4d;stroke:none;stroke-width:1.41421;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 19,13 v 1 h 4 v -1 z" />
+            <path id="path931"
+                style="display:inline;fill:#87deaa;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+                d="m 23,13 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer76accessoires 10" style="display:inline">
+            <path id="rect488" style="fill:#f4e3d7;fill-opacity:1;stroke-linecap:round" d="m 3,29 v 2 h 1 v -2 z" />
+            <path id="rect489" style="fill:#e6e6e6;fill-opacity:1;stroke-linecap:round"
+                d="m 2,26 v 1 H 1 v 1 1 H 6 V 28 27 H 5 v -1 z" />
+            <path id="rect491" style="fill:#ff0000;fill-opacity:1;stroke-linecap:round"
+                d="m 3,26 v 1 H 2 1 v 2 h 1 v -1 h 1 v 1 H 5 6 V 27 H 5 v 1 H 4 v -1 h 1 v -1 z" />
+        </g>
+        <g id="layer77accessoires 11" style="display:inline">
+            <path id="rect495" style="fill:#803300;fill-opacity:1;stroke-linecap:round" d="m 1,30 v 1 h 5 v -1 z" />
+            <path id="rect496" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 3,27 v 1 H 2 v 1 1 H 5 V 29 H 4 v -1 -1 z" />
+            <path id="rect498" style="fill:#ffff00;fill-opacity:1;stroke-linecap:round" d="m 3,29 v 1 h 1 v -1 z" />
+            <path id="rect499" style="fill:#ff0000;fill-opacity:1;stroke-linecap:round"
+                d="m 3,24 v 1 H 2 v 2 H 1 v 2 h 1 v -1 h 1 v -1 h 1 v 2 H 6 V 28 H 5 V 27 26 H 4 v -2 z" />
+        </g>
+        <g id="layer78accessoires 12" style="display:inline">
+            <path id="rect503" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 2,26 v 1 1 h 1 v 1 H 4 V 28 H 5 V 27 26 H 4 3 Z" />
+            <path id="rect504" style="fill:#2ca02c;fill-opacity:1;stroke-linecap:round"
+                d="m 2,23 v 1 h 1 v 2 H 4 V 25 H 5 V 24 H 4 V 23 H 3 Z" />
+        </g>
+        <g id="layer79accessoires 13" style="display:inline">
+            <path id="rect506" style="fill:#ffff00;fill-opacity:1;stroke-linecap:round"
+                d="m 4,26 v 1 H 3 v 3 h 1 v 1 h 1 v -1 -3 -1 z" />
+            <path id="rect507" style="fill:#803300;fill-opacity:1;stroke-linecap:round"
+                d="m 4,25 v 1 h 1 v -1 z m 1,5 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer80accessoires 14" style="display:inline">
+            <path id="rect508" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 2,27 v 1 h 2 v 2 h 1 v -2 -1 z" />
+            <path id="rect509" style="fill:#ffff00;fill-opacity:1;stroke-linecap:round"
+                d="m 3,26 v 3 H 4 5 6 V 28 H 5 V 27 H 4 v -1 z" />
+            <path id="rect511" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round" d="m 3,27 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g934accessoires 14" style="display:inline">
+            <path id="path932" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 2,27 v 1 h 2 v 2 h 1 v -2 -1 z" />
+            <path id="path933" style="fill:#ff2a2a;fill-opacity:1;stroke-linecap:round"
+                d="m 3,26 v 3 H 4 5 6 V 28 H 5 V 27 H 4 v -1 z" />
+            <path id="path934" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round" d="m 3,27 v 1 h 1 v -1 z" />
+            <path id="rect934" style="fill:#f9f9f9;fill-opacity:1;stroke-linecap:round" d="m 3,28 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer81mouse" style="display:inline">
+            <path id="rect512" style="fill:#ffaaaa;fill-opacity:1;stroke-linecap:round"
+                d="m 3,26 v 1 H 1 v 1 h 1 v 1 1 h 1 v -1 h 1 v 1 h 1 v -1 0 H 6 V 28 H 4 v -2 z" />
+            <path id="rect516" style="fill:#b3b3b3;fill-opacity:1;stroke-linecap:round" d="m 2,27 v 2 h 3 v -2 z" />
+            <path id="rect517" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round" d="m 2,27 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g937labrat" style="display:inline">
+            <path id="path935" style="fill:#ffaaaa;fill-opacity:1;stroke-linecap:round"
+                d="m 3,26 v 1 H 1 v 1 h 1 v 1 1 h 1 v -1 h 1 v 1 h 1 v -1 0 H 6 V 28 H 4 v -2 z" />
+            <path id="path936" style="fill:#ececec;fill-opacity:1;stroke-linecap:round" d="m 2,27 v 2 h 3 v -2 z" />
+            <path id="path937" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round" d="m 2,27 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer82cat" style="display:inline">
+            <path id="rect518" style="fill:#ff6600;fill-opacity:1;stroke-linecap:round"
+                d="m 2,25 v 5 h 1 v -1 h 1 v 1 h 1 v -1 h 1 v 1 H 7 V 25 H 6 v 2 H 5 V 25 H 4 v 1 H 3 v -1 z" />
+            <path id="rect522" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 2,27 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z" />
+            <path id="rect523" style="fill:#1a1a1a;fill-opacity:0.5;stroke-linecap:round"
+                d="m 6,25 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g940cat" style="display:inline">
+            <path id="path938" style="fill:#aca793;fill-opacity:1;stroke-linecap:round"
+                d="m 2,25 v 5 h 1 v -1 h 1 v 1 h 1 v -1 h 1 v 1 H 7 V 25 H 6 v 2 H 5 V 25 H 4 v 1 H 3 v -1 z" />
+            <path id="path939" style="fill:#1a1a1a;fill-opacity:1;stroke-linecap:round"
+                d="m 2,27 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z" />
+            <path id="path940" style="fill:#1a1a1a;fill-opacity:0.5;stroke-linecap:round"
+                d="m 6,25 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z" />
+        </g>
+        <g id="g943cat" style="display:inline">
+            <path id="path941" style="fill:#333333;fill-opacity:1;stroke-linecap:round"
+                d="m 2,25 v 5 h 1 v -1 h 1 v 1 h 1 v -1 h 1 v 1 H 7 V 25 H 6 v 2 H 5 V 25 H 4 v 1 H 3 v -1 z" />
+            <path id="path942" style="fill:#37c837;fill-opacity:1;stroke-linecap:round"
+                d="m 2,27 v 1 h 1 v -1 z m 2,0 v 1 h 1 v -1 z" />
+            <path id="path943" style="fill:#1a1a1a;fill-opacity:0.5;stroke-linecap:round"
+                d="m 6,25 v 1 h 1 v -1 z m -3,1 v 1 h 1 v -1 z m 2,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z" />
+        </g>
+        <g id="layer83accessoires 17" style="display:inline">
+            <path id="rect526" style="display:inline;fill:#ff2929;fill-opacity:1;stroke-linecap:round"
+                d="m 9,12 v 1 h 1 v -1 z m 1,1 v 1 h 2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h -8 z" />
+        </g>
+        <g id="g944accessoires 17" style="display:inline">
+            <path id="path944" style="display:inline;fill:#0044aa;fill-opacity:1;stroke-linecap:round"
+                d="m 9,12 v 1 h 1 v -1 z m 1,1 v 1 h 2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h -8 z" />
+        </g>
+        <g id="g945accessoires 17" style="display:inline">
+            <path id="path945" style="display:inline;fill:#800080;fill-opacity:1;stroke-linecap:round"
+                d="m 9,12 v 1 h 1 v -1 z m 1,1 v 1 h 2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h -8 z" />
+        </g>
+    </g>
+</svg>

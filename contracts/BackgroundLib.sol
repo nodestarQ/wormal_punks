@@ -52,10 +52,10 @@ library BackgroundLib {
         return bytes3(uint24(uint256(w >> shift)));
     }
 
-    function backgroundSvg(
+    function background(
         bytes32 h,
         uint256 i
-    ) internal pure returns (string memory) {
+    ) external pure returns (string memory) {
         bytes3 wall = colorBase(i);
         bytes3 floor = colorDark(i);
 
