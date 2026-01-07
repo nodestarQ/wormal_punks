@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-e949badf1d3755263d0dfecc7a506c4ee9ba9d24",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/AccData.sol": "project/contracts/AccData.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/AccData.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nlibrary AccData {\n    function traits(uint256 i) external pure returns (string memory) {\n        if (i == 0) return \"Cigarette\";\n        if (i == 1) return \"Pipe\";\n        if (i == 2) return \"Collar Red\";\n        if (i == 3) return \"Collar Blue\";\n        if (i == 4) return \"Collar Pink\";\n        if (i == 5) return \"Rog\";\n        if (i == 6) return \"Ball\";\n        if (i == 7) return \"Apple\";\n        if (i == 8) return \"Cactus\";\n        if (i == 9) return \"Floppy Disk\";\n        if (i == 10) return \"Vape Blue\";\n        if (i == 11) return \"Vape Red\";\n        if (i == 12) return \"Vape Green\";\n        if (i == 13) return \"Mushroom\";\n        if (i == 14) return \"Fire\";\n        if (i == 15) return \"Root\";\n        if (i == 16) return \"Banana\";\n        if (i == 17) return \"Chick\";\n        if (i == 18) return \"Bullfinch\";\n        if (i == 19) return \"Sewer Rat\";\n        if (i == 20) return \"Lab Rat\";\n        if (i == 21) return \"Orange Cat\";\n        if (i == 22) return \"Grey Cat\";\n        if (i == 23) return \"Black Cat\";\n        if (i == 24) return \"Face Mask Red\";\n        if (i == 25) return \"Face Mask Blue\";\n        if (i == 26) return \"Face Mask Purple\";\n        if (i == 27) return \"None\";\n\n        revert(\"acc idx\");\n    }\n}\n"
+      }
+    }
+  }
+}

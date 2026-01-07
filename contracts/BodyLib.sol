@@ -1,16 +1,14 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity 0.8.17;
 
 import "./HexLib.sol";
 
 library BodyLib {
     uint256 internal constant BASE_BODY_COLOR_N = 28;
-    uint8 internal constant BASE_BODY_COLOR_TAIL = 8; // last pack has 8 colors (indices 20..27)
-
-    uint256 internal constant MATERIAL_BODY_COLOR_N = 5; // 5 pairs => 10 colors in one pack
-    uint256 internal constant VAR1_BODY_COLOR_N = 6; // 6 pairs => 12 colors across 2 packs
-    uint256 internal constant VAR2_BODY_COLOR_N = 4; // 4 pairs => 8 colors in one pack
-
+    uint8 internal constant BASE_BODY_COLOR_TAIL = 8;
+    uint256 internal constant MATERIAL_BODY_COLOR_N = 5;
+    uint256 internal constant VAR1_BODY_COLOR_N = 6;
+    uint256 internal constant VAR2_BODY_COLOR_N = 4;
     uint256 internal constant OFF_BASE = 0;
     uint256 internal constant OFF_MAT = OFF_BASE + BASE_BODY_COLOR_N;
     uint256 internal constant OFF_VAR1 = OFF_MAT + MATERIAL_BODY_COLOR_N;
@@ -25,7 +23,7 @@ library BodyLib {
         hex"edb2e5dd6cd9b65cb7ed77b4c36599ff66002ca05a0066ff0000000000000000";
 
     bytes32 internal constant PACK_BASE_MATERIALS =
-        hex"ffd700b7bec855ddff2aff80ff5555ccac009aa4b222d3ff00f663ff22220000"; // 0..4 base, 5..9 shade
+        hex"ffd700b7bec855ddff2aff80ff5555ccac009aa4b222d3ff00f663ff22220000";
 
     bytes32 internal constant PACK_VAR1_0 =
         hex"f9f9f9ececec71c83755ddff0080004d4d4dff2a2aff6600aa00d42a7fff0000";
@@ -33,7 +31,7 @@ library BodyLib {
         hex"00d455e6c9120000000000000000000000000000000000000000000000000000";
 
     bytes32 internal constant PACK_VAR2_0 =
-        hex"f9f9f9f2f2f2c87137aade8700aad4e6e6e6ffd42a7c916f0000000000000000"; // 0..3 base, 4..7 shade
+        hex"f9f9f9f2f2f2c87137aade8700aad4e6e6e6ffd42a7c916f0000000000000000";
 
     string internal constant D_BODY =
         "m 11,8 v 1 h -1 v 1 H 9 v 3 1 3 h 6 v -2 -1 h 1 3 V 10 H 18 V 9 H 17 V 8 Z M 7,18 v 4 h 1 1 6 1 1 V 18 H 16 15 9 8 Z m 14,3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 H 16 15 V 23 H 9 v 2 1 h 1 v 2 h 1 v 1 h 9 v -1 h 1 v -1 h 1 v -1 -1 h 1 v -1 h 1 v 1 h 1 v 1 h 3 v -1 h -1 v -1 h -1 v -2 h -1 v -1 z";
@@ -55,12 +53,12 @@ library BodyLib {
         uint256 shift;
 
         if (i < 20) {
-            uint256 p = i / 10; // 0 or 1
-            j = i - p * 10; // 0..9
+            uint256 p = i / 10;
+            j = i - p * 10;
             shift = (9 - j) * 24 + 16;
             w = (p == 0) ? PACK_BASE_0 : PACK_BASE_1;
         } else {
-            j = i - 20; // 0..7
+            j = i - 20;
             shift = (uint256(BASE_BODY_COLOR_TAIL - 1) - j) * 24 + 64;
             w = PACK_BASE_2;
         }
@@ -77,7 +75,7 @@ library BodyLib {
     }
 
     function _matColor(uint256 j) private pure returns (bytes3) {
-        uint256 shift = (9 - j) * 24 + 16; // 10 colors, 2-byte pad
+        uint256 shift = (9 - j) * 24 + 16;
         return bytes3(uint24(uint256(PACK_BASE_MATERIALS >> shift)));
     }
 
@@ -94,8 +92,8 @@ library BodyLib {
             uint256 shift = (9 - j) * 24 + 16;
             return bytes3(uint24(uint256(PACK_VAR1_0 >> shift)));
         } else if (j < 12) {
-            uint256 k = j - 10; // 0..1
-            uint256 shift = (1 - k) * 24 + 208; // 2 colors => padBits 208
+            uint256 k = j - 10;
+            uint256 shift = (1 - k) * 24 + 208;
             return bytes3(uint24(uint256(PACK_VAR1_1 >> shift)));
         } else {
             revert("idx");
@@ -112,7 +110,7 @@ library BodyLib {
 
     function _var2Color(uint256 j) private pure returns (bytes3) {
         if (j >= 8) revert("idx");
-        uint256 shift = (7 - j) * 24 + 64; // 8 colors => padBits 64
+        uint256 shift = (7 - j) * 24 + 64;
         return bytes3(uint24(uint256(PACK_VAR2_0 >> shift)));
     }
 
@@ -174,13 +172,13 @@ library BodyLib {
             );
     }
 
-    function body(uint256 i) external pure returns (string memory) {
+    function visual(uint256 i) external pure returns (string memory) {
         return
             string(
                 abi.encodePacked(
-                    '<path id="bodyOutline" style="fill:#000;" d="M 11,7 V 8 H 10 V 9 H 9 v 1 H 8 v 7 H 7 v 1 H 6 v 4 h 1 v 1 h 1 v 2 1 h 1 v 2 h 1 v 1 h 1 v 1 h 9 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 2 v 1 h 3 v -1 h 1 v -1 h -1 v -1 h -1 v -2 h -1 v -1 h -1 v -1 h -4 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h 1 v -1 h 1 v -4 h -1 v -1 h -1 v -2 h 3 v -1 h 1 V 10 H 19 V 9 H 18 V 8 H 17 V 7 Z" />',
+                    '<path style="fill:#000;" d="M 11,7 V 8 H 10 V 9 H 9 v 1 H 8 v 7 H 7 v 1 H 6 v 4 h 1 v 1 h 1 v 2 1 h 1 v 2 h 1 v 1 h 1 v 1 h 9 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 2 v 1 h 3 v -1 h 1 v -1 h -1 v -1 h -1 v -2 h -1 v -1 h -1 v -1 h -4 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h 1 v -1 h 1 v -4 h -1 v -1 h -1 v -2 h 3 v -1 h 1 V 10 H 19 V 9 H 18 V 8 H 17 V 7 Z" />',
                     selectBodyPattern(i),
-                    '<path id="bodyHighlight" style="fill:#fff;fill-opacity:0.75;" d="m 11,8 v 1 h 6 V 8 Z m 0,1 h -1 v 1 h 1 z m -1,1 H 9 v 7 h 1 z m -3,8 v 1 3 h 1 v -3 h 9 v -1 z m 14,3 v 1 h 4 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z M 9,23 v 3 h 1 v -3 z m 1,3 v 2 h 1 v -2 z m 1,2 v 1 h 1 v -1 z" />'
+                    '<path style="fill:#fff;fill-opacity:0.75;" d="m 11,8 v 1 h 6 V 8 Z m 0,1 h -1 v 1 h 1 z m -1,1 H 9 v 7 h 1 z m -3,8 v 1 3 h 1 v -3 h 9 v -1 z m 14,3 v 1 h 4 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z M 9,23 v 3 h 1 v -3 z m 1,3 v 2 h 1 v -2 z m 1,2 v 1 h 1 v -1 z" />'
                 )
             );
     }

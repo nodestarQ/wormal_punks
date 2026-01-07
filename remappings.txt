@@ -1,0 +1,6 @@
+@openzeppelin/=node_modules/@openzeppelin/
+ERC721A/=node_modules/erc721a/contracts/
+erc721a/=node_modules/erc721a/
+solmate/=node_modules/solmate/src/
+openzeppelin-contracts/=node_modules/@openzeppelin/contracts/
+utility-contracts/=node_modules/utility-contracts/src/

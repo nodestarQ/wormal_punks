@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-a4897a6ea3ab2b5dcac6c3d7bc4cb2bb39c53aa6",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/HeadData.sol": "project/contracts/HeadData.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/HeadData.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nlibrary HeadData {\n    function traits(uint256 i) external pure returns (string memory) {\n        if (i == 0) return \"Beanie Orange\";\n        if (i == 1) return \"Beanie Black\";\n        if (i == 2) return \"Beanie Red\";\n        if (i == 3) return \"Beanie Purple\";\n        if (i == 4) return \"Punk Blue\";\n        if (i == 5) return \"Punk Blonde\";\n        if (i == 6) return \"Punk Green\";\n        if (i == 7) return \"Bandana Red\";\n        if (i == 8) return \"Bandana Blue\";\n        if (i == 9) return \"Bandana Purple\";\n        if (i == 10) return \"Straw Hat\";\n        if (i == 11) return \"Top Hat\";\n        if (i == 12) return \"Gold Crown\";\n        if (i == 13) return \"Backwards Cap Green\";\n        if (i == 14) return \"Backwards Cap Orange\";\n        if (i == 15) return \"Backwards Cap Pink\";\n        if (i == 16) return \"Backwards Cap Blue\";\n        if (i == 17) return \"Pot\";\n        if (i == 18) return \"Aluminum Hat\";\n        if (i == 19) return \"Party Hat\";\n        if (i == 20) return \"Propeller Hat\";\n        if (i == 21) return \"Cowboy Hat\";\n        if (i == 22) return \"Red Hat\";\n        if (i == 23) return \"Black Hat\";\n        if (i == 24) return \"White Hat\";\n        if (i == 25) return \"Wizard Hat\";\n        if (i == 26) return \"Hard Hat\";\n        if (i == 27) return \"Single Strand\";\n        if (i == 28) return \"Cropped Brunette\";\n        if (i == 29) return \"Cropped Ginger\";\n        if (i == 30) return \"Cropped Blonde\";\n        if (i == 31) return \"Cropped Gray\";\n        if (i == 32) return \"Cropped Black\";\n        if (i == 33) return \"Bob Brunette\";\n        if (i == 34) return \"Bob Ginger\";\n        if (i == 35) return \"Bob Blonde\";\n        if (i == 36) return \"Bob Gray\";\n        if (i == 37) return \"Bob Black\";\n        if (i == 38) return \"Santa Hat\";\n        if (i == 39) return \"Knight Helmet\";\n        if (i == 40) return \"Royale Knight Helmet\";\n        if (i == 41) return \"Black Knight Helmet\";\n        if (i == 42) return \"Ninja Headband\";\n        if (i == 43) return \"Wagie\";\n        if (i == 44) return \"Cap Blue\";\n        if (i == 45) return \"Cap Pink\";\n        if (i == 46) return \"Cap Orange\";\n        if (i == 47) return \"Cap Green\";\n        if (i == 48) return \"Diving Gear\";\n        if (i == 49) return \"Chefs Hat\";\n        if (i == 50) return \"Sapling\";\n        if (i == 51) return \"Flower Crown\";\n        if (i == 52) return \"Green Feelers\";\n        if (i == 53) return \"Clown\";\n        if (i == 54) return \"Antenna\";\n        if (i == 55) return \"Rice Hat\";\n        if (i == 56) return \"Halo\";\n        if (i == 57) return \"Pilot Helmet\";\n        if (i == 58) return \"Headphones Red\";\n        if (i == 59) return \"Headphones Green\";\n        if (i == 60) return \"Headphones Blue\";\n        if (i == 61) return \"Pompadour Brunette\";\n        if (i == 62) return \"Pompadour Ginger\";\n        if (i == 63) return \"Pompadour Blonde\";\n        if (i == 64) return \"Pompadour Gray\";\n        if (i == 65) return \"Pompadour Black\";\n        if (i == 66) return \"Perm Brunette\";\n        if (i == 67) return \"Perm Ginger\";\n        if (i == 68) return \"Perm Blonde\";\n        if (i == 69) return \"Perm Gray\";\n        if (i == 70) return \"Perm Black\";\n        if (i == 71) return \"Half Bald Brunette\";\n        if (i == 72) return \"Half Bald Ginger\";\n        if (i == 73) return \"Half Bald Blonde\";\n        if (i == 74) return \"Half Bald Gray\";\n        if (i == 75) return \"Half Bald Black\";\n        if (i == 76) return \"Ponytail Pink\";\n        if (i == 77) return \"Ponytail Brunette\";\n        if (i == 78) return \"Ponytail Ginger\";\n        if (i == 79) return \"Ponytail Blonde\";\n        if (i == 80) return \"Ponytail Gray\";\n        if (i == 81) return \"Ponytail Black\";\n        if (i == 82) return \"Grunge Green\";\n        if (i == 83) return \"Grunge Brunette\";\n        if (i == 84) return \"Grunge Ginger\";\n        if (i == 85) return \"Grunge Blonde\";\n        if (i == 86) return \"Grunge Gray\";\n        if (i == 87) return \"Grunge Black\";\n        if (i == 88) return \"Sombrero\";\n        if (i == 89) return \"Fez hat\";\n        if (i == 90) return \"Captain Hat\";\n        if (i == 91) return \"Buzzcut Brunette\";\n        if (i == 92) return \"Buzzcut Ginger\";\n        if (i == 93) return \"Buzzcut Blonde\";\n        if (i == 94) return \"Buzzcut Gray\";\n        if (i == 95) return \"Buzzcut Black\";\n        if (i == 96) return \"Balaclava Black\";\n        if (i == 97) return \"Balaclava Orange\";\n        if (i == 98) return \"Balaclava Pink\";\n        if (i == 99) return \"None\";\n\n        revert(\"head idx\");\n    }\n}\n"
+      }
+    }
+  }
+}

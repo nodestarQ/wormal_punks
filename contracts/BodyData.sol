@@ -1,0 +1,96 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+library BodyData {
+    string internal constant ELEMENT_0 = "Apricot";
+    string internal constant ELEMENT_1 = "Crimson";
+    string internal constant ELEMENT_2 = "Pumpkin";
+    string internal constant ELEMENT_3 = "Clay";
+    string internal constant ELEMENT_4 = "Amber";
+    string internal constant ELEMENT_5 = "Banana";
+    string internal constant ELEMENT_6 = "Lime";
+    string internal constant ELEMENT_7 = "Acid";
+    string internal constant ELEMENT_8 = "Olive";
+    string internal constant ELEMENT_9 = "Phantasmal";
+    string internal constant ELEMENT_10 = "Wormal";
+    string internal constant ELEMENT_11 = "Chloroplasts";
+    string internal constant ELEMENT_12 = "Aqua";
+    string internal constant ELEMENT_13 = "Sea";
+    string internal constant ELEMENT_14 = "Alloy";
+    string internal constant ELEMENT_15 = "Ocean";
+    string internal constant ELEMENT_16 = "Lilac";
+    string internal constant ELEMENT_17 = "Ultraviolet";
+    string internal constant ELEMENT_18 = "Lavender";
+    string internal constant ELEMENT_19 = "Purple";
+    string internal constant ELEMENT_20 = "Quartz";
+    string internal constant ELEMENT_21 = "Polymer";
+    string internal constant ELEMENT_22 = "Spike";
+    string internal constant ELEMENT_23 = "Pulse";
+    string internal constant ELEMENT_24 = "Mulberry";
+    string internal constant ELEMENT_25 = "Resin";
+    string internal constant ELEMENT_26 = "Circuit";
+    string internal constant ELEMENT_27 = "Synth";
+    string internal constant ELEMENT_28 = "Gold";
+    string internal constant ELEMENT_29 = "Iron";
+    string internal constant ELEMENT_30 = "Diamond";
+    string internal constant ELEMENT_31 = "Emerald";
+    string internal constant ELEMENT_32 = "Ruby";
+    string internal constant ELEMENT_33 = "Candy Cane";
+    string internal constant ELEMENT_34 = "Koi";
+    string internal constant ELEMENT_35 = "Corrupted";
+    string internal constant ELEMENT_36 = "Glacier";
+    string internal constant ELEMENT_37 = "Squarewave";
+    string internal constant ELEMENT_38 = "Conducting";
+    string internal constant ELEMENT_39 = "Frostbite";
+    string internal constant ELEMENT_40 = "Albinism";
+    string internal constant ELEMENT_41 = "Bronze Age";
+    string internal constant ELEMENT_42 = "Prehistoric";
+
+    function traits(uint256 i) external pure returns (string memory) {
+        if (i == 0) return ELEMENT_0;
+        if (i == 1) return ELEMENT_1;
+        if (i == 2) return ELEMENT_2;
+        if (i == 3) return ELEMENT_3;
+        if (i == 4) return ELEMENT_4;
+        if (i == 5) return ELEMENT_5;
+        if (i == 6) return ELEMENT_6;
+        if (i == 7) return ELEMENT_7;
+        if (i == 8) return ELEMENT_8;
+        if (i == 9) return ELEMENT_9;
+        if (i == 10) return ELEMENT_10;
+        if (i == 11) return ELEMENT_11;
+        if (i == 12) return ELEMENT_12;
+        if (i == 13) return ELEMENT_13;
+        if (i == 14) return ELEMENT_14;
+        if (i == 15) return ELEMENT_15;
+        if (i == 16) return ELEMENT_16;
+        if (i == 17) return ELEMENT_17;
+        if (i == 18) return ELEMENT_18;
+        if (i == 19) return ELEMENT_19;
+        if (i == 20) return ELEMENT_20;
+        if (i == 21) return ELEMENT_21;
+        if (i == 22) return ELEMENT_22;
+        if (i == 23) return ELEMENT_23;
+        if (i == 24) return ELEMENT_24;
+        if (i == 25) return ELEMENT_25;
+        if (i == 26) return ELEMENT_26;
+        if (i == 27) return ELEMENT_27;
+        if (i == 28) return ELEMENT_28;
+        if (i == 29) return ELEMENT_29;
+        if (i == 30) return ELEMENT_30;
+        if (i == 31) return ELEMENT_31;
+        if (i == 32) return ELEMENT_32;
+        if (i == 33) return ELEMENT_33;
+        if (i == 34) return ELEMENT_34;
+        if (i == 35) return ELEMENT_35;
+        if (i == 36) return ELEMENT_36;
+        if (i == 37) return ELEMENT_37;
+        if (i == 38) return ELEMENT_38;
+        if (i == 39) return ELEMENT_39;
+        if (i == 40) return ELEMENT_40;
+        if (i == 41) return ELEMENT_41;
+        if (i == 42) return ELEMENT_42;
+
+        revert("body idx");
+    }
+}

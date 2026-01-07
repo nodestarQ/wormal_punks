@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity 0.8.17;
 
 library HexLib {
     function hex6(bytes3 c) internal pure returns (bytes memory out) {

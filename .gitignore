@@ -19,3 +19,6 @@
 # Hardhat coverage reports
 /coverage
 
+.env
+DEPLOYMENT.md
+QUICKSTART.md

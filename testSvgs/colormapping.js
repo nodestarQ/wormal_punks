@@ -2,9 +2,11 @@
 // node make-packs.js
 
 const BG_COLORS = [
-    "0xebab99", "0xd95763", "0xeb7d43", "0xfacc7e", "0xfb9e27", "0xe6c912", "0xd3e387", "0xa7d03a", "0xbde898", "0x75db60",
-    "0x99e4e8", "0x2ac9de", "0xaecaf8", "0x639bff", "0x5681d5", "0x8983ec", "0x746fc7", "0xaa6edb", "0xedb2e5", "0xdd6cd9",
-    "0xed77b4", "0xf9f9f9", "0x55ddff", "0x666666", "0xafafe9",
+    "0xff99b3", "0xff99e5", "0xe599ff", "0xb399ff", "0x99b3ff", "0x99e5ff",
+    "0x99ffe5", "0x99ffb3", "0xb3ff99", "0xe5ff99", "0xffe599", "0xffb399",
+    "0xf9f9f9", "0xff0080", "0xff00ff", "0x8000ff", "0x0000ff", "0x0080ff",
+    "0X00ffff", "0x00ff80", "0x00ff00", "0x80ff00", "0xffff00", "0xff8000",
+    "0xff0000", "0x666666"
 ];
 
 const BODY_COLORS = [
@@ -28,7 +30,7 @@ const COLOR_VARIATION2 = [
 ]
 
 
-const COLORS = COLOR_VARIATION2; // <--- pick source here
+const COLORS = BG_COLORS; // <--- pick source here
 console.log(COLORS.length);
 
 // bytes32 can hold 10 * bytes3 = 30 bytes, leaving 2 bytes padding
