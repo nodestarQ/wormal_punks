@@ -33,14 +33,33 @@ function attributes(
         uint256 he, 
         uint256 a
     ) external pure returns (bytes memory) {
-
-
-string memory hashHex = Strings.toHexString(uint256(h), 32);
-return abi.encodePacked(
+        return abi.encodePacked(
             "[",
+            _sigilAttribute(h),
+            ",",
+            _visualTraitAttributes(b, t, e, he, a),
+            ",",
+            _levelAttribute(level),
+            "]"
+        );
+    }
+
+    function _sigilAttribute(bytes32 h) private pure returns (bytes memory) {
+        return abi.encodePacked(
             '{"trait_type":"Sigil","value":"',
-            hashHex,
-            '"},',
+            Strings.toHexString(uint256(h), 32),
+            '"}'
+        );
+    }
+
+    function _visualTraitAttributes(
+        uint256 b,
+        uint256 t,
+        uint256 e,
+        uint256 he,
+        uint256 a
+    ) private pure returns (bytes memory) {
+        return abi.encodePacked(
             '{"trait_type":"Background","value":"',
             BackgroundLib.traits(b),
             '"},',
@@ -55,14 +74,17 @@ return abi.encodePacked(
             '"},',
             '{"trait_type":"Accessory","value":"',
             AccData.traits(a),
-            '"},',
+            '"}'
+        );
+    }
+
+    function _levelAttribute(uint256 level) private pure returns (bytes memory) {
+        return abi.encodePacked(
             '{"trait_type":"Level","value":"',
             levels(level),
-            '"}',
-            "]"
+            '"}'
         );
-        
-        }
+    }
 
 
 }

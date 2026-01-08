@@ -7,6 +7,11 @@ export default defineConfig({
   paths: {
     sources: "./contracts",
   },
+  verify: {
+    etherscan: {
+      apiKey: process.env.ETHERSCAN_API_KEY!,
+    },
+  },
   solidity: {
     profiles: {
       default: {
@@ -14,7 +19,6 @@ export default defineConfig({
           {
             version: "0.8.17",
             settings: {
-              viaIR: true,
               optimizer: {
                 enabled: true,
                 runs: 200,
@@ -39,10 +43,9 @@ export default defineConfig({
       production: {
         version: "0.8.17",
         settings: {
-          viaIR: true,
           optimizer: {
             enabled: true,
-            runs: 400,
+            runs: 200,
           },
           remappings: [
             "solmate/=node_modules/solmate/src/",
@@ -64,8 +67,8 @@ export default defineConfig({
     sepolia: {
       type: "http",
       chainType: "l1",
-      url: configVariable("SEPOLIA_RPC_URL"),
-      accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
+      url: process.env.SEPOLIA_RPC_URL!,
+      accounts: [process.env.SEPOLIA_PRIVATE_KEY!],
     },
   },
 });

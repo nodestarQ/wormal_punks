@@ -13,6 +13,14 @@ import "./Attributes.sol";
 import "./PseudoRandomness.sol";
 
 contract Display {
+    // Struct to hold visual traits and reduce stack depth
+    struct VisualTraits {
+        uint256 background;
+        uint256 body;
+        uint256 eyes;
+        uint256 head;
+        uint256 accessory;
+    }
     function svg(
         bytes32 h,
         uint256 b,
@@ -64,47 +72,53 @@ contract Display {
         uint256 level,
         uint256 tokenId
     ) external pure returns (string memory) {
-        // derive traits
         bytes32[5] memory hs = hashAllChunks(h);
-        uint256 b = PseudoRandomness.pickBackgroundTrait(hs[0]);
-        uint256 t = PseudoRandomness.pickBodyTrait(hs[1]);
-        uint256 e = PseudoRandomness.pickEyeTrait(hs[2]);
-        uint256 he = PseudoRandomness.pickHeadTrait(hs[3]);
-        uint256 a = PseudoRandomness.pickAccessoryTrait(hs[4]);
+        VisualTraits memory traits = _deriveTraits(hs);
+        
+        return string(abi.encodePacked(
+            "data:application/json;base64,",
+            Base64.encode(_buildMetadataJSON(h, level, tokenId, traits))
+        ));
+    }
 
+    function _deriveTraits(bytes32[5] memory hs) 
+        private pure returns (VisualTraits memory) {
+        return VisualTraits({
+            background: PseudoRandomness.pickBackgroundTrait(hs[0]),
+            body: PseudoRandomness.pickBodyTrait(hs[1]),
+            eyes: PseudoRandomness.pickEyeTrait(hs[2]),
+            head: PseudoRandomness.pickHeadTrait(hs[3]),
+            accessory: PseudoRandomness.pickAccessoryTrait(hs[4])
+        });
+    }
 
-        // image (base64 svg data uri)
-        string memory image = string(
-            abi.encodePacked(
-                "data:image/svg+xml;base64,",
-                Base64.encode(bytes(svg(h, b, t, e, he, a)))
-            )
-        );
-
-
-        // metadata JSON
-        bytes memory json = abi.encodePacked(
+    function _buildMetadataJSON(
+        bytes32 h,
+        uint256 level, 
+        uint256 tokenId,
+        VisualTraits memory traits
+    ) private pure returns (bytes memory) {
+        return abi.encodePacked(
             "{",
             '"name":"Worm #',
             Strings.toString(tokenId),
             '",',
-            '"description":"7,503 Cypher Worms crawling through the Ethereum underground",',
+            '"description":"7,503 Cypher Worms crawling through the Ethereum underground.",',
             '"image":"',
-            image,
+            _buildImageDataURI(h, traits),
             '",',
             '"attributes":',
-            Attributes.attributes(h, level, b, t, e, he, a),
+            Attributes.attributes(h, level, traits.background, traits.body, traits.eyes, traits.head, traits.accessory),
             "}"
         );
+    }
 
-        // base64 encode full JSON as data:application/json
-        return
-            string(
-                abi.encodePacked(
-                    "data:application/json;base64,",
-                    Base64.encode(json)
-                )
-            );
+    function _buildImageDataURI(bytes32 h, VisualTraits memory traits) 
+        private pure returns (string memory) {
+        return string(abi.encodePacked(
+            "data:image/svg+xml;base64,",
+            Base64.encode(bytes(svg(h, traits.background, traits.body, traits.eyes, traits.head, traits.accessory)))
+        ));
     }
 
 }

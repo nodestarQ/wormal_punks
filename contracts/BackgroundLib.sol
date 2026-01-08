@@ -122,19 +122,16 @@ library BackgroundLib {
         bytes3 wall = colorBase(i);
         bytes3 floor = colorDark(i);
 
-        bytes memory wallHex = HexLib.hex6(wall);
-        bytes memory floorHex = HexLib.hex6(floor);
-
         return
             string(
                 abi.encodePacked(
                     '<rect style="fill:#',
-                    wallHex,
+                    HexLib.hex6(wall),
                     ';" id="wall" width="32" height="24" x="0" y="0" />',
                     '<rect style="fill:#',
-                    floorHex,
+                    HexLib.hex6(floor),
                     ';" id="floor" width="32" height="8" x="0" y="24" />',
-                    SigilLib.sigilPath(h, floorHex)
+                    SigilLib.sigilPath(h, HexLib.hex6(floor))
                 )
             );
     }

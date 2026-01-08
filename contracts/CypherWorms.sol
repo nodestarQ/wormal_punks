@@ -5,6 +5,12 @@ import "./seadrop/ERC721SeaDrop.sol";
 import "./seadrop/interfaces/ISeaDropTokenContractMetadata.sol";
 import "./Display.sol";
 import "./PreReveal.sol";
+import "./Special.sol";
+
+interface IERC20 {
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address to, uint256 amount) external returns (bool);
+}
 
 contract CypherWorms is ERC721SeaDrop {
     uint256 constant MAX_SUPPLY = 7503;
@@ -26,6 +32,15 @@ contract CypherWorms is ERC721SeaDrop {
     // Track balances for each recipient
     mapping(address => uint256) public pendingWithdrawals;
 
+    // Owner reserve mint tracking
+    bool public ownerMinted; // Track if owner has used their one-time mint
+
+    // Special 1/1 tracking
+    uint256[6] public specialTokenIds; // The 6 token IDs that are special 1/1s (index 0-5)
+    mapping(uint256 => bool) private isSpecialToken; // Quick lookup if token is special
+    mapping(uint256 => uint256) private tokenToSpecialVariant; // tokenId → variant index (0-5)
+    bool public specialsAssigned; // Track if specials have been assigned
+
     // ========== EVENTS ==========
     event DNAGenerated(uint256 indexed tokenId, bytes32 dna);
     event WormSecretSet(bytes32 secret);
@@ -35,6 +50,10 @@ contract CypherWorms is ERC721SeaDrop {
     event TransferProtectionTokenUpdated(address indexed token);
     event PaymentReceived(address indexed from, uint256 amount, uint256 primaryShare, uint256 secondaryShare);
     event PaymentWithdrawn(address indexed recipient, uint256 amount);
+    event ERC20Recovered(address indexed token, uint256 amount, uint256 primaryShare, uint256 secondaryShare);
+    event PrimaryRecipientUpdated(address indexed oldRecipient, address indexed newRecipient);
+    event OwnerMint(address indexed recipient, uint256 quantity);
+    event SpecialsAssigned(uint256[6] tokenIds);
 
     constructor(
         address _displayContract,
@@ -63,6 +82,24 @@ contract CypherWorms is ERC721SeaDrop {
         address[] memory seaDrop = new address[](1);
         seaDrop[0] = 0x00005EA00Ac477B1030CE78506496e8C2dE24bf5;
         return seaDrop;
+    }
+
+    // ========== OWNER RESERVE MINT ==========
+
+    /// @notice One-time owner mint for initial allocation (700 tokens / 10% of supply)
+    /// @dev Can only be called once before public sale. Mints up to 700 tokens to a specified recipient.
+    /// @param recipient The address to receive the tokens
+    /// @param quantity The number of tokens to mint (max 700)
+    function ownerMint(address recipient, uint256 quantity) external onlyOwner {
+        require(!ownerMinted, "Owner mint already used");
+        require(quantity > 0 && quantity <= 700, "Must mint 1-700 tokens");
+        require(recipient != address(0), "Invalid recipient");
+        require(_totalMinted() + quantity <= MAX_SUPPLY, "Exceeds max supply");
+        
+        ownerMinted = true;
+        _mint(recipient, quantity);
+        
+        emit OwnerMint(recipient, quantity);
     }
 
     // ========== HOLDING & LEVELING SYSTEM ==========
@@ -116,35 +153,32 @@ contract CypherWorms is ERC721SeaDrop {
         require(!transferProtection[tokenId], "already protected");
         
         uint256 price = getTransferProtectionPrice(tokenId);
-        uint256 level = getTokenLevel(tokenId);
+        _processProtectionPayment(price);
         
-        // Handle payment
-        if (transferProtectionToken == address(0)) {
-            // ETH payment
-            require(msg.value >= price, "insufficient payment");
-            
-            // Split payment 70/30
-            uint256 primaryShare = (price * 70) / 100;
-            uint256 secondaryShare = price - primaryShare;
-            
-            // Add to pending withdrawals
-            pendingWithdrawals[primaryRecipient] += primaryShare;
-            pendingWithdrawals[secondaryRecipient] += secondaryShare;
-            
-            emit PaymentReceived(msg.sender, price, primaryShare, secondaryShare);
-            
-            // Refund excess
-            if (msg.value > price) {
-                payable(msg.sender).transfer(msg.value - price);
-            }
-        } else {
-            // ERC20 payment (future implementation)
+        transferProtection[tokenId] = true;
+        emit TransferProtected(tokenId, getTokenLevel(tokenId), price);
+    }
+
+    /// @notice Process payment for transfer protection (internal helper)
+    /// @param price Amount to be paid
+    function _processProtectionPayment(uint256 price) private {
+        if (transferProtectionToken != address(0)) {
             revert("ERC20 payment not yet implemented");
         }
         
-        transferProtection[tokenId] = true;
+        require(msg.value >= price, "insufficient payment");
         
-        emit TransferProtected(tokenId, level, price);
+        // Split payment 70/30
+        uint256 primaryShare = (price * 70) / 100;
+        pendingWithdrawals[primaryRecipient] += primaryShare;
+        pendingWithdrawals[secondaryRecipient] += price - primaryShare;
+        
+        emit PaymentReceived(msg.sender, price, primaryShare, price - primaryShare);
+        
+        // Refund excess
+        if (msg.value > price) {
+            payable(msg.sender).transfer(msg.value - price);
+        }
     }
 
     /// @notice Set the base price for transfer protection (only owner)
@@ -193,14 +227,99 @@ contract CypherWorms is ERC721SeaDrop {
         return pendingWithdrawals[account];
     }
 
+    /// @notice Recover accidentally sent ERC20 tokens with 70/30 split
+    /// @dev Only owner can recover tokens. Splits recovered tokens between recipients.
+    /// @param token The ERC20 token contract address to recover
+    function recoverERC20(address token) external onlyOwner {
+        require(token != address(0), "invalid token address");
+        
+        IERC20 erc20 = IERC20(token);
+        uint256 balance = erc20.balanceOf(address(this));
+        require(balance > 0, "no tokens to recover");
+        
+        // Split tokens 70/30 (same as ETH split)
+        uint256 primaryShare = (balance * 70) / 100;
+        uint256 secondaryShare = balance - primaryShare;
+        
+        // Transfer to recipients
+        require(erc20.transfer(primaryRecipient, primaryShare), "primary transfer failed");
+        require(erc20.transfer(secondaryRecipient, secondaryShare), "secondary transfer failed");
+        
+        emit ERC20Recovered(token, balance, primaryShare, secondaryShare);
+    }
+
+    /// @notice Update the primary recipient address (70% share)
+    /// @dev Only owner can update. Transfers any pending withdrawals to new address.
+    /// @param newRecipient The new primary recipient address
+    function updatePrimaryRecipient(address newRecipient) external onlyOwner {
+        require(newRecipient != address(0), "invalid recipient address");
+        require(newRecipient != primaryRecipient, "same as current recipient");
+        
+        address oldRecipient = primaryRecipient;
+        
+        // Transfer any pending withdrawals to new recipient
+        uint256 pendingAmount = pendingWithdrawals[oldRecipient];
+        if (pendingAmount > 0) {
+            pendingWithdrawals[oldRecipient] = 0;
+            pendingWithdrawals[newRecipient] += pendingAmount;
+        }
+        
+        primaryRecipient = newRecipient;
+        emit PrimaryRecipientUpdated(oldRecipient, newRecipient);
+    }
+
     // ========== REVEAL MECHANISM ==========
 
     /// @notice Set the reveal secret (only owner, can only be set once)
+    /// @dev Can only be called when collection is sold out (7,503 tokens minted)
+    /// @dev Automatically selects 6 random tokens to become special 1/1s
     /// @param secret The secret used to finalize DNA generation
     function adminSetWormSecret(bytes32 secret) external onlyOwner {
         require(wormSecret == bytes32(0), "secret already set");
+        require(_totalMinted() == MAX_SUPPLY, "must be sold out to reveal");
+        
         wormSecret = secret;
+        
+        // Select and assign 6 special 1/1 tokens
+        _assignSpecialTokens(secret);
+        
         emit WormSecretSet(secret);
+    }
+
+    /// @notice Internal function to select 6 random tokens and assign them to special variants
+    /// @dev Uses wormSecret as entropy to deterministically select unique token IDs
+    /// @param secret The wormSecret used for randomness
+    function _assignSpecialTokens(bytes32 secret) private {
+        require(!specialsAssigned, "specials already assigned");
+        
+        uint256 totalMinted = MAX_SUPPLY; // We know it's sold out at this point
+        
+        // Divide the token range into 6 segments to guarantee uniqueness
+        // This avoids collision checking and ensures bounded gas cost
+        uint256 segmentSize = totalMinted / 6; // 7503 / 6 = 1250 tokens per segment
+        
+        for (uint256 i = 0; i < 6; i++) {
+            // Calculate segment boundaries
+            uint256 segmentStart = i * segmentSize;
+            uint256 segmentEnd = (i == 5) ? totalMinted : (i + 1) * segmentSize;
+            
+            // Generate random value using secret + index
+            uint256 randomValue = uint256(
+                keccak256(abi.encodePacked(secret, i))
+            );
+            
+            // Select token ID from this segment (token IDs are 1-based in ERC721A)
+            uint256 tokenId = segmentStart + (randomValue % (segmentEnd - segmentStart)) + 1;
+            
+            // Store the special token assignment
+            // Index i maps to variant i (0→0, 1→1, 2→2, etc.)
+            specialTokenIds[i] = tokenId;
+            isSpecialToken[tokenId] = true;
+            tokenToSpecialVariant[tokenId] = i;
+        }
+        
+        specialsAssigned = true;
+        emit SpecialsAssigned(specialTokenIds);
     }
 
     // ========== MINTING & TRANSFER HOOKS ==========
@@ -256,14 +375,44 @@ contract CypherWorms is ERC721SeaDrop {
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         require(_exists(tokenId), "token does not exist");
         
-        // Post-reveal: generate from DNA + secret
+        // Post-reveal: check if special 1/1 first
         if (wormSecret != bytes32(0)) {
+            // Check if this token is a special 1/1
+            if (isSpecialToken[tokenId]) {
+                // Return the special metadata from Special library
+                return Special.traits(tokenToSpecialVariant[tokenId]);
+            }
+            
+            // Normal generated token
             bytes32 seed = keccak256(abi.encodePacked(dnaMap[tokenId], wormSecret));
             return displayContract.tokenURIFromHash(seed, getTokenLevel(tokenId), tokenId);
         }
         
         // Pre-reveal: placeholder
         return PreReveal.tokenURIPreReveal(tokenId);
+    }
+
+    // ========== SPECIAL 1/1 VIEW FUNCTIONS ==========
+
+    /// @notice Check if a token is a special 1/1
+    /// @param tokenId The token ID to check
+    /// @return True if the token is a special 1/1
+    function isSpecial(uint256 tokenId) external view returns (bool) {
+        return isSpecialToken[tokenId];
+    }
+
+    /// @notice Get the special variant index for a token (0-5)
+    /// @param tokenId The token ID to check
+    /// @return The variant index (0-5), reverts if not a special token
+    function getSpecialVariant(uint256 tokenId) external view returns (uint256) {
+        require(isSpecialToken[tokenId], "not a special token");
+        return tokenToSpecialVariant[tokenId];
+    }
+
+    /// @notice Get all 6 special token IDs
+    /// @return Array of 6 token IDs that are special 1/1s (returns [0,0,0,0,0,0] if not assigned yet)
+    function getSpecialTokenIds() external view returns (uint256[6] memory) {
+        return specialTokenIds;
     }
 
     // ========== PAYMENT HANDLING ==========

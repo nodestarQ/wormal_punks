@@ -21,7 +21,7 @@ library PreReveal {
 
         bytes memory attrs = abi.encodePacked(
             "[",
-            '{"trait_type":"Hidde","value":"true"}',
+            '{"trait_type":"Hidden","value":"true"}',
             "]"
         );
 

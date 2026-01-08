@@ -136,40 +136,38 @@ library BodyLib {
     ) internal pure returns (string memory) {
         if (i >= TOTAL_N) revert("idx");
 
-        if (i < OFF_MAT) {
-            bytes3 c = colorBase(i);
-            return string(_fillPath(c, D_BODY, "bodyColor"));
-        }
-        if (i < OFF_VAR1) {
-            (bytes3 c, bytes3 s) = materialPair(i - OFF_MAT);
-            return
-                string(
-                    abi.encodePacked(
-                        _fillPath(c, D_BODY, "bodyColor"),
-                        _fillPath(s, D_MAT_SHADE, "bodyShade")
-                    )
-                );
-        }
+        if (i < OFF_MAT) return _basePattern(i);
+        if (i < OFF_VAR1) return _materialPattern(i);
+        if (i < OFF_VAR2) return _var1Pattern(i);
+        return _var2Pattern(i);
+    }
 
-        if (i < OFF_VAR2) {
-            (bytes3 c1, bytes3 c2) = var1Pair(i - OFF_VAR1);
-            return
-                string(
-                    abi.encodePacked(
-                        _fillPath(c1, D_BODY, "bodyColor"),
-                        _fillPath(c2, D_VAR1, "bodyPattern")
-                    )
-                );
-        }
+    function _basePattern(uint256 i) private pure returns (string memory) {
+        return string(_fillPath(colorBase(i), D_BODY, "bodyColor"));
+    }
 
+    function _materialPattern(uint256 i) private pure returns (string memory) {
+        (bytes3 c, bytes3 s) = materialPair(i - OFF_MAT);
+        return string(abi.encodePacked(
+            _fillPath(c, D_BODY, "bodyColor"),
+            _fillPath(s, D_MAT_SHADE, "bodyShade")
+        ));
+    }
+
+    function _var1Pattern(uint256 i) private pure returns (string memory) {
+        (bytes3 c1, bytes3 c2) = var1Pair(i - OFF_VAR1);
+        return string(abi.encodePacked(
+            _fillPath(c1, D_BODY, "bodyColor"),
+            _fillPath(c2, D_VAR1, "bodyPattern")
+        ));
+    }
+
+    function _var2Pattern(uint256 i) private pure returns (string memory) {
         (bytes3 v1, bytes3 v2) = var2Pair(i - OFF_VAR2);
-        return
-            string(
-                abi.encodePacked(
-                    _fillPath(v1, D_BODY, "bodyColor"),
-                    _fillPath(v2, D_VAR2, "bodyPattern")
-                )
-            );
+        return string(abi.encodePacked(
+            _fillPath(v1, D_BODY, "bodyColor"),
+            _fillPath(v2, D_VAR2, "bodyPattern")
+        ));
     }
 
     function visual(uint256 i) external pure returns (string memory) {
