@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-import "@openzeppelin/contracts/utils/Base64.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "./BackgroundLib.sol";
 import "./BodyData.sol";
@@ -20,7 +19,7 @@ library Attributes {
         if(level == 5) return "Cluster";
         if(level == 6) return "Network";
         if(level == 7) return "Protocol";
-        if(level == 8) return "Singularity";
+        return "Singularity";
     }
 
 

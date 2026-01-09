@@ -13,7 +13,7 @@ library BodyData {
     string internal constant ELEMENT_8 = "Olive";
     string internal constant ELEMENT_9 = "Phantasmal";
     string internal constant ELEMENT_10 = "Wormal";
-    string internal constant ELEMENT_11 = "Chloroplasts";
+    string internal constant ELEMENT_11 = "Chloroplast";
     string internal constant ELEMENT_12 = "Aqua";
     string internal constant ELEMENT_13 = "Sea";
     string internal constant ELEMENT_14 = "Alloy";
@@ -39,7 +39,7 @@ library BodyData {
     string internal constant ELEMENT_34 = "Koi";
     string internal constant ELEMENT_35 = "Corrupted";
     string internal constant ELEMENT_36 = "Glacier";
-    string internal constant ELEMENT_37 = "Squarewave";
+    string internal constant ELEMENT_37 = "Square Wave";
     string internal constant ELEMENT_38 = "Conducting";
     string internal constant ELEMENT_39 = "Frostbite";
     string internal constant ELEMENT_40 = "Albinism";
