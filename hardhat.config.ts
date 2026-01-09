@@ -9,7 +9,7 @@ export default defineConfig({
   },
   verify: {
     etherscan: {
-      apiKey: process.env.ETHERSCAN_API_KEY!,
+      apiKey: process.env.ETHERSCAN_API_KEY || "dummy-api-key",
     },
   },
   solidity: {
@@ -67,8 +67,8 @@ export default defineConfig({
     sepolia: {
       type: "http",
       chainType: "l1",
-      url: process.env.SEPOLIA_RPC_URL!,
-      accounts: [process.env.SEPOLIA_PRIVATE_KEY!],
+      url: process.env.SEPOLIA_RPC_URL || "https://rpc.sepolia.org",
+      accounts: process.env.SEPOLIA_PRIVATE_KEY ? [process.env.SEPOLIA_PRIVATE_KEY] : [],
     },
   },
 });

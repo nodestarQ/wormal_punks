@@ -4,6 +4,8 @@ pragma solidity 0.8.17;
 import "@openzeppelin/contracts/utils/Base64.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
+// Metadata for pre reveal state of the NFTs
+
 library PreReveal {
     function tokenURIPreReveal(
         uint256 tokenId

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
+// Generates an SVG 8x8 identicon based off of a bytes32
 library SigilLib {
     function sigilPath(
         bytes32 h,
