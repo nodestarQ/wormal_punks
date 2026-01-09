@@ -1,0 +1,18 @@
+{
+  "DisplayModule#AccData": "0xc1e8F14505c2fdEAa992B0D42a4465297913f3D4",
+  "DisplayModule#BodyData": "0xca24FEeC40C0CDD4355C555434b0d028c67147c7",
+  "DisplayModule#EyeData": "0x8dc5d195F6BCCF7dD4386085cB0f66Ee3B703C9c",
+  "DisplayModule#HeadData": "0xceb4A3f725Aa4b53C32965223443094a4296B556",
+  "DisplayModule#AccLib": "0xdadE6DF52361527D3d8ead1d9Dba8FCfE5B2FD5e",
+  "DisplayModule#BackgroundLib": "0xccA93A3F1a5AEcbe07406A9f1054898F6606be66",
+  "DisplayModule#BodyLib": "0x4fa6Bf27142eee8699457fFB5C233fF64890af14",
+  "DisplayModule#EyeLib": "0x0838A064DB0Ac6e75D76Ea597BbE66d8d5FE66cB",
+  "DisplayModule#HeadEndLib": "0xc1Cf925BB9d0c25B708Ac558aD7aDe2f75f21A68",
+  "DisplayModule#HeadStartLib": "0x5E4a74B184C0E4A378C153148bB30EF10bF2d8Fd",
+  "DisplayModule#Attributes": "0x6BE024753d329D00c6Eccd3716c0fFF6B82CCBdf",
+  "DisplayModule#Display": "0x3bDD35f211291d9379D9D3969A04F249428fd036",
+  "CypherWormsModule#PreReveal": "0x25540d9CC1bB2f4F893461bA82F0ee4aF8b6bCb8",
+  "CypherWormsModule#SpecialEnd": "0x40a5F93e92f192e505DE8797539458901F531F29",
+  "CypherWormsModule#Special": "0x84D45e10d4eb4b0b93e4B18D6F5efF1146302C22",
+  "CypherWormsModule#CypherWorms": "0x98EC6F490eB881dccbd1780E7f84c4F7118835A1"
+}

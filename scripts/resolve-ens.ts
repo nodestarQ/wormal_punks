@@ -26,7 +26,7 @@ async function main() {
     });
 
     const secondary = await mainnetClient.getEnsAddress({
-      name: normalize("warptoad.eth"),
+      name: normalize("multisig.warptoad.eth"),
     });
 
     if (!primary || !secondary) {

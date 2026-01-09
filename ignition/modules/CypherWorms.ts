@@ -17,25 +17,30 @@ const CypherWormsModule = buildModule("CypherWormsModule", (m) => {
   // Import Display deployment
   const { display } = m.useModule(DisplayModule);
 
-  // Deploy PreReveal library (needed by CypherWorms) after Display
+  const specialEnd = m.library("SpecialEnd", { after: [display] });
   const preReveal = m.library("PreReveal", { after: [display] });
+  const special = m.library("Special", { 
+    after: [specialEnd, preReveal],
+    libraries: {
+      SpecialEnd: specialEnd,
+    },
+  });
 
-  // Deploy CypherWorms with Display address and recipients
   const cypherWorms = m.contract("CypherWorms", [
     display,
     primaryRecipient,
     secondaryRecipient,
   ], {
-    after: [preReveal],
+    after: [special],
     libraries: {
       PreReveal: preReveal,
+      Special: special,
     },
   });
 
-  // After deployment, call setupRoyalties
   m.call(cypherWorms, "setupRoyalties", []);
 
-  return { cypherWorms, display, preReveal };
+  return { cypherWorms, display, preReveal, special, specialEnd };
 });
 
 export default CypherWormsModule;

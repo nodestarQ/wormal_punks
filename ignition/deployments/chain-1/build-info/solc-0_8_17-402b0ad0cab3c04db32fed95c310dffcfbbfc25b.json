@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_17-402b0ad0cab3c04db32fed95c310dffcfbbfc25b",
+  "solcVersion": "0.8.17",
+  "solcLongVersion": "0.8.17+commit.8df45f5f",
+  "userSourceNameMap": {
+    "contracts/EyeData.sol": "project/contracts/EyeData.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "london",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/EyeData.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.17;\n\nlibrary EyeData {\n    string internal constant ELEMENT_0 = \"Weeping\";\n    string internal constant ELEMENT_1 = \"Paranoid\";\n    string internal constant ELEMENT_2 = \"Masked\";\n    string internal constant ELEMENT_3 = \"Neutral\";\n    string internal constant ELEMENT_4 = \"Skeptical\";\n    string internal constant ELEMENT_5 = \"Flat\";\n    string internal constant ELEMENT_6 = \"Dilated\";\n    string internal constant ELEMENT_7 = \"Shielded\";\n    string internal constant ELEMENT_8 = \"Overstimulated\";\n    string internal constant ELEMENT_9 = \"Visor (Red)\";\n    string internal constant ELEMENT_10 = \"Visor (Orange)\";\n    string internal constant ELEMENT_11 = \"Visor (Blue)\";\n    string internal constant ELEMENT_12 = \"Visor (Green)\";\n    string internal constant ELEMENT_13 = \"Eye Patch\";\n    string internal constant ELEMENT_14 = \"Satisfied\";\n    string internal constant ELEMENT_15 = \"Primitive\";\n    string internal constant ELEMENT_16 = \"Wink\";\n    string internal constant ELEMENT_17 = \"Absent\";\n    string internal constant ELEMENT_18 = \"Crossed\";\n    string internal constant ELEMENT_19 = \"Shy\";\n    string internal constant ELEMENT_20 = \"3D Glasses\";\n    string internal constant ELEMENT_21 = \"Mime (Blue)\";\n    string internal constant ELEMENT_22 = \"Mime (Red)\";\n    string internal constant ELEMENT_23 = \"Mime (Green)\";\n    string internal constant ELEMENT_24 = \"Glasses\"; \n    string internal constant ELEMENT_25 = \"Observing\"; \n    string internal constant ELEMENT_26 = \"Lined (Red)\";\n    string internal constant ELEMENT_27 = \"Lined (Green)\";\n    string internal constant ELEMENT_28 = \"Lined (Blue)\";\n    string internal constant ELEMENT_29 = \"Lined (Purple)\";\n    string internal constant ELEMENT_30 = \"Lined (Pink)\";\n    string internal constant ELEMENT_31 = \"Monocle\";\n    string internal constant ELEMENT_32 = \"Bug Eyed\";\n    string internal constant ELEMENT_33 = \"Corpse Paint (Red)\";\n    string internal constant ELEMENT_34 = \"Corpse Paint (Green)\";\n    string internal constant ELEMENT_35 = \"Corpse Paint (Blue)\";\n    string internal constant ELEMENT_36 = \"Cyclops\";\n    string internal constant ELEMENT_37 = \"Goggles\";\n    string internal constant ELEMENT_38 = \"Sunglasses\";\n    string internal constant ELEMENT_39 = \"Hopeful (Brown)\";\n    string internal constant ELEMENT_40 = \"Hopeful (Green)\";\n    string internal constant ELEMENT_41 = \"Hopeful (Blue)\";\n\n    function traits(uint256 i) external pure returns (string memory) {\n        if (i == 0) return ELEMENT_0;\n        if (i == 1) return ELEMENT_1;\n        if (i == 2) return ELEMENT_2;\n        if (i == 3) return ELEMENT_3;\n        if (i == 4) return ELEMENT_4;\n        if (i == 5) return ELEMENT_5;\n        if (i == 6) return ELEMENT_6;\n        if (i == 7) return ELEMENT_7;\n        if (i == 8) return ELEMENT_8;\n        if (i == 9) return ELEMENT_9;\n        if (i == 10) return ELEMENT_10;\n        if (i == 11) return ELEMENT_11;\n        if (i == 12) return ELEMENT_12;\n        if (i == 13) return ELEMENT_13;\n        if (i == 14) return ELEMENT_14;\n        if (i == 15) return ELEMENT_15;\n        if (i == 16) return ELEMENT_16;\n        if (i == 17) return ELEMENT_17;\n        if (i == 18) return ELEMENT_18;\n        if (i == 19) return ELEMENT_19;\n        if (i == 20) return ELEMENT_20;\n        if (i == 21) return ELEMENT_21;\n        if (i == 22) return ELEMENT_22;\n        if (i == 23) return ELEMENT_23;\n        if (i == 24) return ELEMENT_24;\n        if (i == 25) return ELEMENT_25;\n        if (i == 26) return ELEMENT_26;\n        if (i == 27) return ELEMENT_27;\n        if (i == 28) return ELEMENT_28;\n        if (i == 29) return ELEMENT_29;\n        if (i == 30) return ELEMENT_30;\n        if (i == 31) return ELEMENT_31;\n        if (i == 32) return ELEMENT_32;\n        if (i == 33) return ELEMENT_33;\n        if (i == 34) return ELEMENT_34;\n        if (i == 35) return ELEMENT_35;\n        if (i == 36) return ELEMENT_36;\n        if (i == 37) return ELEMENT_37;\n        if (i == 38) return ELEMENT_38;\n        if (i == 39) return ELEMENT_39;\n        if (i == 40) return ELEMENT_40;\n        if (i == 41) return ELEMENT_41;\n\n        revert(\"eye idx\");\n    }\n}\n"
+      }
+    }
+  }
+}
