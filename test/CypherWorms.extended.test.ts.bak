@@ -8,8 +8,8 @@ describe("CypherWorms - Extended Tests", async function () {
 
   // Test accounts
   let owner: Address;
-  let primaryRecipient: Address;
-  let secondaryRecipient: Address;
+  let paymentRecipient: Address;
+  
   let user1: Address;
   let user2: Address;
   let user3: Address;
@@ -37,11 +37,11 @@ describe("CypherWorms - Extended Tests", async function () {
     const [acc0, acc1, acc2, acc3, acc4, acc5] = await viem.getWalletClients();
     return {
       owner: acc0.account.address,
-      primaryRecipient: acc1.account.address,
-      secondaryRecipient: acc2.account.address,
-      user1: acc3.account.address,
-      user2: acc4.account.address,
-      user3: acc5.account.address,
+      paymentRecipient: acc1.account.address,
+      
+      user1: acc2.account.address,
+      user2: acc3.account.address,
+      user3: acc4.account.address,
     };
   }
 
@@ -54,8 +54,8 @@ describe("CypherWorms - Extended Tests", async function () {
   before(async function () {
     const accounts = await getTestAccounts();
     owner = accounts.owner;
-    primaryRecipient = accounts.primaryRecipient;
-    secondaryRecipient = accounts.secondaryRecipient;
+    paymentRecipient = accounts.paymentRecipient;
+    
     user1 = accounts.user1;
     user2 = accounts.user2;
     user3 = accounts.user3;
@@ -77,8 +77,7 @@ describe("CypherWorms - Extended Tests", async function () {
 
     cypherWorms = await viem.deployContract("CypherWorms", [
       mockDisplay.address,
-      primaryRecipient,
-      secondaryRecipient,
+      paymentRecipient,
     ], {
       libraries: {
         PreReveal: preRevealLib.address,
@@ -108,21 +107,22 @@ describe("CypherWorms - Extended Tests", async function () {
       // Set base price to 1 ETH
       await cypherWorms.write.setTransferProtectionBasePrice([parseEther("1")]);
 
-      // Token is level 0 (Null) initially - multiplier = 1
+      // Token is level 0 (Null) initially - sqrt(1) = 1.0x
       let price = await cypherWorms.read.getTransferProtectionPrice([1n]);
-      assert.equal(price, parseEther("1"), "Level 0 should be 1x base price");
+      assert.equal(price, parseEther("1"), "Level 0 should be 1x base price (sqrt curve)");
 
-      // Advance to level 1 (2 days)
+      // Advance to level 1 (2 days) - sqrt(2) ≈ 1.414x
       await increaseTime(2 * 24 * 60 * 60);
       price = await cypherWorms.read.getTransferProtectionPrice([1n]);
-      assert.equal(price, parseEther("2"), "Level 1 should be 2x base price");
+      // sqrt(2) * 1e18 / 1e9 = 1414213562373095048 ≈ 1.414 ETH
+      assert.equal(price, 1414213562000000000n, "Level 1 should be ~1.414x base price (sqrt curve)");
 
-      // Advance to level 8 (180 days)
+      // Advance to level 8 (180 days) - sqrt(9) = 3.0x
       await increaseTime(178 * 24 * 60 * 60);
       price = await cypherWorms.read.getTransferProtectionPrice([1n]);
-      assert.equal(price, parseEther("9"), "Level 8 should be 9x base price");
+      assert.equal(price, parseEther("3"), "Level 8 should be 3x base price (sqrt curve, not 9x linear)");
 
-      console.log(" Price scales correctly with token level");
+      console.log(" Price scales correctly with sqrt curve (fairer for long-term holders)");
     });
 
     it("Should protect transfer with correct payment", async function () {
@@ -141,14 +141,12 @@ describe("CypherWorms - Extended Tests", async function () {
       const receipt = await publicClient.getTransactionReceipt({ hash });
       trackGas("protectTransfer", receipt.gasUsed);
 
-      // Verify payment split (70/30)
-      const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+      // Verify payment goes to recipient (100%)
+      const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
 
-      assert.equal(primaryPending, parseEther("0.07"), "Primary should get 70%");
-      assert.equal(secondaryPending, parseEther("0.03"), "Secondary should get 30%");
+      assert.equal(recipientPending, parseEther("0.1"), "Recipient should get 100%");
 
-      console.log(" Protection payment processed with 70/30 split");
+      console.log(" Protection payment processed - 100% to recipient");
     });
 
     it("Should reject protection from non-owner", async function () {
@@ -264,11 +262,11 @@ describe("CypherWorms - Extended Tests", async function () {
         value: parseEther("1"),
       });
 
-      const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+      const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
 
-      assert.equal(primaryPending, parseEther("0.7"), "Primary pending should be 0.7 ETH");
-      assert.equal(secondaryPending, parseEther("0.3"), "Secondary pending should be 0.3 ETH");
+      // Secondary recipient removed - single recipient now
+      assert.equal(recipientPending, parseEther("1"), "Primary pending should be 1 ETH");
+      
 
       console.log(" Pending withdrawals tracked correctly");
     });
@@ -300,8 +298,8 @@ describe("CypherWorms - Extended Tests", async function () {
       const balanceAfter = await publicClient.getBalance({ address: primaryRecipient });
       const gasCost = receipt.gasUsed * receipt.effectiveGasPrice;
 
-      // Should have received 0.7 ETH minus gas
-      const expectedBalance = balanceBefore + parseEther("0.7") - gasCost;
+      // Should have received 1 ETH minus gas
+      const expectedBalance = balanceBefore + parseEther("1") - gasCost;
       assert.ok(
         balanceAfter >= expectedBalance - parseEther("0.001") &&
         balanceAfter <= expectedBalance + parseEther("0.001"),
@@ -309,7 +307,7 @@ describe("CypherWorms - Extended Tests", async function () {
       );
 
       // Pending should be 0 now
-      const pendingAfter = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+      const pendingAfter = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
       assert.equal(pendingAfter, 0n, "Pending should be 0 after withdrawal");
 
       console.log(" Withdrawal successful");
@@ -344,11 +342,11 @@ describe("CypherWorms - Extended Tests", async function () {
       await publicClient.waitForTransactionReceipt({ hash });
 
       // Check 70/30 split
-      const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+      const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
 
-      assert.equal(primaryPending, parseEther("0.7"), "Primary should get 70%");
-      assert.equal(secondaryPending, parseEther("0.3"), "Secondary should get 30%");
+      // Secondary recipient removed - single recipient now
+      assert.equal(recipientPending, parseEther("1"), "Primary should get 100%");
+      
 
       console.log(" Direct ETH payment split correctly");
     });
@@ -371,11 +369,11 @@ describe("CypherWorms - Extended Tests", async function () {
         value: parseEther("1"),
       });
 
-      const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+      const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
 
-      assert.equal(primaryPending, parseEther("1.4"), "Primary should have 1.4 ETH");
-      assert.equal(secondaryPending, parseEther("0.6"), "Secondary should have 0.6 ETH");
+      // Secondary recipient removed - single recipient now
+      assert.equal(recipientPending, parseEther("1.4"), "Primary should have 1.4 ETH");
+      
 
       console.log(" Multiple payments accumulated correctly");
     });
@@ -508,7 +506,7 @@ describe("CypherWorms - Extended Tests", async function () {
 
       await cypherWorms.write.updatePrimaryRecipient([newRecipient]);
 
-      const updatedRecipient = await cypherWorms.read.primaryRecipient();
+      const updatedRecipient = await cypherWorms.read.paymentRecipient();
       assert.equal(updatedRecipient.toLowerCase(), newRecipient.toLowerCase(), "Primary recipient should be updated");
 
       console.log(" Primary recipient updated");
@@ -525,20 +523,20 @@ describe("CypherWorms - Extended Tests", async function () {
         value: parseEther("1"),
       });
 
-      const pendingBefore = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      assert.equal(pendingBefore, parseEther("0.7"), "Should have pending withdrawal");
+      const pendingBefore = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
+      assert.equal(pendingBefore, parseEther("1"), "Should have pending withdrawal");
 
       // Update recipient
       const newRecipient = user3;
       await cypherWorms.write.updatePrimaryRecipient([newRecipient]);
 
       // Old recipient should have 0
-      const oldPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+      const oldPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
       assert.equal(oldPending, 0n, "Old recipient should have 0 pending");
 
       // New recipient should have the amount
       const newPending = await cypherWorms.read.getPendingWithdrawal([newRecipient]);
-      assert.equal(newPending, parseEther("0.7"), "New recipient should have pending amount");
+      assert.equal(newPending, parseEther("1"), "New recipient should have pending amount");
 
       console.log(" Pending withdrawals transferred to new recipient");
     });
@@ -580,26 +578,31 @@ describe("CypherWorms - Extended Tests", async function () {
       const contractBalance = await mockERC20.read.balanceOf([cypherWorms.address]);
       assert.equal(contractBalance, parseEther("100"), "Contract should have 100 tokens");
 
-      // Recover
-      const hash = await cypherWorms.write.recoverERC20([mockERC20.address]);
+      // Recover - new signature: recoverERC20(token, recipient, amount)
+      const hash = await cypherWorms.write.recoverERC20([
+        mockERC20.address,
+        primaryRecipient,
+        parseEther("100")
+      ]);
       const publicClient = await viem.getPublicClient();
       const receipt = await publicClient.getTransactionReceipt({ hash });
       trackGas("recoverERC20", receipt.gasUsed);
 
-      // Check 70/30 split
-      const primaryBalance = await mockERC20.read.balanceOf([primaryRecipient]);
-      const secondaryBalance = await mockERC20.read.balanceOf([secondaryRecipient]);
+      // Check tokens sent to specified recipient
+      const recipientBalance = await mockERC20.read.balanceOf([paymentRecipient]);
+      assert.equal(recipientBalance, parseEther("100"), "Primary should get 100 tokens");
 
-      assert.equal(primaryBalance, parseEther("70"), "Primary should get 70 tokens");
-      assert.equal(secondaryBalance, parseEther("30"), "Secondary should get 30 tokens");
-
-      console.log(" ERC20 tokens recovered with 70/30 split");
+      console.log(" ERC20 tokens recovered to specified recipient");
     });
 
     it("Should reject recovery of zero address", async function () {
       await assert.rejects(
         async () => {
-          await cypherWorms.write.recoverERC20([zeroAddress]);
+          await cypherWorms.write.recoverERC20([
+            zeroAddress,
+            primaryRecipient,
+            parseEther("100")
+          ]);
         },
         /invalid token address/,
         "Should revert with zero address"
@@ -608,16 +611,22 @@ describe("CypherWorms - Extended Tests", async function () {
       console.log(" Zero address token recovery rejected");
     });
 
-    it("Should reject recovery when no tokens present", async function () {
+    it("Should reject recovery with zero recipient", async function () {
+      await mockERC20.write.mint([cypherWorms.address, parseEther("100")]);
+      
       await assert.rejects(
         async () => {
-          await cypherWorms.write.recoverERC20([mockERC20.address]);
+          await cypherWorms.write.recoverERC20([
+            mockERC20.address,
+            zeroAddress,
+            parseEther("100")
+          ]);
         },
-        /no tokens to recover/,
-        "Should revert with no tokens"
+        /invalid recipient/,
+        "Should revert with zero recipient"
       );
 
-      console.log(" No tokens recovery rejected");
+      console.log(" Zero recipient recovery rejected");
     });
   });
 
@@ -652,13 +661,13 @@ describe("CypherWorms - Extended Tests", async function () {
       });
 
       // Check that ONLY primary and secondary recipients have pending balance
-      const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+      const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
       const user1Pending = await cypherWorms.read.getPendingWithdrawal([user1]);
+      // Secondary recipient removed - single recipient now
       const randomPending = await cypherWorms.read.getPendingWithdrawal([user3]);
 
-      assert.equal(primaryPending, parseEther("0.7"), "Primary should have pending");
-      assert.equal(secondaryPending, parseEther("0.3"), "Secondary should have pending");
+      assert.equal(recipientPending, parseEther("1"), "Primary should have pending");
+      
       assert.equal(user1Pending, 0n, "User1 (payer) should have 0 pending");
       assert.equal(randomPending, 0n, "Random address should have 0 pending");
 
@@ -710,14 +719,14 @@ describe("CypherWorms - Extended Tests", async function () {
       await publicClient.waitForTransactionReceipt({ hash });
 
       // Verify ONLY the two recipients have funds
-      const primaryTotal = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-      const secondaryTotal = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+      const primaryTotal = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
+      const secondaryTotal = await cypherWorms.read.;
 
       // Total paid: 0.1 + 0.2 = 0.3 ETH
-      // Primary should get: 0.07 + 0.14 = 0.21 ETH (70%)
+      // Primary should get: 0.07 + 0.14 = 0.21 ETH (100%)
       // Secondary should get: 0.03 + 0.06 = 0.09 ETH (30%)
 
-      assert.equal(primaryTotal, parseEther("0.21"), "Primary gets exactly 70% of all payments");
+      assert.equal(primaryTotal, parseEther("0.21"), "Primary gets exactly 100% of all payments");
       assert.equal(secondaryTotal, parseEther("0.09"), "Secondary gets exactly 30% of all payments");
 
       console.log("✅ All payment sources only credit designated recipients");
@@ -786,8 +795,8 @@ describe("CypherWorms - Extended Tests", async function () {
       it("Should process ERC20 payment with correct 70/30 split (direct transfer)", async function () {
         const [, , , user1Client] = await viem.getWalletClients();
 
-        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
-        const secondaryBefore = await mockERC20.read.balanceOf([secondaryRecipient]);
+        const primaryBefore = await mockERC20.read.balanceOf([paymentRecipient]);
+        const secondaryBefore = await mockERC20.read.;
 
         // Approve tokens
         await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
@@ -803,8 +812,8 @@ describe("CypherWorms - Extended Tests", async function () {
         const receipt = await publicClient.getTransactionReceipt({ hash });
         trackGas("protectTransfer (ERC20)", receipt.gasUsed);
 
-        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
-        const secondaryAfter = await mockERC20.read.balanceOf([secondaryRecipient]);
+        const primaryAfter = await mockERC20.read.balanceOf([paymentRecipient]);
+        const secondaryAfter = await mockERC20.read.;
 
         const expectedPrimary = (PROTECTION_BASE_PRICE * 70n) / 100n;
         const expectedSecondary = PROTECTION_BASE_PRICE - expectedPrimary;
@@ -812,7 +821,7 @@ describe("CypherWorms - Extended Tests", async function () {
         assert.equal(
           primaryAfter - primaryBefore,
           expectedPrimary,
-          "Primary should receive 70% directly"
+          "Primary should receive 100% directly"
         );
         assert.equal(
           secondaryAfter - secondaryBefore,
@@ -835,11 +844,11 @@ describe("CypherWorms - Extended Tests", async function () {
         });
 
         // Check that pending withdrawals remain 0 for ERC20 payments
-        const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
-        const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+        const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
 
-        assert.equal(primaryPending, 0n, "Should NOT use pending withdrawals for ERC20");
-        assert.equal(secondaryPending, 0n, "Should NOT use pending withdrawals for ERC20");
+      // Secondary recipient removed - single recipient now
+        assert.equal(recipientPending, 0n, "Should NOT use pending withdrawals for ERC20");
+        assert.equal(, 0n, "Should NOT use pending withdrawals for ERC20");
 
         console.log("✅ ERC20 payments bypass pending withdrawal system");
       });
@@ -950,16 +959,18 @@ describe("CypherWorms - Extended Tests", async function () {
       });
 
       it("Should respect level-based multipliers for ERC20", async function () {
-        // Level 0 (multiplier = 1)
+        // Level 0 (sqrt multiplier = 1.0)
         let price = await cypherWorms.read.getTransferProtectionPrice([1n]);
-        assert.equal(price, PROTECTION_BASE_PRICE, "Level 0 = 1x base price");
+        assert.equal(price, PROTECTION_BASE_PRICE, "Level 0 = 1x base price (sqrt)");
 
-        // Advance to level 1 (multiplier = 2)
+        // Advance to level 1 (sqrt multiplier ≈ 1.414)
         await increaseTime(2 * 24 * 60 * 60);
         price = await cypherWorms.read.getTransferProtectionPrice([1n]);
-        assert.equal(price, PROTECTION_BASE_PRICE * 2n, "Level 1 = 2x base price");
+        // sqrt(2) ≈ 1.414, so 0.1 ETH * 1.414 ≈ 0.1414 ETH
+        const expectedPrice = 141421356200000000n; // approximately 0.1414 ETH
+        assert.equal(price, expectedPrice, "Level 1 = ~1.414x base price (sqrt curve)");
 
-        console.log("✅ Level-based pricing works with ERC20");
+        console.log("✅ Level-based sqrt pricing works with ERC20");
       });
     });
 
@@ -970,7 +981,11 @@ describe("CypherWorms - Extended Tests", async function () {
 
         await assert.rejects(
           async () => {
-            await cypherWorms.write.recoverERC20([mockERC20.address]);
+            await cypherWorms.write.recoverERC20([
+              mockERC20.address,
+              primaryRecipient,
+              ERC20_AMOUNT
+            ]);
           },
           /cannot recover payment token/,
           "Should not allow recovering active payment token"
@@ -986,13 +1001,15 @@ describe("CypherWorms - Extended Tests", async function () {
         // Switch to ETH
         await cypherWorms.write.setTransferProtectionToken([zeroAddress]);
 
-        // Now can recover
-        await cypherWorms.write.recoverERC20([mockERC20.address]);
+        // Now can recover to primary recipient
+        await cypherWorms.write.recoverERC20([
+          mockERC20.address,
+          primaryRecipient,
+          ERC20_AMOUNT
+        ]);
 
-        const primaryBalance = await mockERC20.read.balanceOf([primaryRecipient]);
-        const expectedPrimary = (ERC20_AMOUNT * 70n) / 100n;
-
-        assert.equal(primaryBalance, expectedPrimary, "Should recover with 70/30 split");
+        const recipientBalance = await mockERC20.read.balanceOf([paymentRecipient]);
+        assert.equal(recipientBalance, ERC20_AMOUNT, "Should recover full amount to recipient");
 
         console.log("✅ Can recover ERC20 token after switching payment method");
       });
@@ -1005,10 +1022,14 @@ describe("CypherWorms - Extended Tests", async function () {
         await otherToken.write.mint([cypherWorms.address, ERC20_AMOUNT]);
 
         // Should be able to recover the other token
-        await cypherWorms.write.recoverERC20([otherToken.address]);
+        await cypherWorms.write.recoverERC20([
+          otherToken.address,
+          primaryRecipient,
+          ERC20_AMOUNT
+        ]);
 
-        const primaryBalance = await otherToken.read.balanceOf([primaryRecipient]);
-        assert.ok(primaryBalance > 0n, "Should recover other tokens");
+        const recipientBalance = await otherToken.read.balanceOf([paymentRecipient]);
+        assert.equal(recipientBalance, ERC20_AMOUNT, "Should recover other tokens");
 
         console.log("✅ Can recover non-payment ERC20 tokens");
       });
@@ -1031,10 +1052,10 @@ describe("CypherWorms - Extended Tests", async function () {
         });
 
         // Check pending withdrawals (ETH uses this pattern)
-        const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        const recipientPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
         const expectedPending = (PROTECTION_BASE_PRICE * 70n) / 100n;
 
-        assert.equal(primaryPending, expectedPending, "ETH should use pending withdrawals");
+        assert.equal(recipientPending, expectedPending, "ETH should use pending withdrawals");
 
         console.log("✅ ETH payment uses pending withdrawal pattern");
       });
@@ -1049,13 +1070,13 @@ describe("CypherWorms - Extended Tests", async function () {
           account: user1Client.account,
         });
 
-        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+        const primaryBefore = await mockERC20.read.balanceOf([paymentRecipient]);
 
         await cypherWorms.write.protectTransfer([2n], {
           account: user1Client.account,
         });
 
-        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+        const primaryAfter = await mockERC20.read.balanceOf([paymentRecipient]);
         const expectedIncrease = (PROTECTION_BASE_PRICE * 70n) / 100n;
 
         assert.equal(
@@ -1088,7 +1109,7 @@ describe("CypherWorms - Extended Tests", async function () {
           value: PROTECTION_BASE_PRICE,
         });
 
-        const pending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        const pending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
         assert.ok(pending > 0n, "Should have pending ETH withdrawal");
 
         console.log("✅ Can switch from ERC20 back to ETH seamlessly");
@@ -1103,7 +1124,7 @@ describe("CypherWorms - Extended Tests", async function () {
           value: PROTECTION_BASE_PRICE,
         });
 
-        const ethPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        const ethPending = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
 
         // Switch to ERC20
         await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
@@ -1111,16 +1132,16 @@ describe("CypherWorms - Extended Tests", async function () {
           account: user1Client.account,
         });
 
-        const erc20Before = await mockERC20.read.balanceOf([primaryRecipient]);
+        const erc20Before = await mockERC20.read.balanceOf([paymentRecipient]);
 
         await cypherWorms.write.protectTransfer([2n], {
           account: user1Client.account,
         });
 
-        const erc20After = await mockERC20.read.balanceOf([primaryRecipient]);
+        const erc20After = await mockERC20.read.balanceOf([paymentRecipient]);
 
         // ETH pending should remain unchanged
-        const ethPendingAfter = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        const ethPendingAfter = await cypherWorms.read.getPendingWithdrawal([paymentRecipient]);
         assert.equal(ethPending, ethPendingAfter, "ETH pending should not change");
 
         // ERC20 should be directly transferred
@@ -1153,11 +1174,11 @@ describe("CypherWorms - Extended Tests", async function () {
         });
 
         // 5. Protect transfer (ERC20 payment)
-        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+        const primaryBefore = await mockERC20.read.balanceOf([paymentRecipient]);
         await cypherWorms.write.protectTransfer([1n], {
           account: user1Client.account,
         });
-        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+        const primaryAfter = await mockERC20.read.balanceOf([paymentRecipient]);
 
         // Verify payment was made
         assert.ok(primaryAfter > primaryBefore, "Payment should be made");
@@ -1184,7 +1205,7 @@ describe("CypherWorms - Extended Tests", async function () {
         await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
         await mockERC20.write.mint([user1, ERC20_AMOUNT]);
 
-        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+        const primaryBefore = await mockERC20.read.balanceOf([paymentRecipient]);
 
         // Multiple payments
         for (let i = 1; i <= 3; i++) {
@@ -1196,7 +1217,7 @@ describe("CypherWorms - Extended Tests", async function () {
           });
         }
 
-        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+        const primaryAfter = await mockERC20.read.balanceOf([paymentRecipient]);
         const expectedTotal = (PROTECTION_BASE_PRICE * 3n * 70n) / 100n;
 
         assert.equal(

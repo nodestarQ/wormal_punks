@@ -1,0 +1,9 @@
+{
+  "CypherWormsWithLibrariesModule": {
+    "paymentRecipient": "0xYourPaymentRecipientAddress",
+    "displayAddress": "0xYourDisplayContractAddress",
+    "preRevealAddress": "0xYourPreRevealLibraryAddress",
+    "specialAddress": "0xYourSpecialLibraryAddress",
+    "specialEndAddress": "0xYourSpecialEndLibraryAddress"
+  }
+}

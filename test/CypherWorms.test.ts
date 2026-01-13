@@ -8,8 +8,7 @@ describe("CypherWorms - Critical Path Tests", async function () {
 
   // Test accounts
   let owner: Address;
-  let primaryRecipient: Address;
-  let secondaryRecipient: Address;
+  let paymentRecipient: Address;
   let user1: Address;
   let user2: Address;
   let user3: Address;
@@ -38,14 +37,13 @@ describe("CypherWorms - Critical Path Tests", async function () {
 
   // Helper to get all test accounts
   async function getTestAccounts() {
-    const [acc0, acc1, acc2, acc3, acc4, acc5] = await viem.getWalletClients();
+    const [acc0, acc1, acc2, acc3, acc4] = await viem.getWalletClients();
     return {
       owner: acc0.account.address,
-      primaryRecipient: acc1.account.address,
-      secondaryRecipient: acc2.account.address,
-      user1: acc3.account.address,
-      user2: acc4.account.address,
-      user3: acc5.account.address,
+      paymentRecipient: acc1.account.address,
+      user1: acc2.account.address,
+      user2: acc3.account.address,
+      user3: acc4.account.address,
     };
   }
 
@@ -60,8 +58,7 @@ describe("CypherWorms - Critical Path Tests", async function () {
   before(async function () {
     const accounts = await getTestAccounts();
     owner = accounts.owner;
-    primaryRecipient = accounts.primaryRecipient;
-    secondaryRecipient = accounts.secondaryRecipient;
+    paymentRecipient = accounts.paymentRecipient;
     user1 = accounts.user1;
     user2 = accounts.user2;
     user3 = accounts.user3;
@@ -90,8 +87,7 @@ describe("CypherWorms - Critical Path Tests", async function () {
     // Deploy CypherWorms with library linking
     cypherWorms = await viem.deployContract("CypherWorms", [
       mockDisplay.address,
-      primaryRecipient,
-      secondaryRecipient,
+      paymentRecipient,
     ], {
       libraries: {
         PreReveal: preRevealLib.address,
@@ -106,11 +102,9 @@ describe("CypherWorms - Critical Path Tests", async function () {
 
   describe("1. Deployment & Initialization", function () {
     it("Should deploy with correct initial state", async function () {
-      // Verify recipients (max supply is internal, can't be checked directly)
-      const primary = await cypherWorms.read.primaryRecipient();
-      const secondary = await cypherWorms.read.secondaryRecipient();
-      assert.equal(primary.toLowerCase(), primaryRecipient.toLowerCase(), "Primary recipient mismatch");
-      assert.equal(secondary.toLowerCase(), secondaryRecipient.toLowerCase(), "Secondary recipient mismatch");
+      // Verify payment recipient
+      const recipient = await cypherWorms.read.paymentRecipient();
+      assert.equal(recipient.toLowerCase(), paymentRecipient.toLowerCase(), "Payment recipient mismatch");
 
       // Verify display contract
       const display = await cypherWorms.read.displayContract();
@@ -128,24 +122,19 @@ describe("CypherWorms - Critical Path Tests", async function () {
       assert.equal(basePrice, 0n, "Base price should be 0 initially");
       assert.equal(protectionToken, "0x0000000000000000000000000000000000000000", "Protection token should be address(0)");
 
-      // Verify worm secret not set
+      // Verify worm secret not set (now bytes30, not bytes32)
       const wormSecret = await cypherWorms.read.wormSecret();
-      assert.equal(wormSecret, "0x0000000000000000000000000000000000000000000000000000000000000000", "Worm secret should be 0");
-
-      // Verify specials not assigned
-      const specialsAssigned = await cypherWorms.read.specialsAssigned();
-      assert.equal(specialsAssigned, false, "Specials should not be assigned yet");
+      assert.equal(wormSecret, "0x000000000000000000000000000000000000000000000000000000000000", "Worm secret should be 0");
 
       console.log("Deployment state verified");
     });
 
-    it("Should reject deployment with zero address primary recipient", async function () {
+    it("Should reject deployment with zero address payment recipient", async function () {
       await assert.rejects(
         async () => {
           await viem.deployContract("CypherWorms", [
             mockDisplay.address,
             "0x0000000000000000000000000000000000000000",
-            secondaryRecipient,
           ], {
             libraries: {
               PreReveal: preRevealLib.address,
@@ -153,30 +142,11 @@ describe("CypherWorms - Critical Path Tests", async function () {
             },
           });
         },
-        /Primary recipient cannot be zero address/,
-        "Should revert with zero primary recipient"
+        /Payment recipient cannot be zero address/,
+        "Should revert with zero address"
       );
-      console.log("Zero address primary recipient rejected");
-    });
 
-    it("Should reject deployment with zero address secondary recipient", async function () {
-      await assert.rejects(
-        async () => {
-          await viem.deployContract("CypherWorms", [
-            mockDisplay.address,
-            primaryRecipient,
-            "0x0000000000000000000000000000000000000000",
-          ], {
-            libraries: {
-              PreReveal: preRevealLib.address,
-              Special: specialLib.address,
-            },
-          });
-        },
-        /Secondary recipient cannot be zero address/,
-        "Should revert with zero secondary recipient"
-      );
-      console.log("Zero address secondary recipient rejected");
+      console.log("Zero address payment recipient rejected");
     });
   });
 

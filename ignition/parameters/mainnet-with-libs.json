@@ -1,0 +1,9 @@
+{
+  "CypherWormsWithLibrariesModule": {
+    "paymentRecipient": "0x4aB90e9a201Af33BF9C0EB9cDD7fD429771FA699",
+    "displayAddress": "0x3bDD35f211291d9379D9D3969A04F249428fd036",
+    "preRevealAddress": "0x25540d9CC1bB2f4F893461bA82F0ee4aF8b6bCb8",
+    "specialAddress": "0x84D45e10d4eb4b0b93e4B18D6F5efF1146302C22",
+    "specialEndAddress": "0x40a5F93e92f192e505DE8797539458901F531F29"
+  }
+}

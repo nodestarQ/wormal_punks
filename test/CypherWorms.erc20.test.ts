@@ -8,8 +8,8 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
 
   // Test accounts
   let owner: Address;
-  let primaryRecipient: Address;
-  let secondaryRecipient: Address;
+  let paymentRecipient: Address;
+  
   let user1: Address;
   let user2: Address;
 
@@ -30,10 +30,10 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
     const [acc0, acc1, acc2, acc3, acc4] = await viem.getWalletClients();
     return {
       owner: acc0.account.address,
-      primaryRecipient: acc1.account.address,
-      secondaryRecipient: acc2.account.address,
-      user1: acc3.account.address,
-      user2: acc4.account.address,
+      paymentRecipient: acc1.account.address,
+      
+      user1: acc2.account.address,
+      user2: acc3.account.address,
     };
   }
 
@@ -41,8 +41,8 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
   before(async function () {
     const accounts = await getTestAccounts();
     owner = accounts.owner;
-    primaryRecipient = accounts.primaryRecipient;
-    secondaryRecipient = accounts.secondaryRecipient;
+    paymentRecipient = accounts.paymentRecipient;
+    
     user1 = accounts.user1;
     user2 = accounts.user2;
 
@@ -64,7 +64,7 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
 
     cypherWorms = await viem.deployContract(
       "CypherWorms",
-      [mockDisplay.address, primaryRecipient, secondaryRecipient],
+      [mockDisplay.address, paymentRecipient],
       {
         libraries: {
           PreReveal: preRevealLib.address,
@@ -164,20 +164,16 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
       ]);
       await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
 
-      // Mint ERC20 tokens to user1
-      const [, , , user1Client] = await viem.getWalletClients();
+      // Mint ERC20 tokens to user1 (user1 is acc2, which is index 2)
       await mockERC20.write.mint([user1, ERC20_AMOUNT]);
     });
 
     it("Should process ERC20 payment for transfer protection", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
 
-      // Get initial balances
-      const primaryBalanceBefore = await mockERC20.read.balanceOf([
-        primaryRecipient,
-      ]);
-      const secondaryBalanceBefore = await mockERC20.read.balanceOf([
-        secondaryRecipient,
+      // Get initial balance
+      const recipientBalanceBefore = await mockERC20.read.balanceOf([
+        paymentRecipient,
       ]);
 
       // Approve the contract to spend user's tokens
@@ -193,34 +189,23 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
         account: user1Client.account,
       });
 
-      // Check balances after
-      const primaryBalanceAfter = await mockERC20.read.balanceOf([
-        primaryRecipient,
-      ]);
-      const secondaryBalanceAfter = await mockERC20.read.balanceOf([
-        secondaryRecipient,
+      // Check balance after
+      const recipientBalanceAfter = await mockERC20.read.balanceOf([
+        paymentRecipient,
       ]);
 
-      // Calculate expected shares (70/30 split)
-      const expectedPrimaryShare = (PROTECTION_BASE_PRICE * 70n) / 100n;
-      const expectedSecondaryShare = PROTECTION_BASE_PRICE - expectedPrimaryShare;
-
+      // Should receive 100% of payment
       assert.equal(
-        primaryBalanceAfter - primaryBalanceBefore,
-        expectedPrimaryShare,
-        "Primary should receive 70%"
-      );
-      assert.equal(
-        secondaryBalanceAfter - secondaryBalanceBefore,
-        expectedSecondaryShare,
-        "Secondary should receive 30%"
+        recipientBalanceAfter - recipientBalanceBefore,
+        PROTECTION_BASE_PRICE,
+        "Recipient should receive 100%"
       );
 
-      console.log("✓ ERC20 payment processed with correct 70/30 split");
+      console.log("✓ ERC20 payment processed - 100% to recipient");
     });
 
     it("Should emit ERC20PaymentProcessed event", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
       const publicClient = await viem.getPublicClient();
 
       await mockERC20.write.approve(
@@ -240,7 +225,7 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
     });
 
     it("Should reject ERC20 payment if ETH is sent", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
 
       await mockERC20.write.approve(
         [cypherWorms.address, PROTECTION_BASE_PRICE],
@@ -263,7 +248,7 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
     });
 
     it("Should reject if insufficient ERC20 allowance", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
 
       // Approve less than required
       await mockERC20.write.approve([cypherWorms.address, parseEther("0.05")], {
@@ -315,7 +300,7 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
       ]);
       await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
 
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
       await mockERC20.write.mint([user1, ERC20_AMOUNT]);
     });
 
@@ -368,7 +353,11 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
 
       await assert.rejects(
         async () => {
-          await cypherWorms.write.recoverERC20([mockERC20.address]);
+          await cypherWorms.write.recoverERC20([
+            mockERC20.address,
+            paymentRecipient,
+            ERC20_AMOUNT
+          ]);
         },
         /cannot recover payment token/,
         "Should not allow recovering payment token"
@@ -383,24 +372,16 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
       // Send tokens to contract
       await otherToken.write.mint([cypherWorms.address, ERC20_AMOUNT]);
 
-      // Should be able to recover
-      await cypherWorms.write.recoverERC20([otherToken.address]);
-
-      const primaryBalance = await otherToken.read.balanceOf([primaryRecipient]);
-      const secondaryBalance = await otherToken.read.balanceOf([
-        secondaryRecipient,
+      // Should be able to recover to primary recipient
+      await cypherWorms.write.recoverERC20([
+        otherToken.address,
+        paymentRecipient,
+        ERC20_AMOUNT
       ]);
 
-      const expectedPrimary = (ERC20_AMOUNT * 70n) / 100n;
-      const expectedSecondary = ERC20_AMOUNT - expectedPrimary;
-
-      assert.equal(primaryBalance, expectedPrimary, "Primary should get 70%");
-      assert.equal(
-        secondaryBalance,
-        expectedSecondary,
-        "Secondary should get 30%"
-      );
-      console.log("✓ Can recover other tokens with proper split");
+      const recipientBalance = await otherToken.read.balanceOf([paymentRecipient]);
+      assert.equal(recipientBalance, ERC20_AMOUNT, "Primary should receive full amount");
+      console.log("✓ Can recover other tokens to specified recipient");
     });
 
     it("Should allow recovering payment token after switching", async function () {
@@ -413,10 +394,14 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
       ]);
 
       // Now should be able to recover
-      await cypherWorms.write.recoverERC20([mockERC20.address]);
+      await cypherWorms.write.recoverERC20([
+        mockERC20.address,
+        paymentRecipient,
+        ERC20_AMOUNT
+      ]);
 
-      const primaryBalance = await mockERC20.read.balanceOf([primaryRecipient]);
-      assert.ok(primaryBalance > 0n, "Primary should receive tokens");
+      const recipientBalance = await mockERC20.read.balanceOf([paymentRecipient]);
+      assert.equal(recipientBalance, ERC20_AMOUNT, "Primary should receive full amount");
       console.log("✓ Can recover token after switching payment methods");
     });
   });
@@ -431,16 +416,16 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
         PROTECTION_BASE_PRICE,
       ]);
 
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
       await mockERC20.write.mint([user1, ERC20_AMOUNT]);
     });
 
     it("Should handle ETH payment after deploying", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
 
       const primaryBefore = await viem
         .getPublicClient()
-        .then((c) => c.getBalance({ address: primaryRecipient }));
+        .then((c) => c.getBalance({ address: paymentRecipient }));
 
       await cypherWorms.write.protectTransfer([1n], {
         account: user1Client.account,
@@ -449,20 +434,19 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
 
       // Check that pending withdrawal was recorded (not direct transfer for ETH)
       const pending = await cypherWorms.read.getPendingWithdrawal([
-        primaryRecipient,
+        paymentRecipient,
       ]);
-      const expectedPending = (PROTECTION_BASE_PRICE * 70n) / 100n;
 
       assert.equal(
         pending,
-        expectedPending,
-        "Should have pending withdrawal for ETH"
+        PROTECTION_BASE_PRICE,
+        "Should have 100% pending withdrawal for ETH"
       );
       console.log("✓ ETH payment uses pending withdrawals");
     });
 
     it("Should handle ERC20 payment after switching", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
 
       // Mint another token for second protection
       await cypherWorms.write.strategicMint([user1, 1n]);
@@ -477,25 +461,24 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
         }
       );
 
-      const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+      const primaryBefore = await mockERC20.read.balanceOf([paymentRecipient]);
 
       await cypherWorms.write.protectTransfer([2n], {
         account: user1Client.account,
       });
 
-      const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
-      const expectedIncrease = (PROTECTION_BASE_PRICE * 70n) / 100n;
+      const primaryAfter = await mockERC20.read.balanceOf([paymentRecipient]);
 
       assert.equal(
         primaryAfter - primaryBefore,
-        expectedIncrease,
-        "Should receive ERC20 directly"
+        PROTECTION_BASE_PRICE,
+        "Should receive 100% ERC20 directly"
       );
       console.log("✓ ERC20 payment bypasses pending withdrawals (direct)");
     });
 
     it("Should handle switching back to ETH", async function () {
-      const [, , , user1Client] = await viem.getWalletClients();
+      const [, , user1Client] = await viem.getWalletClients();
 
       // Start with ERC20
       await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
@@ -526,7 +509,7 @@ describe("CypherWorms - ERC20 Payment Tests", async function () {
       });
 
       const pending = await cypherWorms.read.getPendingWithdrawal([
-        primaryRecipient,
+        paymentRecipient,
       ]);
       assert.ok(pending > 0n, "Should have pending ETH withdrawal");
       console.log("✓ Successfully switched from ERC20 back to ETH");
