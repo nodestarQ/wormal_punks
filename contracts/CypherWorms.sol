@@ -40,6 +40,12 @@ interface IERC20 {
     function balanceOf(address account) external view returns (uint256);
 
     function transfer(address to, uint256 amount) external returns (bool);
+
+    function transferFrom(
+        address from,
+        address to,
+        uint256 amount
+    ) external returns (bool);
 }
 
 contract CypherWorms is ERC721SeaDrop {
@@ -86,6 +92,13 @@ contract CypherWorms is ERC721SeaDrop {
     event PaymentWithdrawn(address indexed recipient, uint256 amount);
     event ERC20Recovered(
         address indexed token,
+        uint256 amount,
+        uint256 primaryShare,
+        uint256 secondaryShare
+    );
+    event ERC20PaymentProcessed(
+        address indexed token,
+        address indexed from,
         uint256 amount,
         uint256 primaryShare,
         uint256 secondaryShare
@@ -222,25 +235,56 @@ contract CypherWorms is ERC721SeaDrop {
     /// @notice Process payment for transfer protection (internal helper)
     /// @param price Amount to be paid
     function _processProtectionPayment(uint256 price) private {
-        if (transferProtectionToken != address(0)) {
-            revert("ERC20 payment not yet implemented");
-        }
-
-        require(msg.value >= price, "insufficient payment");
-
         uint256 primaryShare = (price * 70) / 100;
-        pendingWithdrawals[primaryRecipient] += primaryShare;
-        pendingWithdrawals[secondaryRecipient] += price - primaryShare;
+        uint256 secondaryShare = price - primaryShare;
 
-        emit PaymentReceived(
-            msg.sender,
-            price,
-            primaryShare,
-            price - primaryShare
-        );
+        if (transferProtectionToken != address(0)) {
+            // ERC20 payment: Direct transfer to recipients (no pending withdrawals)
+            require(msg.value == 0, "ETH not accepted for ERC20 payment");
 
-        if (msg.value > price) {
-            payable(msg.sender).transfer(msg.value - price);
+            IERC20 token = IERC20(transferProtectionToken);
+
+            // Transfer tokens from payer to primary recipient (70%)
+            require(
+                token.transferFrom(msg.sender, primaryRecipient, primaryShare),
+                "primary transfer failed"
+            );
+
+            // Transfer tokens from payer to secondary recipient (30%)
+            require(
+                token.transferFrom(
+                    msg.sender,
+                    secondaryRecipient,
+                    secondaryShare
+                ),
+                "secondary transfer failed"
+            );
+
+            emit ERC20PaymentProcessed(
+                transferProtectionToken,
+                msg.sender,
+                price,
+                primaryShare,
+                secondaryShare
+            );
+        } else {
+            // ETH payment: Use pending withdrawals pattern
+            require(msg.value >= price, "insufficient payment");
+
+            pendingWithdrawals[primaryRecipient] += primaryShare;
+            pendingWithdrawals[secondaryRecipient] += secondaryShare;
+
+            emit PaymentReceived(
+                msg.sender,
+                price,
+                primaryShare,
+                secondaryShare
+            );
+
+            // Refund excess ETH
+            if (msg.value > price) {
+                payable(msg.sender).transfer(msg.value - price);
+            }
         }
     }
 
@@ -258,6 +302,16 @@ contract CypherWorms is ERC721SeaDrop {
     function setTransferProtectionToken(address token) external onlyOwner {
         transferProtectionToken = token;
         emit TransferProtectionTokenUpdated(token);
+    }
+
+    /// @notice Get the current payment token for transfer protection
+    /// @return Address of ERC20 token (address(0) means ETH)
+    function getTransferProtectionPaymentToken()
+        external
+        view
+        returns (address)
+    {
+        return transferProtectionToken;
     }
 
     /// @notice Setup royalty info (only owner, should be called after deployment)
@@ -294,9 +348,14 @@ contract CypherWorms is ERC721SeaDrop {
 
     /// @notice Recover accidentally sent ERC20 tokens with 70/30 split
     /// @dev Only owner can recover tokens. Splits recovered tokens between recipients.
+    /// @dev Cannot recover the currently configured payment token to prevent accidental loss.
     /// @param token The ERC20 token contract address to recover
     function recoverERC20(address token) external onlyOwner {
         require(token != address(0), "invalid token address");
+        require(
+            token != transferProtectionToken,
+            "cannot recover payment token"
+        );
 
         IERC20 erc20 = IERC20(token);
         uint256 balance = erc20.balanceOf(address(this));

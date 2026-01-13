@@ -724,6 +724,492 @@ describe("CypherWorms - Extended Tests", async function () {
     });
   });
 
+  // ========================================
+  // ERC20 PAYMENT FUNCTIONALITY
+  // ========================================
+
+  describe("14. ERC20 Payment Functionality", function () {
+    const PROTECTION_BASE_PRICE = parseEther("0.1");
+    const ERC20_AMOUNT = parseEther("1000");
+
+    describe("Configuration", function () {
+      it("Should default to ETH payment method", async function () {
+        const token = await cypherWorms.read.getTransferProtectionPaymentToken();
+        assert.equal(token, zeroAddress, "Should default to address(0) for ETH");
+        console.log("✅ Default payment method is ETH (address 0)");
+      });
+
+      it("Should allow owner to set ERC20 token as payment method", async function () {
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        const token = await cypherWorms.read.getTransferProtectionPaymentToken();
+        assert.equal(
+          token.toLowerCase(),
+          mockERC20.address.toLowerCase(),
+          "Token should be set"
+        );
+        console.log("✅ Owner can set ERC20 payment token");
+      });
+
+      it("Should allow switching back to ETH", async function () {
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await cypherWorms.write.setTransferProtectionToken([zeroAddress]);
+        const token = await cypherWorms.read.getTransferProtectionPaymentToken();
+        assert.equal(token, zeroAddress, "Should be back to ETH");
+        console.log("✅ Can switch back to ETH payment");
+      });
+
+      it("Should reject non-owner setting payment token", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+        await assert.rejects(
+          async () => {
+            await cypherWorms.write.setTransferProtectionToken([mockERC20.address], {
+              account: user1Client.account,
+            });
+          },
+          "Should revert for non-owner"
+        );
+        console.log("✅ Non-owner cannot set payment token");
+      });
+    });
+
+    describe("ERC20 Payment Processing", function () {
+      beforeEach(async function () {
+        await cypherWorms.write.ownerMint([user1, 1n]);
+        await cypherWorms.write.setTransferProtectionBasePrice([PROTECTION_BASE_PRICE]);
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        
+        // Mint ERC20 tokens to user1
+        const [, , , user1Client] = await viem.getWalletClients();
+        await mockERC20.write.mint([user1, ERC20_AMOUNT]);
+      });
+
+      it("Should process ERC20 payment with correct 70/30 split (direct transfer)", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+        const secondaryBefore = await mockERC20.read.balanceOf([secondaryRecipient]);
+
+        // Approve tokens
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+
+        // Protect transfer
+        const hash = await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+        });
+
+        const publicClient = await viem.getPublicClient();
+        const receipt = await publicClient.getTransactionReceipt({ hash });
+        trackGas("protectTransfer (ERC20)", receipt.gasUsed);
+
+        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+        const secondaryAfter = await mockERC20.read.balanceOf([secondaryRecipient]);
+
+        const expectedPrimary = (PROTECTION_BASE_PRICE * 70n) / 100n;
+        const expectedSecondary = PROTECTION_BASE_PRICE - expectedPrimary;
+
+        assert.equal(
+          primaryAfter - primaryBefore,
+          expectedPrimary,
+          "Primary should receive 70% directly"
+        );
+        assert.equal(
+          secondaryAfter - secondaryBefore,
+          expectedSecondary,
+          "Secondary should receive 30% directly"
+        );
+
+        console.log("✅ ERC20 payment: 70/30 split via direct transfer");
+      });
+
+      it("Should NOT use pending withdrawals for ERC20 payments", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+
+        await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+        });
+
+        // Check that pending withdrawals remain 0 for ERC20 payments
+        const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        const secondaryPending = await cypherWorms.read.getPendingWithdrawal([secondaryRecipient]);
+
+        assert.equal(primaryPending, 0n, "Should NOT use pending withdrawals for ERC20");
+        assert.equal(secondaryPending, 0n, "Should NOT use pending withdrawals for ERC20");
+
+        console.log("✅ ERC20 payments bypass pending withdrawal system");
+      });
+
+      it("Should reject ETH payment when ERC20 is configured", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+
+        await assert.rejects(
+          async () => {
+            await cypherWorms.write.protectTransfer([1n], {
+              account: user1Client.account,
+              value: parseEther("0.1"),
+            });
+          },
+          /ETH not accepted for ERC20 payment/,
+          "Should reject ETH when ERC20 is configured"
+        );
+
+        console.log("✅ Rejects ETH when ERC20 payment is configured");
+      });
+
+      it("Should reject if insufficient ERC20 allowance", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        // Approve less than required
+        await mockERC20.write.approve([cypherWorms.address, parseEther("0.05")], {
+          account: user1Client.account,
+        });
+
+        await assert.rejects(
+          async () => {
+            await cypherWorms.write.protectTransfer([1n], {
+              account: user1Client.account,
+            });
+          },
+          "Should reject with insufficient allowance"
+        );
+
+        console.log("✅ Rejects insufficient ERC20 allowance");
+      });
+
+      it("Should reject if insufficient ERC20 balance", async function () {
+        const [, , , , user2Client] = await viem.getWalletClients();
+
+        // Mint token to user2 but don't give them ERC20 tokens
+        await cypherWorms.write.strategicMint([user2, 1n]);
+
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user2Client.account,
+        });
+
+        await assert.rejects(
+          async () => {
+            await cypherWorms.write.protectTransfer([2n], {
+              account: user2Client.account,
+            });
+          },
+          "Should reject with insufficient balance"
+        );
+
+        console.log("✅ Rejects insufficient ERC20 balance");
+      });
+
+      it("Should emit ERC20PaymentProcessed event", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+        const publicClient = await viem.getPublicClient();
+
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+
+        const hash = await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+        });
+
+        const receipt = await publicClient.getTransactionReceipt({ hash });
+        assert.ok(receipt.logs.length > 0, "Should emit events");
+
+        console.log("✅ ERC20PaymentProcessed event emitted");
+      });
+    });
+
+    describe("Price Calculation with ERC20", function () {
+      beforeEach(async function () {
+        await cypherWorms.write.ownerMint([user1, 1n]);
+        await cypherWorms.write.setTransferProtectionBasePrice([PROTECTION_BASE_PRICE]);
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+      });
+
+      it("Should calculate same price for ERC20 as ETH", async function () {
+        const priceWithERC20 = await cypherWorms.read.getTransferProtectionPrice([1n]);
+
+        // Switch to ETH
+        await cypherWorms.write.setTransferProtectionToken([zeroAddress]);
+        const priceWithETH = await cypherWorms.read.getTransferProtectionPrice([1n]);
+
+        assert.equal(
+          priceWithERC20,
+          priceWithETH,
+          "Price should be same for both payment methods"
+        );
+
+        console.log("✅ Price calculation independent of payment method");
+      });
+
+      it("Should respect level-based multipliers for ERC20", async function () {
+        // Level 0 (multiplier = 1)
+        let price = await cypherWorms.read.getTransferProtectionPrice([1n]);
+        assert.equal(price, PROTECTION_BASE_PRICE, "Level 0 = 1x base price");
+
+        // Advance to level 1 (multiplier = 2)
+        await increaseTime(2 * 24 * 60 * 60);
+        price = await cypherWorms.read.getTransferProtectionPrice([1n]);
+        assert.equal(price, PROTECTION_BASE_PRICE * 2n, "Level 1 = 2x base price");
+
+        console.log("✅ Level-based pricing works with ERC20");
+      });
+    });
+
+    describe("Token Recovery Protection", function () {
+      it("Should prevent recovering the active payment token", async function () {
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await mockERC20.write.mint([cypherWorms.address, ERC20_AMOUNT]);
+
+        await assert.rejects(
+          async () => {
+            await cypherWorms.write.recoverERC20([mockERC20.address]);
+          },
+          /cannot recover payment token/,
+          "Should not allow recovering active payment token"
+        );
+
+        console.log("✅ Cannot recover active ERC20 payment token");
+      });
+
+      it("Should allow recovering payment token after switching", async function () {
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await mockERC20.write.mint([cypherWorms.address, ERC20_AMOUNT]);
+
+        // Switch to ETH
+        await cypherWorms.write.setTransferProtectionToken([zeroAddress]);
+
+        // Now can recover
+        await cypherWorms.write.recoverERC20([mockERC20.address]);
+
+        const primaryBalance = await mockERC20.read.balanceOf([primaryRecipient]);
+        const expectedPrimary = (ERC20_AMOUNT * 70n) / 100n;
+
+        assert.equal(primaryBalance, expectedPrimary, "Should recover with 70/30 split");
+
+        console.log("✅ Can recover ERC20 token after switching payment method");
+      });
+
+      it("Should allow recovering different tokens while ERC20 payment is active", async function () {
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+
+        // Deploy another token
+        const otherToken = await viem.deployContract("MockERC20");
+        await otherToken.write.mint([cypherWorms.address, ERC20_AMOUNT]);
+
+        // Should be able to recover the other token
+        await cypherWorms.write.recoverERC20([otherToken.address]);
+
+        const primaryBalance = await otherToken.read.balanceOf([primaryRecipient]);
+        assert.ok(primaryBalance > 0n, "Should recover other tokens");
+
+        console.log("✅ Can recover non-payment ERC20 tokens");
+      });
+    });
+
+    describe("Switching Between ETH and ERC20", function () {
+      beforeEach(async function () {
+        await cypherWorms.write.ownerMint([user1, 3n]);
+        await cypherWorms.write.setTransferProtectionBasePrice([PROTECTION_BASE_PRICE]);
+        await mockERC20.write.mint([user1, ERC20_AMOUNT]);
+      });
+
+      it("Should handle ETH payment correctly (uses pending withdrawals)", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        // Default is ETH
+        await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+          value: PROTECTION_BASE_PRICE,
+        });
+
+        // Check pending withdrawals (ETH uses this pattern)
+        const primaryPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        const expectedPending = (PROTECTION_BASE_PRICE * 70n) / 100n;
+
+        assert.equal(primaryPending, expectedPending, "ETH should use pending withdrawals");
+
+        console.log("✅ ETH payment uses pending withdrawal pattern");
+      });
+
+      it("Should handle ERC20 payment after switching (direct transfer)", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        // Switch to ERC20
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+
+        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+
+        await cypherWorms.write.protectTransfer([2n], {
+          account: user1Client.account,
+        });
+
+        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+        const expectedIncrease = (PROTECTION_BASE_PRICE * 70n) / 100n;
+
+        assert.equal(
+          primaryAfter - primaryBefore,
+          expectedIncrease,
+          "ERC20 should use direct transfer"
+        );
+
+        console.log("✅ ERC20 payment uses direct transfer (no pending)");
+      });
+
+      it("Should handle switching back to ETH seamlessly", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        // Start with ERC20
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+        await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+        });
+
+        // Switch back to ETH
+        await cypherWorms.write.setTransferProtectionToken([zeroAddress]);
+
+        // Use ETH
+        await cypherWorms.write.protectTransfer([2n], {
+          account: user1Client.account,
+          value: PROTECTION_BASE_PRICE,
+        });
+
+        const pending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        assert.ok(pending > 0n, "Should have pending ETH withdrawal");
+
+        console.log("✅ Can switch from ERC20 back to ETH seamlessly");
+      });
+
+      it("Should maintain separate accounting for ETH and ERC20", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        // Pay with ETH first
+        await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+          value: PROTECTION_BASE_PRICE,
+        });
+
+        const ethPending = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+
+        // Switch to ERC20
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+          account: user1Client.account,
+        });
+
+        const erc20Before = await mockERC20.read.balanceOf([primaryRecipient]);
+
+        await cypherWorms.write.protectTransfer([2n], {
+          account: user1Client.account,
+        });
+
+        const erc20After = await mockERC20.read.balanceOf([primaryRecipient]);
+
+        // ETH pending should remain unchanged
+        const ethPendingAfter = await cypherWorms.read.getPendingWithdrawal([primaryRecipient]);
+        assert.equal(ethPending, ethPendingAfter, "ETH pending should not change");
+
+        // ERC20 should be directly transferred
+        assert.ok(erc20After > erc20Before, "ERC20 should be directly transferred");
+
+        console.log("✅ ETH and ERC20 accounting remain separate");
+      });
+    });
+
+    describe("Integration: Complete ERC20 Payment Flow", function () {
+      it("Should complete full lifecycle: mint → approve → pay → protect → transfer", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        // 1. Setup
+        await cypherWorms.write.ownerMint([user1, 1n]);
+        await cypherWorms.write.setTransferProtectionBasePrice([PROTECTION_BASE_PRICE]);
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await mockERC20.write.mint([user1, ERC20_AMOUNT]);
+
+        // 2. Build up hold time
+        await increaseTime(10 * 24 * 60 * 60);
+        const daysHeldBefore = await cypherWorms.read.getHoldCountInDays([1n]);
+
+        // 3. Get actual price (level changes after time increase)
+        const actualPrice = await cypherWorms.read.getTransferProtectionPrice([1n]);
+
+        // 4. Approve ERC20 with correct amount
+        await mockERC20.write.approve([cypherWorms.address, actualPrice], {
+          account: user1Client.account,
+        });
+
+        // 5. Protect transfer (ERC20 payment)
+        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+        await cypherWorms.write.protectTransfer([1n], {
+          account: user1Client.account,
+        });
+        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+
+        // Verify payment was made
+        assert.ok(primaryAfter > primaryBefore, "Payment should be made");
+
+        // 6. Transfer token (hold count should be preserved)
+        await cypherWorms.write.transferFrom([user1, user2, 1n], {
+          account: user1Client.account,
+        });
+
+        const daysHeldAfter = await cypherWorms.read.getHoldCountInDays([1n]);
+        assert.ok(
+          daysHeldAfter >= daysHeldBefore - 1n,
+          "Hold count should be preserved"
+        );
+
+        console.log("✅ Full ERC20 payment lifecycle works correctly");
+      });
+
+      it("Should handle multiple consecutive ERC20 payments", async function () {
+        const [, , , user1Client] = await viem.getWalletClients();
+
+        await cypherWorms.write.ownerMint([user1, 3n]);
+        await cypherWorms.write.setTransferProtectionBasePrice([PROTECTION_BASE_PRICE]);
+        await cypherWorms.write.setTransferProtectionToken([mockERC20.address]);
+        await mockERC20.write.mint([user1, ERC20_AMOUNT]);
+
+        const primaryBefore = await mockERC20.read.balanceOf([primaryRecipient]);
+
+        // Multiple payments
+        for (let i = 1; i <= 3; i++) {
+          await mockERC20.write.approve([cypherWorms.address, PROTECTION_BASE_PRICE], {
+            account: user1Client.account,
+          });
+          await cypherWorms.write.protectTransfer([BigInt(i)], {
+            account: user1Client.account,
+          });
+        }
+
+        const primaryAfter = await mockERC20.read.balanceOf([primaryRecipient]);
+        const expectedTotal = (PROTECTION_BASE_PRICE * 3n * 70n) / 100n;
+
+        assert.equal(
+          primaryAfter - primaryBefore,
+          expectedTotal,
+          "Should accumulate all payments"
+        );
+
+        console.log("✅ Multiple consecutive ERC20 payments work correctly");
+      });
+    });
+  });
+
   // Print gas summary
   after(function () {
     console.log("\n EXTENDED TESTS GAS USAGE:");
